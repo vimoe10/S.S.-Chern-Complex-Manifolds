@@ -1,0 +1,330 @@
+\chapter{Hermitian Geometry and Kählerian Geometry}
+
+% \section*{Hermitian Geometry and Kählerian Geometry}
+
+Let $M$ be a complex manifold of dimension $m$. $M$ is called hermitian if an hermitian structure $H$ is given in its tangent bundle $T(M)$. With the local coordinates $z^1, \ldots, z^m$ a natural frame field is given by
+\begin{equation}
+s_i = \frac{\partial}{\partial z^i}, \quad 1 \leq i,j,k,\ell \leq m, \tag{7.1}
+\end{equation}
+and this frame is holomorphic. Let
+\begin{equation}
+h_{ik} = H\left( \frac{\partial}{\partial z^i}, \frac{\partial}{\partial z^k} \right) = \overline{h}_{ki}. \tag{7.2}
+\end{equation}
+Then the matrix
+\begin{equation}
+H = (h_{ik}) \tag{7.3}
+\end{equation}
+is positive definite hermitian.
+
+There are special features arising from the fact that the bundle in question is the tangent bundle. First there is the Kähler form (cf. (2.16))
+\begin{equation}
+\hat{H} = \frac{i}{2} \sum_{j,k} h_{jk} dz^j \wedge d\overline{z}^k, \tag{7.4}
+\end{equation}
+which is a real-valued form of type $(1,1)$. An hermitian manifold is called Kählerian if its Kähler form is closed
+\begin{equation}
+d\hat{H} = 0. \tag{7.5}
+\end{equation}
+
+Secondly, let $s$ be a local frame field, holomorphic or not. To $s$ there is uniquely determined a coframe field $\sigma = (\sigma^1, \ldots, \sigma^m)$ such that at every point $x \in M$ the sections $s_1(x), \ldots, s_m(x)$ of $s$ and the sections $\sigma^1(x), \ldots, \sigma^m(x)$ of $\sigma$ in the cotangent bundle are dual bases. The sections $\sigma^i$, being in the cotangent bundle, are complex-valued 1-forms, and they are everywhere linearly independent. Let $s'$ be a new frame field, related to $s$ by (5.19), and let $\sigma'$ be its dual coframe field. Write
+\begin{align}
+s &= (s_1, \ldots, s_m), \quad s' = (s_1', \ldots, s_m'), \tag{7.6} \\
+\sigma &= (\sigma^1, \ldots, \sigma^m), \quad \sigma' = (\sigma'^1, \ldots, \sigma'^m). \tag{7.7}
+\end{align}
+If $T_x$ and $T^*_x$ are respectively the tangent and cotangent spaces at $x$, we denote their pairing by
+\begin{equation}
+\langle \xi, \omega \rangle, \quad \xi \in T_x, \quad \omega \in T^*_x. \tag{7.8}
+\end{equation}
+Then we have
+\begin{equation}
+\langle s_i, \sigma^k \rangle = \langle s_i', \sigma'^k \rangle = \delta_i^k. \tag{7.9}
+\end{equation}
+Equation (5.19) can be written
+\begin{equation}
+s_i' = \sum_j g_i^j s_j, \quad g = (g_i^j). \tag{7.10}
+\end{equation}
+In view of (7.9) we have
+\begin{equation}
+\sigma^i = \sum_j g_j^i \sigma'^j \tag{7.11}
+\end{equation}
+or, in matrix notation,
+\begin{equation}
+\sigma = \sigma' g. \tag{7.12}
+\end{equation}
+By taking the exterior derivative of (7.12) and using (5.21), we get
+\begin{equation}
+(d\sigma' - \sigma' \wedge \omega')g = d\sigma - \sigma \wedge \omega. \tag{7.13}
+\end{equation}
+
+We will call the $(1 \times q)$-matrix
+\begin{equation}
+\tau = d\sigma - \sigma \wedge \omega \tag{7.14}
+\end{equation}
+the torsion matrix. It is a matrix of complex-valued two forms and follows the transformation law (7.13) under a change of the frame field, holomorphic or not.
+
+(A) Let $M$ be an hermitian manifold. A connection in its tangent bundle is of type $(1,0)$ if and only if its torsion matrix is of type $(2,0)$.
+
+To prove this let $\sigma$ be the dual coframe field of a holomorphic frame field $s$. The connection matrix $\omega$ relative to $s$ can be written in a unique way as
+\[\omega = \omega_1 + \omega_2,\]
+where $\omega_1$ and $\omega_2$ are matrices of 1-forms of types $(1,0)$ and $(0,1)$ respectively. $\sigma$ is a matrix of forms of type $(1,0)$ with holomorphic coefficients. The torsion matrix $\tau$ in (7.14) is of type $(2,0)$ if and only if
+\[\sigma \wedge \omega_2 = 0.\]
+Let
+\[\sigma = (\sigma^1, \ldots, \sigma^m), \quad \omega_2 = (\theta_j^k), \quad 1 \leq i,j,k \leq m.\]
+Then the above relation can be written explicitly as
+\[\sum_i \sigma^i \wedge \theta_j^k = 0.\]
+Since $\sigma^i$ are linearly independent, we have
+\[\theta_j^k = \sum_i a_{ij}^k \sigma^i,\]
+where $a_{ij}^k$ are functions. But $\sigma^i$ is of type $(1,0)$, while $\theta_j^k$ is of type $(0,1)$ by our hypothesis. It follows that the above relation is equivalent to
+\[\theta_j^k = 0 \quad \text{or} \quad \omega_2 = 0.\]
+This proves (A).
+
+The criterion expressed by (A) has the advantage that, unlike the notion of a connection of type $(1,0)$ which is defined in terms of holomorphic frame fields, it has a meaning for $C^\infty$ frame fields. In the study of hermitian manifolds it is desirable to use $C^\infty$ frame fields, for example, the unitary frame fields. It follows from §6 and (A) that an hermitian manifold has a uniquely determined admissible connection in its tangent bundle whose torsion matrix is of type $(2,0)$. When we speak of the connection in an hermitian manifold, this will be the connection meant. It is to be noticed that the curvature matrix of this connection is of type $(1,1)$ (relative to $C^\infty$ frame fields).
+
+(B) An hermitian manifold is Kählerian if and only if the torsion matrix of its connection is zero.
+
+Since both properties are independent of the choice of a frame field, it suffices to verify this theorem by using the natural frame field (7.1). Its dual coframe field is
+\[\sigma = (dz^1, \ldots, dz^m),\]
+so that $d\sigma = 0$. By (6.2) the vanishing of the torsion matrix can be written
+\[\sigma \wedge \partial H = 0,\]
+or, in expanded form,
+\[\sum_{i,j,k} \frac{\partial h_{ik}}{\partial z^j} dz^j \wedge dz^i = 0, \quad 1 \leq i, j, k \leq m.\]
+The latter is equivalent to the conditions
+\begin{equation}
+\frac{\partial h_{ik}}{\partial z^j} - \frac{\partial h_{jk}}{\partial z^i} = 0. \tag{7.15}
+\end{equation}
+One sees directly that (7.5) and (7.15) are equivalent.
+
+(C) An hermitian manifold is Kählerian if and only if there exists locally a real-valued $C^\infty$-function $u$, such that its Kähler form can be written
+\begin{equation}
+\hat{H} = i \partial \bar{\partial} u. \tag{7.16}
+\end{equation}
+It suffices to prove that a Kählerian manifold has the property stated in the theorem, for the form (7.16) is clearly closed. Suppose therefore that $\hat{H}$ is closed. There exists locally a real-valued 1-form $\omega$ such that
+\[\hat{H} = d\omega.\]
+We can write
+\[\omega = \alpha + \bar{\alpha},\]
+where
+\[\alpha = \Pi_{1,0} \omega, \quad \bar{\alpha} = \Pi_{0,1} \omega.\]
+Then
+\[d\omega = \partial \alpha + (\bar{\partial} \alpha + \partial \bar{\alpha}) + \bar{\partial} \bar{\alpha},\]
+where the terms are of types $(2,0)$, $(1,1)$, $(0,2)$ respectively. Since $d\omega$ is of type $(1,1)$, we have
+\[\bar{\partial} \bar{\alpha} = 0.\]
+It follows from the Dolbeault-Grothendieck lemma (Theorem (E), §3) that there exists a complex-valued $C^\infty$-function $F$ such that
+\[\bar{\alpha} = \bar{\partial} F.\]
+Then
+\[\hat{H} = d\omega = \partial \bar{\partial} (F - \overline{F}).\]
+The theorem follows by setting $u = -i(F - \overline{F})$.
+
+The most important local properties of an hermitian manifold arise from its curvature matrix. The latter is defined in terms of a frame field. To have the situation under control we list together the formulas giving the effect from a change of the frame field on the various matrices we have introduced (formulas (5.19), (5.22), (5.57), (7.12)):
+\begin{align}
+s' &= g s, \tag{7.17} \\
+\Omega' g &= g \Omega, \tag{7.18} \\
+H' &= g H \, ^t \overline{g}, \tag{7.19} \\
+\sigma &= \sigma' g. \tag{7.20}
+\end{align}
+From the second and third formulas of (7.17)-(7.20) we get
+\begin{equation}
+\Omega' H' = g \Omega H \, ^t \overline{g}. \tag{7.21}
+\end{equation}
+We note that $\Omega H$ is skew-hermitian (cf. (5.61)). Since $\Omega H$ is of type $(1,1)$, we set
+\begin{align}
+\Omega H &= (\Omega_{ik}), \tag{7.22} \\
+\Omega_{ik} &= \sum_{j,\ell} R_{ikj\ell} \sigma^j \wedge \overline{\sigma^\ell}. \tag{7.23}
+\end{align}
+The skew-hermitian property of $\Omega H$ is then expressed by
+\begin{equation}
+R_{ikj\ell} = \overline{R_{k i \ell j}}. \tag{7.24}
+\end{equation}
+
+Throughout this part of our discussion we suppose as usual that our small Latin indices have the range from 1 to $m$:
+\begin{equation}
+1 \leq i,j,k,\ell,p,q,u,v \leq m. \tag{7.25}
+\end{equation}
+
+The fourth equation of (7.17)-(7.20) and the equation (7.21) can be written out in detail as follows:
+\begin{align}
+\sigma'^i &= \sum_j g_j^i \sigma^j, \tag{7.26} \\
+\sum_{j,\ell} R'_{ikj\ell} \sigma'^j \wedge \overline{\sigma'^\ell} &= \sum_{p,q,u,v} g_i^p \overline{g_k^q} R_{pquv} \sigma^u \wedge \overline{\sigma^v}, \tag{7.27}
+\end{align}
+where the left-hand sides of the second equation are the entries in the matrix $\Omega' H'$. It follows that
+\begin{equation}
+R'_{ikj\ell} = \sum_{p,q,u,v} g_i^p \overline{g_k^q} g_j^u \overline{g_\ell^v} R_{pquv}. \tag{7.28}
+\end{equation}
+
+Let
+\begin{equation}
+\xi = \sum_i \xi^i s_i = \sum_j \xi'^j s'_j \tag{7.29}
+\end{equation}
+be a vector at $x \in M$. The $\xi^i$ and $\xi'^j$ in (7.29) are the components of the vector relative to the frames $s$ and $s'$ respectively. Between them we have the relation
+\begin{equation}
+\xi^i = \sum_j g_j^i \xi'^j. \tag{7.30}
+\end{equation}
+From (7.28) and (7.30) we get
+\[\sum_{i,k,j,\ell} R'_{ikj\ell} \xi'^i \overline{\xi'^k} \xi'^j \overline{\xi'^\ell} = \sum_{i,k,j,\ell} R_{ikj\ell} \xi^i \overline{\xi^k} \xi^j \overline{\xi^\ell},\]
+so that the common expression is independent of the choice of the frame field. If $\xi \neq 0$, we define
+\begin{equation}
+R(x, \xi) = 2 \frac{\sum_{i,k,j,\ell} R_{ikj\ell} \xi^i \overline{\xi^k} \xi^j \overline{\xi^\ell}}{\left( \sum_{i,k} h_{ik} \xi^i \overline{\xi^k} \right)^2} \tag{7.31}
+\end{equation}
+to be the holomorphic sectional curvature at $(x, \xi)$.
+
+From the second equation of (7.17)-(7.20) we get
+\begin{equation}
+\text{Tr } \Omega' = \text{Tr } \Omega = \Phi \quad (\text{say}). \tag{7.32}
+\end{equation}
+$\Phi$ is a form of type $(1,1)$ and is called the Ricci form of the hermitian metric. The metric is called hermitian-einsteinian if the Ricci form is a multiple of the Kähler form.
+
+Let $h^{ik}$ be the elements of the matrix $H^{-1}$. By the symmetry relations (7.24) we see that
+\[R = \sum_{i,k,j,\ell} R_{ikj\ell} h^{ik} h^{j\ell}\]
+is real; it is also independent of the choice of the frame field. This quantity $R$ is called the scalar curvature.
+
+Compact Kählerian manifolds have strong topological restrictions. Perhaps the simplest among them is the following:
+
+(D) The second Betti number of a compact Kählerian manifold is positive.
+
+\textit{Corollary.} The Hopf and Calabi-Eckmann manifolds $S^{2p+1} \times S^{2q+1}$, $p \geq 0$, $q \geq 1$, cannot be given a Kählerian structure. (Cf. §1.)
+
+Since $\hat{H}$ is closed, it determines by de Rham's theorem an element $u \in H^2(M,\mathbb{R})$. To prove (D) we make use of the fact that the $2m$-form
+\[\hat{H}^m = \hat{H} \wedge \ldots \wedge \hat{H}, \quad m \text{ times}\]
+determines the element $u^m = u \cup \ldots \cup u$ (cup product $m$ times) of $H^{2m}(M,\mathbb{R})$. Using the local expression (7.4), we find
+\[\hat{H}^m = \left(\frac{i}{2}\right)^m m! (\det H) \bigwedge_j dz^j \wedge d\overline{z}^j.\]
+Since the matrix $H$ is positive definite, $\det H > 0$. It follows that
+\begin{equation}
+\int_M \hat{H}^m > 0, \tag{7.33}
+\end{equation}
+and $u^m \neq 0$. Therefore $u \neq 0$.
+
+Let $M,N$ be complex manifolds, of dimensions $m,n$ respectively. A continuous mapping $f: M \rightarrow N$ is called holomorphic, if locally it is defined by expressing the coordinates of the image point as holomorphic functions of those of the original point. $f$ is called an immersion, if $m \leq n$ and if the Jacobian matrix is of rank $m$ everywhere. An immersion $f$ is called an imbedding, if it is one-one, i.e., if $f(x) = f(y)$, $x,y \in M$, implies $x = y$. The following is immediate:
+
+(E) Let $N$ be a Kählerian manifold and let $f: M \rightarrow N$ be a holomorphic immersion. Then $M$ has a Kählerian structure.
+
+Consider the complex projection space $P_n$ of dimension $n$. It is known that (cf. §8)
+\begin{align}
+H^{2i}(P_n,\mathbb{Z}) &\cong \mathbb{Z}, \quad 0 \leq i \leq n, \tag{7.34} \\
+H^k(P_n,\mathbb{Z}) &= 0, \quad k \text{ odd}. \tag{7.35}
+\end{align}
+Moreover we will show in §8 that $P_n$ is Kählerian. In this case, however, there is an additional important fact: The cohomology group $H^2(P_n,\mathbb{R})$ is a real vector space of real dimension 1 and is isomorphic to $jH^2(P_n,\mathbb{Z}) \otimes \mathbb{R}$, where $j$ is induced by the coefficient homomorphism $j: \mathbb{Z} \rightarrow \mathbb{R}$. In other words, if $g$ denotes a generator of $H^2(P_n,\mathbb{Z})$, $jg$ generates $H^2(P_n,\mathbb{R})$ over $\mathbb{R}$. By the multiplication of a constant factor when necessary, we can define on $P_n$ a Kählerian metric such that the cohomology class $u \in H^2(P_n,\mathbb{R})$ determined by the Kähler form belongs to $jH^2(P_n,\mathbb{Z})$. A Kählerian manifold with this property is said to be of restricted type.
+
+Under the conditions of Theorem (E) we have the commutative diagram
+\[
+\begin{tikzcd}
+H^2(N,\mathbb{Z}) \arrow{r}{j} \arrow{d}{f^*} & H^2(N,\mathbb{R}) \arrow{d}{f^*} \\
+H^2(M,\mathbb{Z}) \arrow{r}{j} & H^2(M,\mathbb{R})
+\end{tikzcd}
+\]
+where $f^*$ is induced by the mapping $f$ and $j$ is induced by the coefficient homomorphism. Theorem (E) has the following complement:
+
+(E') Let $N$ be a Kählerian manifold of restricted type and let $f: M \to N$ be a holomorphic immersion. Then $M$ is a Kählerian manifold of restricted type.
+
+A theorem of Chow says that a compact complex manifold holomorphically imbedded in $P_n$ is an algebraic variety, i.e., its locus is defined by a finite number of polynomial equations. The imbedding theorem of Kodaira says that a compact Kählerian manifold of restricted type can be holomorphically imbedded in a projective space, [18].
+
+As an example we will study the conditions that the complex torus $\Theta = C_m / \Gamma$ (Ex. 4, §1) can be given a Kählerian structure of restricted type. Suppose that such a Kählerian structure exists on $\Theta$. The latter being a compact connected Lie group, we can integrate the Kählerian metric over $\Theta$. The resulting metric will define a Kählerian structure of restricted type which is invariant under the action of $\Theta$.
+
+Let $z^1, \ldots, z^m$ be the coordinates in $C_m$, and let $\Gamma$ be generated by the vectors
+\begin{equation}
+\pi_\lambda = (\pi_\lambda^1, \ldots, \pi_\lambda^m), \quad 1 \leq \lambda, \mu \leq 2m, \tag{7.36}
+\end{equation}
+which are linearly independent over $\mathbb{R}$. Let the Kählerian structure of restricted type be given by
+\begin{equation}
+ds^2 = \sum_{i,k} h_{ik} dz^i d\overline{z}^k, \quad 1 \leq i,j,k \leq m, \tag{7.37}
+\end{equation}
+where $h_{ik}$ are $C^\infty$-functions in $\Theta$. If the structure is invariant, as we are allowed to assume, $h_{ik}$ are constants. A homology basis for the two-dimensional cycles of $\Theta$ is formed by the two-dimensional tori $T_{\lambda\mu}$, $\lambda < \mu$; $T_{\lambda\mu}$ is the quotient of the space spanned by $\pi_\lambda$, $\pi_\mu$ divided by the discrete group generated by $\pi_\lambda$, $\pi_\mu$. It follows that the metric (7.37) is of restricted type, if and only if
+\begin{equation}
+g_{\lambda\mu} = -g_{\mu\lambda} = i \sum_{j,k} h_{jk} \left( \pi_\lambda^j \overline{\pi_\mu^k} - \pi_\mu^j \overline{\pi_\lambda^k} \right) \tag{7.38}
+\end{equation}
+are integers. We introduce the matrices
+\begin{align}
+G &= (g_{\lambda\mu}), \quad \text{order } (2m \times 2m), \tag{7.39} \\
+H &= (h_{ik}), \quad \text{order } (m \times m), \tag{7.40} \\
+\Pi &= (\pi_\lambda^k), \quad \text{order } (2m \times m). \tag{7.41}
+\end{align}
+Then (7.38) can be written
+\begin{align}
+G &= i (\Pi H \, ^t \overline{\Pi} - \overline{\Pi} H \, ^t \Pi) \tag{7.42} \\
+&= (\Pi, \overline{\Pi}) \begin{pmatrix}
+iH & 0 \\
+0 & -iH
+\end{pmatrix} \begin{pmatrix}
+^t \overline{\Pi} \\
+^t \Pi
+\end{pmatrix}. \tag{7.43}
+\end{align}
+Taking the inverse matrix of this equation, we get
+\begin{equation}
+\begin{pmatrix}
+^t \overline{\Pi} \\
+^t \Pi
+\end{pmatrix}
+G^{-1} (\Pi, \overline{\Pi}) =
+\begin{pmatrix}
+-iH^{-1} & 0 \\
+0 & iH^{-1}
+\end{pmatrix}. \tag{7.44}
+\end{equation}
+Therefore we have the theorem:
+
+(F) A necessary and sufficient condition for the torus $\Theta = C_m / \Gamma$ to have a Kählerian metric of restricted type is that there exists a skew-symmetric matrix $G$ with integral elements such that
+\begin{align}
+i \, \overline{\Pi} G^{-1} \, ^t \Pi &> 0, \tag{7.45} \\
+\Pi G^{-1} \, ^t \Pi &= 0. \tag{7.46}
+\end{align}
+The first condition in (7.45)-(7.46) means that the hermitian matrix at the left-hand side is positive definite.
+
+The conditions (7.45)-(7.46) were first given by Riemann.
+
+We wish to simplify the Riemann conditions (7.45)-(7.46) by proper choices of the basis vectors of $C_m$ and of $\Gamma$. Let
+\[(z^1, \ldots, z^m) \rightarrow (z'^1, \ldots, z'^m) = (z^1, \ldots, z^m)T\]
+be a change of coordinates in $C_m$, where $T$ is a non-singular $(m \times m)$-matrix with complex elements. Meanwhile, under a change of basis of $\Gamma$ the matrix $\Pi$ is transformed according to
+\[\Pi \rightarrow \tilde{\Pi} = U \Pi,\]
+where $U$ is a unimodular integral matrix. The combined effect of these changes on the matrices is given by
+\begin{align}
+\Pi &\rightarrow \tilde{\Pi} = U \Pi T, \tag{7.47} \\
+H &\rightarrow \tilde{H} = T^{-1} H \, ^t \overline{T}^{-1}, \tag{7.48} \\
+G &\rightarrow \tilde{G} = U G \, ^t U. \tag{7.49}
+\end{align}
+
+It is known in the theory of matrices that $U$ can be so chosen that
+\begin{equation}
+\tilde{G} = \begin{pmatrix}
+0 & D \\
+-D & 0
+\end{pmatrix}, \tag{7.50}
+\end{equation}
+where
+\begin{equation}
+D = \begin{bmatrix}
+d_1 & & 0 \\
+& \ddots & \\
+0 & & d_m
+\end{bmatrix}, \quad d_i \in \mathbb{Z}. \tag{7.51}
+\end{equation}
+We can then choose $T$, so that
+\begin{equation}
+\tilde{\Pi} = \begin{pmatrix}
+I \\
+Z
+\end{pmatrix}. \tag{7.52}
+\end{equation}
+With $\tilde{G}$, $\tilde{\Pi}$ in place of $G$, $\Pi$, the conditions (7.45)-(7.46) become
+\begin{align}
+^t Z &= Z, \tag{7.53} \\
+i(\overline{Z} - Z) &> 0, \tag{7.54}
+\end{align}
+where
+\begin{equation}
+Z = \Sigma D. \tag{7.55}
+\end{equation}
+The domain defined by (7.53)-(7.54) is of dimension $m(m+1)/2$; it is called the \textit{Siegel upper half plane} and is known to be biholomorphically equivalent to one of the bounded symmetric domains of Elie Cartan. For $m = 1$ it is the Poincaré half-plane.
+
+An example of a torus not satisfying the Riemann conditions is given in the case $m = 2$ by
+\[Z = \begin{pmatrix}
+\sqrt{-2} & \sqrt{-5} \\
+\sqrt{-3} & \sqrt{-7}
+\end{pmatrix}.\]
+Then
+\[Z D = \begin{pmatrix}
+\sqrt{-2}d_1 & \sqrt{-5}d_2 \\
+\sqrt{-3}d_1 & \sqrt{-7}d_2
+\end{pmatrix}, \quad d_i \in \mathbb{Z}.\]
+For this matrix to be symmetric we must have $d_1 = d_2 = 0$. Then the second condition in (7.53)-(7.54) will not be fulfilled. Thus the corresponding torus will not have a Kählerian structure of restricted type.
+
+In the general case a meromorphic function on the complex torus $\Theta$ is identical to a $2m$-ply periodic meromorphic function in $C_m$ with the period vectors (7.36). All the meromorphic functions on $\Theta$ form a field. It follows from Kodaira's imbedding theorem that a complex torus satisfying the conditions (7.45)-(7.46) can be holomorphically imbedded in a projective space and is thus by definition an abelian variety. At every point $x$ of an abelian variety $\Theta$ of dimension $m$ there are $m$ meromorphic functions on $\Theta$, which are functionally independent at $x$. On the other hand, there exist complex tori on which every meromorphic function is a constant.
+
+\endinput

@@ -1,0 +1,1637 @@
+\section*{Appendix: Geometry of Characteristic Classes$^1$}
+
+\subsection*{1. Historical Remarks and Examples}
+
+The last few decades have seen the development, in different branches of mathematics, of the notion of a local product structure, i.e., fiber spaces and their generalizations. Characteristic classes are the simplest global invariants which measure the deviation of a local product structure from a product structure. They are intimately related to the notion of curvature in differential geometry. In fact, a real characteristic class is a "total curvature," according to a well-defined relationship. We will give in this paper an exposition of the relations between characteristic classes and curvature and discuss some of their applications.
+
+The simplest characteristic class is the Euler characteristic. If $M$ is a finite cell complex, its Euler characteristic is defined by
+
+\begin{equation}
+\chi(M) = \sum_k (-1)^k a_k = \sum_1 (-1)^k b_k, \tag{A.1}
+\end{equation}
+
+where $a_k$ is the number of k-cells and $b_k$ is the k-dimensional Betti number of $M$. The equality of the last two expressions in (1) is known as the Euler-Poincar\'e formula.
+
+Now let $M$ be a compact oriented differentiable manifold of dimension $n$ and let $\xi$ be a smooth vector field on $M$ with isolated zeroes. Each zero can be assigned a multiplicity. In his dissertation (1927) H. Hopf proved that
+
+\begin{equation}
+\chi(M) = \int Z \text{ zeroes of } \xi. \tag{A.2}
+\end{equation}
+
+This gives a differential topological meaning to $\chi(M)$.
+
+This idea can be immediately generalized. Instead of one vector field we consider $k$ smooth vector fields $\xi_1, \ldots, \xi_k$. In the generic case the points on $M$ where the exterior product $\xi_1 \wedge \cdots \wedge \xi_k = 0$, i.e., where the vectors are linearly dependent, form a (k-1)-dimensional submanifold. Depending on the parity of n-k, this defines a (k-1)-dimensional cycle, with integer coefficients $Z$ or with coefficients $Z_2$, whose homology class, and in particular the homology class mod 2 in all cases, is independent of the choice of the $k$ vector fields. Because the linear dependence of vector fields is expressed by "conditions," it is more proper to define the differential topological invariants so obtained as cohomology classes. This leads to the Stiefel-Whitney cohomology classes $w^i \in H^i(M,Z_2), 1 \leq i \leq n - 1, i = n - k + 1$. The nth Stiefel-Whitney class corresponding to $k = 1$ or the Euler class has integer coefficients $w^n \in H^n(M,Z)$. It is related to $\chi(M)$ by
+
+\begin{equation}
+\chi(M) = \int_M w^n, \tag{A.3}
+\end{equation}
+
+where we write the pairing of homology and cohomology by an integral.
+
+Whitney went much farther. He saw the great generality of the notion of a vector bundle over an arbitrary topological space $M$. (Actually Whitney considered sphere bundles, thus gaining the advantage that the fibers are compact but losing the linear structure on the fibers. He was not concerned with the latter, as he was only interested in topological problems.) He also saw the effectiveness of the principal bundles and the fact that the universal principal bundle $(u) \quad 0(q+N)/0(N) \longrightarrow 0(q+N)/[0(q) \times 0(N)] = G(q,N)$, say, has the property
+
+\begin{equation}
+\pi_{\frac{1}{2}}(0(q+N)/0(N)) = 0, \quad 0 \leq i < N, \tag{A.5}
+\end{equation}
+
+where $\pi_{\frac{1}{2}}$ is the $i$th homotopy group. The left-hand side of (4) is called a Stiefel manifold and can be regarded as the space of all orthonormal q-frames through a fixed point 0 of the euclidean space $E^{q+N}$ of dimension $q+N$ and the right-hand side is the Grassmann manifold of all q-dimensional linear spaces through 0 in $E^{q+N}$, while the mapping $\pi$ in (4) can be interpreted geometrically as taking the q-dimensional space spanned by the q vectors of the frame. Thus the universal principal bundle has the feature that its total space has a string of vanishing homotopy groups while its base space, the Grassmann manifold, has rich homological properties. The associated sphere bundle of the principal bundle (4) can be written
+
+\begin{equation}
+0(q+N)/\phi(q-1) \times 0(N) \to 0(q+N)/\phi(q) \times 0(N). \tag{A.6}
+\end{equation}
+
+The importance of the universal bundle lies in the Whitney-Pontrjagin imbedding theorem: let M be a finite cell complex. A sphere bundle of fiber dimension $q-1$ (or a vector bundle E of fiber dimension q) over M can be induced by a continuous mapping f: M $\to G(q,N)$, dim M < N, and f is defined up to a homotopy.
+
+Let u $\in H^{\frac{1}{2}}(G(q,N),A)$ be a cohomology class with coefficient group A. It follows from the above theorem that $f^*u \in H^{\frac{1}{2}}(M,A)$ depends only on the bundle. It is called a characteristic class corresponding to the universal class u.
+
+Example 1. Consider all the q-dimensional linear spaces X through 0 in $E^{q+N}$ satisfying the Schubert condition
+
+\begin{equation}
+dim(X \cap E^{\frac{1}{2}+N-1}) \geq i, \quad 1 \leq i \leq q, \tag{A.7}
+\end{equation}
+
+where $E^{\frac{1}{2}+N-1}$ is a fixed space of dimension $i + N - 1$ through 0. They form a cycle mod 2 of dimension $qN - i$ in $G(q,N)$. The dual of its homology class is an element $\tilde{w}^i \in H^{\frac{1}{2}}(G(q,N),Z_2)$ and is called the ith universal Stiefel-Whitney class. Its image $\mathbf{w}^i(E) = f^*\mathbf{w}^i \in H^i(M,Z_2)$, $1 \leq i \leq q$, is called the Stiefel-Whitney class of the bundle E.
+
+Example 2. Similarly, consider the q-dimensional linear spaces X through 0 satisfying the condition
+\begin{equation}
+\dim(X \cap E^{2k+N-2}) \geq 2k, \tag{A.8}
+\end{equation}
+where $E^{2k+N-2}$ is fixed, with its superscript indicating the dimension. They form a cycle of dimension $qN-W_k$ with integer coefficients. The dual of its homology class is an element 
+$P_K \in H^{W_k}(G(q,N),Z)$ and is called a universal Pontrjagin class. Its image $p_K(E) = f^*p_K \in H^{W_k}(M,Z)$, $1 \leq k \leq \left[ \prod_i \right]$, n = dim M, is called a Pontrjagin class of E.
+
+Example 3. It has been known that the complex Grassmann manifold
+\begin{equation}
+G(q,N,C) = U(q+N)/U(q) \times U(N) \tag{A.9}
+\end{equation}
+has simpler topological properties than the real ones. In fact, it is simply connected, has no torsion (i.e., no homology class of finite order), and its odd-dimensional homology classes are all zero.
+$G(q,N,C)$ can be regarded as the manifold of all q-dimensional linear spaces X through a fixed point 0 in the complex number space $C_{q+N}$ of dimension $q + N$. Imitating Example 1, let $C_{i+N-1}$ be a fixed space of dimension $i + N - 1$ through 0. Then all the X satisfying the condition
+\begin{equation}
+\dim(X \cap C_{i+N-1}) \geq i, \quad 1 \leq i \leq q, \tag{A.10}
+\end{equation}
+form a cycle of real dimension $2(qN-i)$ with coefficients Z. As above, this defines the Chern classes $c_i(E) \in H^{2i}(M,Z)$, $1 \leq i \leq q$, of a complex vector bundle E and they are cohomology classes with integer coefficients.
+
+When applied to the tangent bundle of a differentiable manifold the Stiefel-Whitney classes and the Pontrjagin classes are invariants of the differentiable structure. Similarly, the Chern classes of the tangent bundle of a complex manifold are invariants of the complex structure.
+
+It is of great importance to know whether and how the characteristic classes are related to the underlying topological structure of the manifold. The first such relation is the identification of the Euler class with the Euler characteristic, as given by (3). It was proved by Thom and Wu that the Stiefel-Whitney classes can be defined through the Steenrod squaring operations and are topological invariants. On a compact complex manifold of dimension m we have, in analogy to (3).
+
+\begin{equation}
+\chi(M) = \int_{M} c_m(M), \tag{A.11}
+\end{equation}
+
+where $c_m(M)$ denotes the nth Chern class of the tangent bundle of M .
+
+From the Pontrjagin classes of the tangent bundle of a compact oriented differentiable manifold $M^{HK}$ of dimension $HK$. Hirzebruch constructed a number called the L-genus and, using Thom's cobordism theory, proved that it is equal to the signature of $M^{HK}$. In the simplest case $k = 1$ the relation is
+
+\begin{equation}
+sign(M) = \frac{1}{3} \int_{M} p_1(M), \quad M = M^H. \tag{A.12}
+\end{equation}
+
+In particular, it shows that the integral at the right-hand side is divisible by 3.
+
+The characteristic classes are closely related to the notion of curvature in differential geometry. In this respect one could take as a starting-point the theorem in plane geometry that the sum of angles of a triangle is equal to $\pi$. More generally, let $D$ be a domain in a two-dimensional riemannian manifold, whose boundary $\partial D$ is sectionally smooth. Then its Euler characteristic is given by the Gauss-Bonnet formula
+
+\begin{equation}
+2\pi\chi(D) = \sum_{\pm} (\pi-\alpha_{\pm}) + \int_{\partial D} \frac{ds}{\rho_{g}} + \iint_{D} K  dA, \tag{A.13}
+\end{equation}
+
+where the first term at the right-hand side is the sum of the exterior angles at the corners, the second term is the integral of the geodesic curvature, and the last term is the integral of the gaussian curvature. They are respectively the point curvature, the line curvature, and the surface curvature of the domain $D$, and the Gauss-Bonnet formula should be interpreted as expressing the Euler characteristic $\chi(D)$ as a total curvature.
+
+The interpretation has a far-reaching generalization. Let $\pi: E \to M$ be a real ($C^{\infty}$-differentiable) vector bundle of fiber dimension $q$. Let $\Gamma(E)$ be the space of sections of $E$, i.e., smooth mappings $s: M \to E$ such that $\pi \circ s = identity$. A connection or a covariant differential in $E$ is a structure which allows the differentiation of sections. It is a mapping
+
+\begin{equation}
+D: \Gamma(E) \to \Gamma(T^{*} \otimes E), \tag{A.14}
+\end{equation}
+
+where $T^{*}$ is the cotangent bundle of $M$ and the right-hand side stands for the space of sections of the tensor product bundle $T^{*} \otimes E$, such that the following two conditions are satisfied:
+
+\begin{equation}
+D(s_1 + s_2) = Ds_1 + Ds_2, \quad s_1, s_2 \in \Gamma(E), \tag{A.15a}
+\end{equation}
+
+\begin{equation}
+D(fs) = df \otimes s + fDs, \quad s \in \Gamma(E), \tag{A.15b}
+\end{equation}
+
+where $f$ in (15b) is a $C^{\infty}$-function.
+
+Let $s_i, 1 \leq i \leq q$, be a local frame field, i.e., be $q$ sections defined in a neighborhood, which are everywhere linearly independent. Then we can write
+\begin{equation}
+Ds_i = \left[ \begin{matrix} 0 \\ 1 \end{matrix} \right] \otimes s_j, \tag{A.16}
+\end{equation}
+where $0 = (0^j_1)$, $1 \leq i,j \leq q$, is a matrix of one-forms, the connection matrix. Putting
+\begin{equation}
+t_s = (s_1, \ldots, s_q), \quad t_s = \text{transpose of } s, \tag{A.16a}
+\end{equation}
+we can write (16) as a matrix equation
+\begin{equation}
+Ds = 0 \otimes s. \tag{A.16b}
+\end{equation}
+
+The effect on the connection matrix under a change of the frame field can easily be found. In fact, let
+\begin{equation}
+s' = gs \tag{A.17}
+\end{equation}
+be a new frame field, where $g$ is a nonsingular (qxq)-matrix of $C^\infty$-functions. Let $0^l$ be the connection matrix relative to the frame field $s'$ so that
+\begin{equation}
+Ds' = 0^l \otimes s'. \tag{A.18}
+\end{equation}
+
+Using the properties of $D$ as expressed by (15a) and (15b), we find immediately
+\begin{equation}
+0^lg = dg + g0. \tag{A.19}
+\end{equation}
+
+This is the equation for the change of the connection matrix under a change of the frame field.
+
+Taking the exterior derivative of (20), we get
+\begin{equation}
+0^l = g0g^{-1} \tag{A.20}
+\end{equation}
+where
+
+\begin{equation}
+\Theta = d\Theta - \Theta \wedge \Theta \tag{A.22}
+\end{equation}
+
+and $\Theta^1$ is defined in terms of $\Theta^1$ by a similar equation. $\Theta$ is a (qxq)-matrix of two-forms and is called the curvature matrix relative to the frame field s. Equation (21) shows that it undergoes a very simple transformation law under a change of the frame field. As a consequence it follows from (21) that $\text{tr}(\Theta^k)$ is a form of degree $2k$ globally defined in M. Moreover, $\text{tr}(\Theta^k)$ can be proved to be a closed form and the cohomology class $\{\text{tr}(\Theta^k)\} \in H^{2k}(M,R)$ it represents in the sense of de Rham's theorem can be identified with a characteristic class of E.
+
+Example 1. Let $M^4$ be a compact oriented differentiable manifold of dimension $4$. Let $\Theta = (\Theta_j^i), 1 \leq i,j \leq 4$, be the curvature matrix of a connection in the tangent bundle of $M^4$. Then $P_1(M^4)$ can be identified with a numerical multiple of $\{\text{tr}(\Theta^2)\}$. By (12) we will have the integral formula
+
+\begin{equation}
+\text{sign}(M) = \frac{1}{24\pi^2} \int_M \sum_{i,j} \Theta_j^i \wedge \Theta_j^j, \quad M^4 = M. \tag{A.23}
+\end{equation}
+
+Example 2. When the bundle $\pi: E + M$ is oriented and has a riemannian structure, the structure group is reduced to $SO(q)$, and we can restrict our consideration to frame fields consisting of orthonormal frames. Then both connection and curvature matrices are anti-symmetric, and we have
+
+\begin{equation}
+\Theta = -\Theta = (\Theta_{ij}), \quad \Theta_{ij} + \Theta_{ji} = 0. \tag{A.24}
+\end{equation}
+
+If q is even, the pfaffian
+
+\begin{equation}
+Pf(\Theta) = \frac{(-1)^r}{2^q\pi^r r!} \sum_i \epsilon_{ij,i} \cdots \epsilon_{ij,i}^q \wedge \cdots \wedge \Theta_{iq-i}^q, \quad r = q/2, \tag{A.25}
+\end{equation}
+
+represents the Euler class, i.e.,
+
+\begin{equation}
+\{Pf(\theta)\} = w^q(E). \tag{A.26}
+\end{equation}
+
+Formula (26) is essentially the high-dimensional Gauss-Bonnet Theorem. The starting point of this paper is the Weil homomorphism which gives a representation of characteristic classes with real coefficients by the curvature forms of a connection in the bundle. The connection makes many cochain constructions canonical and gives geometrical meaning to them. The resulting homomorphism exhibits a relationship between local and global properties which is not available in the topological theory of characteristic classes. It is effective when the manifold has more structure, such as a foliated structure (Bott's theorem) or a complex structure with a holomorphic bundle over it. In the latter case we will show the fundamental role played by the curvature forms representing characteristic classes in the Ahlfors-Weyl theory of holomorphic curves in complex projective space, which generalizes the theory of value distributions in complex function theory. This is the case of the geometry of a noncompact manifold where deep studies have been carried out.
+
+In another direction the Weil homomorphism leads to new global invariants when certain curvature forms vanish. In recent works of Chern and Simons such invariants are found to be nontrivial global invariants of the underlying conformal or projective structure of a riemannian manifold.
+
+This exposition will be devoted to the following topics:
+
+1. Weil homomorphism;
+2. Bott's theorem on foliated manifolds;
+3. Secondary invariants (Chern-Simons);
+4. Vector fields and characteristic numbers (Bott-Baum-Cheeger);
+5. Holomorphic curves (Ahlfors-Weyl).
+
+\subsection*{2. Connections}
+We will develop the fundamental notions of a connection in a principal bundle with a Lie group as structure group. We begin by a review and an explanation of our notations on Lie groups. All manifolds and mappings are $C^{\infty}$.
+
+Let $G$ be a Lie group of dimension $r$. A left translation $L_a : G \to G$ is defined by $L_a : s \to as$, $a, s \in G$, a fixed. Let $e$ be the unit element of $G$ and $T_e$ the tangent space at $e$. A tangent vector $X_e \in T_e$ generates a left-invariant vector field given by $X_s = (L_s)^* X_e$. If $T_e^*$ is the cotangent space at $e$ and $w_e \in T_e^*$, we get a left-invariant one-form or Maurer-Cartan form $w_s$ by the definition
+
+\begin{equation}
+w_s = (L_s^{-1})^* w_e \quad \text{or} \quad L_s^* w_s = w_e. \tag{A.27}
+\end{equation}
+
+Let $w_e^{i}, 1 \leq i \leq r$, be a basis in $T_e^*$. Then $w_i^{i} = w_s^{i} \in T_s^*$ are everywhere linearly independent and we have
+
+\begin{equation}
+dw_i^{i} = \frac{1}{2} \int_{j,k} c_j^i x^{ij} dw^k, \quad c_j^i x + c_k^i x_j = 0, \quad 1 \leq i,j,k \leq r. \tag{A.28}
+\end{equation}
+
+It is easily proved that $c_j^i x$ are constants, the constants of structure of $G$. Equations (28) are known as the Maurer-Cartan structure equations.
+
+Let $X_i = (X_i)^s \in T_s$ be a dual basis to $w_i^i$. The $X_i$ are left-invariant vector fields or, what is the same, linear differential operators of the first order. Dual to (28) are the equations of Lie:
+
+\begin{equation}
+[X_j,X_i] = - \int_{K} c_j^k x^j dx. \tag{A.29}
+\end{equation}
+
+The tangent space $T_e$ has an algebra structure given by the bracket. It is called the Lie algebra of $G$ and will be denoted by $g$.
+
+For a fixed $a \in G$ the inner automorphism $s \to asa^{-1}$ leaves e fixed and induces a linear mapping
+
+\begin{equation}
+ad(a): g \to g, \tag{A.30}
+\end{equation}
+
+called the adjoint mapping. We have
+
+\begin{equation}
+ad(ab) = ad(a)ad(b),  a,b ∈ G \tag{A.31}
+\end{equation}
+
+\begin{equation}
+ad(a)[X,Y] = [ad(a)X, ad(a)Y],  X,Y ∈ g . \tag{A.32}
+\end{equation}
+
+The first relation is immediate and the second is easy to prove.
+
+Let M be a manifold. It will be desirable to consider $g$-valued exterior differential forms in M . As $g$ has an algebra structure, such forms can be multiplied. In fact, every $g$-valued form is a sum of terms $X ⊗ ω$, where $ω$ is an exterior differential form and $X ∈ g$. We define
+
+\begin{equation}
+[X ⊗ ω, Y ⊗ θ] = [X,Y] ⊗ (ω ∧ θ) . \tag{A.33}
+\end{equation}
+
+Distributivity in both factors then defines the multiplication of any two $g$-valued forms. Interchange of order of multiplication follows the rule
+
+\begin{equation}
+[X ⊗ ω, Y ⊗ θ] = (-1)^{rS+1} [Y ⊗ θ, X ⊗ ω] ,  
+    r = deg ω ,   s = deg θ . \tag{A.34}
+\end{equation}
+
+This notion allows us to write the Maurer-Cartan equations (28) in a simple form. The expression
+
+\begin{equation}
+ω = \int_{1}^{∞} (X_i) e^{iω} ω_{s}^{i} \tag{A.35}
+\end{equation}
+
+defines a left-invariant $g$-valued one-form in G , which is independent of the choice of the basis. It is the Maurer-Cartan form of G. Using (28) and (29) we have
+
+\begin{equation}
+dω = - \frac{1}{2} [ω,ω]. \tag{A.36}
+\end{equation}
+
+This writes the Maurer-Cartan equation in a basis-free form.
+
+Exterior differentiation of (36) gives the Jacobi identity:
+
+\begin{equation}
+[a,[ω,ω]] = 0. \tag{A.37}
+\end{equation}
+
+What we have discussed on left translations naturally holds also for right translations. In particular, we have a right-invariant one-form $α$ in $G$. Under the mappings $s + s^{-1}$, $s ∈ G$, $ω$ goes into $-α$. We derive therefore from (36)
+
+\begin{equation}
+da = \frac{1}{2}[a,a]. \tag{A.38}
+\end{equation}
+
+If we denote by $ds$ the identity endomorphism in $T_g$ and consider it as an element of $T_g ⊗ T_g^*$, then we can write
+
+\begin{equation}
+ω = (L_{s-1})_*ds = s^{-1}ds, \tag{A.39}
+\end{equation}
+
+where $(L_{s-1})_*$ acts only on the first factor $T_g$ in the tensor product $T_g ⊗ T_g^*$; the last expression is a convenient abbreviation. In the same way we can write $α = dss^{-1}$.
+
+Example. $G = GL(q_jR)$. We can regard it as the group of all nonsingular (q×q)-matrices $X$ with real elements. Then $g$ is the space of all (q×q)-matrices, and $ω = X^{-1}dX$. Thus the notation in (39) has in this case a concrete meaning. The Maurer-Cartan equation is
+
+\begin{equation}
+du = -ω ∧ ω. \tag{A.40}
+\end{equation}
+
+A principal fiber bundle with a group $G$ is a mapping
+
+\begin{equation}
+π: P → M, \tag{A.41}
+\end{equation}
+
+which satisfies the following conditions:
+
+1. $G$ acts freely on $P$ to the left, i.e., there is an action $G × P → P$ given by $(a,z) + az = L_a z ∈ P$, $a ∈ G$, $z ∈ P$, such that $az ≠ z$ when $a ≠ e$;
+
+2. $M = P/G$;
+
+3. P is locally trivial, i.e., there is an open covering (U,V,...) of M such that to each member U of the covering there is a chart $\psi_{U}: \pi^{-1}(U) \rightarrow U \times G$, with $\psi_{U}(z) = (\pi(z) = x,s_{U}(z))$, $z \in \pi^{-1}(U)$, satisfying
+\begin{equation}
+s_{U}(az) = as_{U}(z), \quad z \in \pi^{-1}(U), \quad a \in G. \tag{A.42}
+\end{equation}
+
+Suppose $z \in \pi^{-1}(U \cap V)$. By (42) we have also
+\begin{equation}
+s_{V}(az) = as_{V}(z), \tag{A.42a}
+\end{equation}
+so that
+\begin{equation}
+s_{U}(az)^{-1}s_{V}(az) = s_{U}(z)^{-1}s_{V}(z) \tag{A.42b}
+\end{equation}
+is independent of a and depends only on $x = \pi(z)$. We put
+\begin{equation}
+s_{U}(z)^{-1}s_{V}(z) = g_{UV}(x) \tag{A.42c}
+\end{equation}
+or
+\begin{equation}
+s_{U}g_{UV} = s_{V}. \tag{A.43}
+\end{equation}
+
+The $g_{UV}$ are mappings of $U \cap V$ into $G$ and satisfy the relations
+\begin{equation}
+g_{UV}g_{VU} = e \quad \text{in} \quad U \cap V, \tag{A.43a}
+\end{equation}
+\begin{equation}
+g_{UV}g_{VW}g_{WU} = e \quad \text{in} \quad U \cap V \cap W. \tag{A.43b}
+\end{equation}
+
+They are called the transition functions of the bundle. It is well-known that the bundle, the principal bundle or any of its associated bundles, can be constructed from the transition functions.
+
+The bundle structure in P defines in each tangent space $T_z$ a subspace $G_z = \pi^{-1}_k(0)$, called the vertical space. By (43) each fiber of P is the group manifold $G$ defined up to right translations. It is thus meaningful to talk about $g$-valued forms in P which restrict to the right-invariant form $ds_{U}s_{U}^{-1}$ on a fiber.
+
+We will give three definitions of a connection, which are all equivalent:
+
+First definition of a connection. A \textit{connection} is a C*-family of subspaces $H_z$ (the horizontal spaces) in $T_z$ satisfying the conditions:
+1. $T_z = G_z + H_z$, $G_z \cap H_z = 0$;
+2. $H_{az} = (L_a)_*H_z$.
+
+The second condition means that the family of horizontal spaces is invariant under the action of the group $G$.
+
+Second definition of a connection. This is the dual of the first definition, by giving instead of $H_z \in T_z$ its annihilator $V^*_z$ in the cotangent space $T^*_z$. This in turn is equivalent to giving a $g$-valued one-form $\phi$ in $P$ which restricts to $ds_uS_u^{-1}$ on a fiber, i.e., locally
+\begin{equation}
+\phi(z) = ds_uS_u^{-1} + \theta_u(x,s_u,dx) \tag{A.44}
+\end{equation}
+such that
+\begin{equation}
+\phi(az) = ad(a)\phi(z) \tag{A.45}
+\end{equation}
+
+The last condition is equivalent to condition (2) in the first definition. It implies that locally
+\begin{equation}
+\phi(z) = ds_uS_u^{-1} + ad(s_u)\theta_u(x,dx) \tag{A.46}
+\end{equation}
+where $\theta_u(x,dx)$ is a $g$-valued one-form in $U$. Thus the second definition of a connection is the existence of a $g$-valued one-form in $P$, which has the local expression (46).
+
+Third definition of a connection. When we express the condition that in $\pi^{-1}(U \cap V)$ the right-hand side of (46) is equal to the corresponding expression with the subscript $V$, we get
+\begin{equation}
+\theta_u = dg_{UV}g_{UV}^{-1} + ad(g_{UV})\theta_V \quad \text{in } U \cap V, \tag{A.47}
+\end{equation}
+where the first term at the right-hand side is the pull-back of the right-invariant form in $G$ under $g_{UV}$. Hence a connection in $P$ is given by a $g$-valued one-form $\theta_u$ in every member $U$ of an open covering $\{U,V,\ldots\}$ of $M$, such that in $U \cap V$ the equation (47) holds. This is essentially the classical definition of a connection.
+
+We wish to take the exterior derivative of (46). For this purpose we need the following lemma, which is easily proved (and the proof is omitted here):
+
+\begin{equation}
+\text{Lemma. Let } \theta \text{ be a } g\text{-valued one-form in } U . \text{ Let } s \in G \tag{A.47a}
+\end{equation}
+
+\begin{equation}
+\text{and let } \alpha = \text{dss}^{-1} \text{ be the right-invariant } g\text{-valued one-form in } G. \tag{A.47b}
+\end{equation}
+
+Then, in $U \times G$, we have
+
+\begin{equation}
+d(\text{ad}(s)\theta) = ad(s)d\theta + [ad(s)\theta,\alpha] . \tag{A.48}
+\end{equation}
+
+We put
+
+\begin{equation}
+\theta_{U} = d\theta_{U} - \frac{1}{2}[\theta_{U},\theta_{U}] , \tag{A.49}
+\end{equation}
+
+\begin{equation}
+\phi = d\phi - \frac{1}{2}[\phi,\phi] . \tag{A.50}
+\end{equation}
+
+Applying the lemma we get by exterior differentiation of (46),
+
+\begin{equation}
+\phi = ad(s_{U})\theta_{U} . \tag{A.51}
+\end{equation}
+
+Thus $\phi$ is a $g$-valued two-form in $P$,which has the local expression (51). Alternately, we have, in $U \cap V$ ,
+
+\begin{equation}
+\theta_{U} = ad(g_{UV})\theta_{V} . \tag{A.52}
+\end{equation}
+
+Either $\phi$ or $\theta_{U}$ will be called the curvature form of the connection.
+
+Exterior differentiation of (50) gives the Bianchi Identity:
+
+\begin{equation}
+d\phi = -[\phi,\phi] = [\phi,\phi] . \tag{A.53}
+\end{equation}
+
+One of the most important cases of this general theory is when $G = GL(q;R)$. As discussed above, $s_{U}$ is now a nonsingular $(qxq)$-matrix, $\theta_{U}$, $\phi$ are matrices of one-forms, and $\theta_{U}$, $\phi$ are matrices of two forms. Equation (46) becomes a matrix equation
+
+\begin{equation}
+\phi = (ds_{U} + s_{U}\theta_{U})s_{U}^{-1} . \tag{A.54}
+\end{equation}
+
+Let $\sigma_{U}$ (resp. $\sigma_{V}$) be the one-rowed matrix formed by the first row of $s_{ij}$ (resp. $s_{ij}$). Then (43) gives, by taking the first rows of both sides,
+
+\begin{equation}
+\sigma_{ij} g_{ij} = \sigma_{ij} \tag{A.55}
+\end{equation}
+
+This is the equation for the change of chart of the associated vector bundle $E$, defined as the bundle of the first row vectors of the matrices representing the elements of $GL(q;R)$. Moreover, equating the right-hand side of (54) with the corresponding expression with the subscript $V$, we get
+
+\begin{equation}
+(ds_{ij} + s_{ij} \theta_{ij}) g_{ij} = ds_{ij} + s_{ij} \theta_{ij} \tag{A.56}
+\end{equation}
+
+On taking the first rows of both sides of (56), we have
+
+\begin{equation}
+D \sigma_{ij} g_{ij} = D \sigma_{ij} \tag{A.57}
+\end{equation}
+
+where we put
+
+\begin{equation}
+D \sigma_{ij} = d \sigma_{ij} + \sigma_{ij} \theta_{ij} \tag{A.58}
+\end{equation}
+
+Applying to a section of $E$, we can identify this with the operator $D$ in (14). Thus we have shown that the connection in a vector bundle defined in §1 is included as a special case of our general theory.
+
+Another important case is the bundle (4) discussed in §1, which is a principal bundle with the group $O(q)$. This bundle plays a fundamental role in the study of submanifolds in euclidean space. As remarked above, its importance in bundle theory arises from the fact that it is a universal bundle when $N$ is large. We will describe a canonical connection in it. Let $E^{q+N}$ be the euclidean space of dimension $q + N$. Let
+
+\begin{equation}
+e_A = (e_{A_1}, \ldots, e_{A_q + N}), \quad 1 \leq A,B,C \leq q + N, \tag{A.59}
+\end{equation}
+
+be an orthonormal frame, so that the matrix
+
+\begin{equation}
+X = (e_{AB}) \tag{A.59a}
+\end{equation}
+
+is orthogonal. 0(q+N) can be identified with the space of all orthonormal frames $e_A$ (or all orthogonal matrices X). Let
+\begin{equation}
+de_A = \int_B a_{AB}e_B \tag{A.60}
+\end{equation}
+Then, if $a = (a_{AB})$, we have
+\begin{equation}
+a = dXX^{-1} = -t_a \tag{A.61}
+\end{equation}
+
+The Stiefel manifold 0(q+N)/0(N) can be identified with the manifold of all orthonormal frames $e_1,\ldots,e_q$ and the Grassmann manifold 0(q+N)/0(q) × 0(N) with the q-planes spanned by $e_1,\ldots,e_q$. The matrix
+\begin{equation}
+a = (a_{ij}), \quad 1 \leq i,j \leq q \tag{A.62}
+\end{equation}
+
+defines a connection in the bundle (4), as easily verified.
+
+\subsection*{3. Weil Homomorphism}
+
+The local expression (51) of the curvature form $\Phi$ prompts us to introduce functions $F(X_1,\ldots,X_h)$, $X_i \in g$, $1 \leq i \leq h$, which are real or complex valued and satisfy the conditions:
+1. $F$ is h-linear and remains unchanged under any permutation of its arguments;
+2. $F$ is "invariant," i.e.,
+\begin{equation}
+f(ad(a)X_1,\ldots,ad(a)X_h) = F(X_1,\ldots,X_h), \quad all  a \in G \tag{A.63}
+\end{equation}
+
+To the h-linear function $F(X_1,\ldots,X_h)$ there corresponds the polynomial
+\begin{equation}
+F(X) = F(X,\ldots,X), \quad X \in g \tag{A.64}
+\end{equation}
+
+of which $F(X_1,\ldots,X_h)$ is the complete polarization. We will call $F(X)$ an invariant polynomial. All invariant polynomials under $G$ form a ring, to be denoted by I(G).
+
+The invariance condition (63) implies its "infinitesimal form"
+
+\begin{equation}
+\int_{1 \leq i \leq h} F(X_1, \ldots, [Y,X_i], \ldots, X_h) = 0 \quad Y,X_i \in g. \tag{A.65}
+\end{equation}
+
+More generally, if $Y$ is a $g$-valued one-form and $X_i$ is a $g$-valued form of degree $m_i$, $1 \leq i \leq h$, we have
+
+\begin{equation}
+\int_{1 \leq i \leq h} (-1)^{m_i + \cdots + m_i - 1} F(X_1, \ldots, [Y,X_i], \ldots, X_h) = 0. \tag{A.66}
+\end{equation}
+
+It follows from (51) that if $F$ is an invariant polynomial of degree $h$, we have the form of degree $2h$:
+
+\begin{equation}
+F(\phi) = F(\theta_u). \tag{A.67}
+\end{equation}
+
+The left-hand side shows that it is globally defined in $P$, while the right-hand side shows that it is a form in $M$. Moreover, by the Bianchi identity (53) and by (66), we have
+
+\begin{equation}
+\frac{1}{h} df(\phi) = F([\phi,\phi],\phi,\ldots,\phi) = 0. \tag{A.68}
+\end{equation}
+
+Hence $F(\phi)$ is closed and its cohomology class $[F(\phi)]$ is an element of $H^{2h}(M,R)$. We shall prove that this class depends only on $F$ and is independent of the choice of the connection.
+
+\begin{equation}
+\text{Lemma 3.1.} \quad Let \quad \phi_0, \phi_1 \quad be \quad g-valued \quad one-forms \quad and \quad let \tag{A.68a}
+\end{equation}
+
+\begin{equation}
+F \in I(G) \quad be \quad an \quad invariant \quad polynomial \quad of \quad degree \quad h. \quad Let \tag{A.68b}
+\end{equation}
+
+\begin{equation}
+\phi_t = \phi_0 + ta, \quad a = \phi_1 - \phi_0, \tag{A.68c}
+\end{equation}
+
+\begin{equation}
+\phi_t = d\phi_t - \frac{1}{2} [\phi_t,\phi_t]. \tag{A.69}
+\end{equation}
+
+Then
+
+\begin{equation}
+F(\phi_1) - F(\phi_0) = hd \int_0^1 F(a,\phi_t,\ldots,\phi_t)dt. \tag{A.70}
+\end{equation}
+
+To prove the lemma we first find
+
+\begin{equation}
+\phi_t = \phi_0 + t(aa - [\phi_0,a]) - \frac{1}{2} t^2[a,a]. \tag{A.70a}
+\end{equation}
+
+Therefore we have
+
+\begin{equation}
+\frac{1}{h} \frac{d}{dt} F(\phi_t) = F(aa - [\phi_t,a], \phi_t,\ldots,\phi_t). \tag{A.70b}
+\end{equation}
+
+On the other hand,
+
+\begin{equation}
+dF(a, \phi_t, \ldots, \phi_t) = F(da, \phi_t, \ldots, \phi_t) - (h-1)F(a,[\phi_t, \phi_t], \phi_t, \ldots, \phi_t). \tag{A.70c}
+\end{equation}
+
+The invariance of $F$ implies, by (66),
+
+\begin{equation}
+F([\phi_t, a], \phi_t, \ldots, \phi_t) - (h-1)F(a,[\phi_t, \phi_t], \phi_t, \ldots, \phi_t) = 0. \tag{A.70d}
+\end{equation}
+
+It follows that
+
+\begin{equation}
+\frac{1}{h} \frac{d}{dt} F(\phi_t) = dF(a, \phi_t, \ldots, \phi_t), \tag{A.71}
+\end{equation}
+
+and the lemma follows by integrating this equation with respect to $t$.
+
+Corollary 3.1. Let $\phi_0, \phi_1$ be two connections in the bundle $\pi: P \to M$ and let $F \in I(G)$. Then $F(\phi_0)$ and $F(\phi_1)$, as closed forms in $M$, are cohomologous in $M$.
+
+Corollary 3.2. Let $\phi$ be a connection in the bundle $\pi: P \to M$ and let $F \in I(G)$. Then $F(\phi)$ is a coboundary in $P$. More precisely, let
+
+\begin{equation}
+\phi_t = t d\phi - \frac{1}{2} t^2 [\phi,\phi] = t\phi + \frac{1}{2}(t-t^2)[\phi,\phi]. \tag{A.72}
+\end{equation}
+
+Then
+
+\begin{equation}
+F(\phi) = hd \int_{0}^{1} F(\phi, \phi_t, \ldots, \phi_t) dt. \tag{A.73}
+\end{equation}
+
+By putting
+
+\begin{equation}
+w(F) = [F(\phi)], \quad F \in I(G), \tag{A.74}
+\end{equation}
+
+where the right-hand side denotes the cohomology class represented by the closed form $F(\phi)$, we have defined a mapping
+
+\begin{equation}
+w: I(G) \to H^*(M; R). \tag{A.75}
+\end{equation}
+
+It is clearly a ring homomorphism and is called the Weil homomorphism.
+
+In the case that $G$ is a compact connected Lie group, the Weil homomorphism has a simple geometric interpretation, which we will
+
+G-bundle over a compact manifold $M$ and $\phi$ a connection in $P$.
+
+Then the ring $I(G)$ of invariant polynomials is generated by elements $F_1, \ldots, F_p$ and the de Rham ring of $P$ can be given as the quotient ring
+
+\begin{equation}
+H^*(P,R) = A/dA, \tag{A.80}
+\end{equation}
+
+where
+
+\begin{equation}
+A = 0(TF_1(\phi), \ldots, TF_p(\phi)) \tag{A.81}
+\end{equation}
+
+is the ring of polynomials in $TF_1(\phi), \ldots, TF_p(\phi)$ with coefficients which are forms in $M$.
+
+For geometrical applications we will describe in detail the Weil homomorphism for some of the classical groups [24]:
+
+1. $G = GL(q;C) = \{X|det X \neq 0\}$, where $X$ is a (qxq)-matrix with complex elements. The coefficients $F_i(X)$, $1 \leq i \leq q$, in the polynomial in $t$:
+
+\begin{equation}
+det\left(tT_q + \frac{i}{2\pi} X\right) = t^q + F_1(X)t^{q-1} + \ldots + F_q(X), \tag{A.82}
+\end{equation}
+
+where $T_q$ is the (qxq)-unit matrix, are invariant polynomials.
+
+Suppose $\pi: E \to M$ be a complex vector bundle and $\phi$ be a connection, with the curvature form $\phi$, so that $\phi$ is a matrix of two-forms. Then we have
+
+\begin{equation}
+F_i(\phi) = c_i(E) \in H^{2i}(M,Z). \tag{A.83}
+\end{equation}
+
+Notice that the coefficients are here so chosen that the corresponding classes have integer coefficients.
+
+By the above Corollary 3.1 it suffices to establish this result in the classifying space $B_g = G(q,N;C)$ (N sufficiently large), with its connection defined in a similar way as the one in §2 for the real Grassmann manifold. In other words it is sufficient to consider the universal bundle with its universal connection. The same remark applies in the identification in the next two cases.
+
+2. $G = GL(q;R) = \{X|det X \neq 0\}$, where $X$ is a (qxq)-matrix with real elements. We put
+
+\begin{equation}
+\text{det} \left[ tI_q - \frac{1}{2\pi} X \right] = t^q + E_1(X)t^{q-1} + \ldots + E_q(X). \tag{A.84}
+\end{equation}
+
+Let $\pi: E \rightarrow M$ be a real vector bundle and $\phi$ be a connection, with the curvature form $\phi$. Then $\{E_{2k+1}(\phi)\} = 0$ and
+
+\begin{equation}
+\{E_{2k}(\phi)\} = p_k(E) \in H^{4k}(M,Z) \tag{A.85}
+\end{equation}
+
+is the kth Pontrjagin class of E.
+
+3. $G = S0(2r)$. A representative of the Euler class was given by formula (26), §1.
+
+As an application of the representation of characteristic classes by curvature forms we will prove a theorem of Bott on foliations [10].
+
+Let $M$ be a manifold of dimension $n$ and $TM$ its tangent bundle. Suppose that $TM$ has a k-dimensional subbundle $W$, i.e., a smooth family of k-dimensional subspaces $W_x \subset T_x$, $x \in M$, where $T_x$ is the tangent space of $M$ at $x$. To $W_x$ corresponds the annihilator $W_x^\perp$ of dimension $n-k$ in the cotangent space $T_x^*$ at $x$. The subbundle $W$ is called \textit{integrable}, if there exist local coordinates $x^a$, $x^{\lambda}$, $1 \leq a \leq k$, $k + 1 \leq \lambda \leq n$, such that $W_x^\perp$ is spanned by $dx^{\lambda}$. In other words, the $W_x$ are tangent to the submanifolds of dimension $k$ defined by $x^{\lambda} = \text{const}$. An integrable subbundle is called a \textit{foliation}. The local coordinates with the above properties are defined up to a transformation
+
+\begin{equation}
+x^a = x^a(x^{l\beta}, x^{l\mu}), \quad x^{\lambda} = x^{\lambda}(x^{l\mu}), \quad 1 \leq a, \beta \leq k, \quad k + 1 \leq \lambda, \mu \leq n, \tag{A.86}
+\end{equation}
+
+where the last $n - k$ coordinates transform among themselves. As a consequence the quotient bundle $TM/W$ has as transition functions the Jacobian matrices $(3x^\lambda / 3x^{14})$.
+
+From the existence of the foliation on M we have an ideal F in the ring of exterior differential polynomials, which is generated by $dx^\lambda$. F is stable under d, i.e., $a \in F$ implies $da \in F$. Moreover, the product of any n - k + 1 elements of F is zero.
+
+From (47) we see by a stepwise extension argument that TM/W has a connection whose connection forms belong to F. By (49) its curvature forms also belong to F. It follows that if F is an invariant polynomial of degree h > n - k, the form $F(\phi) = 0$. Hence every Pontrjagin class, being a polynomial of the Pontrjagin classes defined in §1, of the bundle TM/W is zero, if its dimension is >2(n-k). We state this theorem of Bott as follows:
+
+Let M be a compact manifold of dimension n, which has a foliation W of dimension k. Then every Pontrjagin class (with real coefficients) of dimension >2(n-k) of the quotient bundle TM/W is zero.
+
+The theorem is remarkable because the integrability of W involves differential conditions, so that it cannot be proved by standard methods in fiber bundles. The necessary condition asserted in the theorem is not vacuous. For example, there are real codimension two subbundles in the complex projective space $P_5(C)$ of complex dimension 5, which do not satisfy the above condition.
+
+\subsection*{4. Secondary Invariants$^1$}
+
+When the characteristic classes are given representatives by differential forms, the vanishing of the forms leads to further invariants which deserve investigation. We follow the notations of the last section and consider the formula (79). If $F(\phi) = 0$,
+
+$^1$The results in this section are taken from joint work with James Simons, cf. [18].
+
+We have therefore
+\begin{equation}
+dF(\psi, \phi(\tau), d\phi(\tau) - \frac{1}{2} t[\phi(\tau), \phi(\tau)]) \tag{A.87}
+\end{equation}
+\begin{equation}
+= F(d\psi - t([\phi(\tau), \psi], \phi(\tau), d\phi(\tau) - \frac{1}{2} t[\phi(\tau), \phi(\tau)]) \tag{A.87a}
+\end{equation}
+\begin{equation}
+- F(\psi, d\phi(\tau)-t[\phi(\tau), \phi(\tau)], d\phi(\tau) - \frac{1}{2} t[\phi(\tau), \phi(\tau)]). \tag{A.87b}
+\end{equation}
+
+On the other hand, we have
+\begin{equation}
+h^{-1} \frac{\partial}{\partial\tau} TF(\phi(\tau)) \tag{A.88}
+\end{equation}
+\begin{equation}
+= \int_{0}^{1} t^{h-1}F(\psi, d\phi(\tau) - \frac{1}{2} t[\phi(\tau), \phi(\tau)]dt \tag{A.88a}
+\end{equation}
+\begin{equation}
++ (h-1) \int_{0}^{1} t^{h-1}F(\phi(\tau), d\psi - t[\phi(\tau), \psi], d\phi(\tau) - \frac{1}{2} t[\phi(\tau), \phi(\tau)]dt. \tag{A.88b}
+\end{equation}
+
+It follows that
+\begin{equation}
+h^{-1} \frac{\partial}{\partial\tau} TF(\phi(\tau)) - (h-1)dV(\tau) \tag{A.89}
+\end{equation}
+\begin{equation}
+= h \int_{0}^{1} t^{h-1}F\left[ \psi, d\phi(\tau) - \frac{2h-1}{2h} t[\phi(\tau), \phi(\tau)], d\phi(\tau) - \frac{1}{2} t[\phi(\tau), \phi(\tau)] \right] dt. \tag{A.89a}
+\end{equation}
+
+To simplify the last integral we introduce the curvature form
+\begin{equation}
+\phi(\tau) = d\phi(\tau) - \frac{1}{2} [\phi(\tau), \phi(\tau)] \tag{A.90}
+\end{equation}
+
+of the connection $\phi(\tau)$ . Putting
+\begin{equation}
+a = \frac{2h-1}{h}, \tag{A.90a}
+\end{equation}
+the integrand above, up to the factor $t^{h-1}$, can be expanded:
+
+\begin{equation}
+F(\psi, \partial \phi (\tau) - \frac{1}{2} \text{at} [\phi (\tau), \phi (\tau)], \partial \phi (\tau) - \frac{1}{2} \text{t} [\phi (\tau), \phi (\tau)] ) \tag{A.91}
+\end{equation}
+\begin{equation}
+= F(\psi, \phi (\tau) + \frac{1}{2} (1-\text{at}) [\phi (\tau), \phi (\tau)], \phi (\tau) + \frac{1}{2} (1-\text{t}) [\phi (\tau), \phi (\tau)] ) \tag{A.91a}
+\end{equation}
+\begin{equation}
+= F(\psi, \phi (\tau)) \tag{A.91b}
+\end{equation}
+\begin{equation}
++ \sum_{1 \leq r \leq h-1} c_r(t)F(\psi, \phi (\tau), \ldots, \phi (\tau), \frac{1}{2} [\phi (\tau), \phi (\tau)], \ldots, \frac{1}{2} [\phi (\tau), \phi (\tau)] ) \tag{A.91c}
+\end{equation}
+
+where
+\begin{equation}
+c_r(t) = 
+\begin{pmatrix}
+h-2 \\
+r
+\end{pmatrix}(1-t)^r + 
+\begin{pmatrix}
+h-2 \\
+r-1
+\end{pmatrix}(1-t)^{r-1}(1-at) . \tag{A.92}
+\end{equation}
+
+From elementary calculus we know
+\begin{equation}
+\int_0^1 t^m(1-t)^n dt = \frac{m!n!}{(m+n+1)!}, \quad m \geq 0, n \geq 0 . \tag{A.93}
+\end{equation}
+
+Using this it is immediately verified that
+\begin{equation}
+\int_0^1 t^{h-1}c_r(t)dt = 0, \quad 1 \leq r \leq h-1 . \tag{A.94}
+\end{equation}
+
+This proves the lemma.
+
+From the lemma follows immediately the theorem:
+
+Theorem 4.1. Let $\pi: P \rightarrow M$ be a principal bundle with the group $G$, and let $F \in I(G)$ be an invariant polynomial. Let $\phi(\tau)$ be a family of commuations, with the curvature form $\phi(\tau)$, which satisfy the conditions
+
+\begin{equation}
+F(\partial \phi(\tau)/\partial \tau, \phi(\tau), \ldots, \phi(\tau)) = 0 , \tag{A.95}
+\end{equation}
+
+\begin{equation}
+F(\phi(\tau), \ldots, \phi(\tau)) = 0 . \tag{A.96}
+\end{equation}
+
+Then the cohomology class $\{TF(\phi(\tau))\}$ is independent of $\tau$.
+
+As $h$ is the degree of $F$, the conditions (91) are automatically satisfied when $2h > dim M + 1$.
+
+Equivalently the conditions (91) can be written in terms of a local chart. By (46) and using the fact that $F$ is an invariant polynomial, we can write (91) as
+
+\begin{equation}
+F(\partial \theta_{ij}(\tau)/\partial \tau,\theta_{ij}(\tau),\ldots,\theta_{ij}(\tau)) = 0 , \tag{A.97}
+\end{equation}
+
+\begin{equation}
+F(\theta_{ij}(\tau),\ldots,\theta_{ij}(\tau)) = 0 . \tag{A.98}
+\end{equation}
+
+We now apply these results to the principal bundle of the tangent bundle of a manifold $M$ of dimension $n$, so that the structure group is $G = GL(n;R)$. The connection will be the Levi-Civita connection of a riemannian metric in $M$ and it will have special properties. We use a local chart with the coordinates $x^{i}$, $1 \leq i,j,k$, $2 \leq n$, and we will omit the subscript $U$ in our notations. The riemannian metric is given by the scalar products
+
+\begin{equation}
+h_{ij} = h_{ji} = \left[ \frac{\partial}{\partial x^{i}} , \frac{\partial}{\partial x^{j}} \right], \tag{A.99}
+\end{equation}
+
+which are the elements of a positive definite symmetric matrix:
+
+\begin{equation}
+H = t_{H} = (h_{ij}) > 0 . \tag{A.100}
+\end{equation}
+
+Let the connection matrix be
+
+\begin{equation}
+\theta = (\theta_{1}^{j}), \quad \theta_{1}^{j} = \sum_{k} r_{ik}^{j} dx^{k}. \tag{A.101}
+\end{equation}
+
+It is determined by the conditions
+
+\begin{equation}
+dH - \theta H - H^{t}\theta = 0 , \quad r_{ik}^{j} = r_{ki}^{j}. \tag{A.102}
+\end{equation}
+
+The curvature form is given by
+
+\begin{equation}
+\theta = d\theta - \theta \wedge \theta. \tag{A.103}
+\end{equation}
+
+Exterior differentiation of (96) gives
+
+\begin{equation}
+\theta H + H^{t}\theta = 0 , \tag{A.104}
+\end{equation}
+
+i.e., the matrix $\theta H$ is anti-symmetric.
+
+Lemma 4.2. Let $F$ be an invariant polynomial of odd degree $h$, and $\Theta$ the curvature matrix of the Levi-Civita connection of a riemannian metric. Then
+
+\begin{equation}
+F(\Theta) = 0. \tag{A.105}
+\end{equation}
+
+To prove this, notice that $F$ clearly has the property:
+
+\begin{equation}
+F(\Theta) = F(t_0). \tag{A.106}
+\end{equation}
+
+By (98) this is equal to
+
+\begin{equation}
+F(-H^{-1}\Theta H) = (-1)^h F(\Theta). \tag{A.107}
+\end{equation}
+
+Hence we have (99) when $h$ is odd.
+
+We write
+
+\begin{equation}
+\Theta = (\Theta_i^j), \tag{A.108}
+\end{equation}
+
+where we set
+
+\begin{equation}
+\Theta_i^j = -\frac{1}{2} \sum_{k,l} R_{ikl}^j dx^k \wedge dx^l, \quad R_{ikl}^j + R_{ikk}^j = 0. \tag{A.109}
+\end{equation}
+
+The $R_{ikl}^j$ define the Riemann curvature tensor and satisfy the symmetry relations
+
+\begin{equation}
+R_{ikl}^j + R_{ikk}^j = 0, \tag{A.110}
+\end{equation}
+
+\begin{equation}
+R_{ikl}^j + R_{ikl}^j + R_{ikk}^j = 0. \tag{A.111}
+\end{equation}
+
+The last relation can also be written,
+
+\begin{equation}
+\sum_{i} dx^i \wedge \Theta_i^j = 0. \tag{A.112}
+\end{equation}
+
+We will consider the case of a conformal family of riemannian metrics, given by the matrix $H(\tau) = \exp(2\sigma\tau)H$, where $\sigma$ is a scalar function and $\tau$ is the parameter. Then we have ([20], p. 89) the matrix equation
+
+\begin{equation}
+\frac{1}{\tau} (0(\tau) - 0(0)) = d\sigma I + \alpha + \beta , \tag{A.113}
+\end{equation}
+
+where $I$ is the unit matrix and 
+
+\begin{equation}
+\alpha = \left[ \frac{\partial \sigma}{\partial x^I} dx^j \right], \quad \beta = -\left( \int_{K} h_{jk} dx^k \int_{\hat{k}} \frac{\partial \sigma}{\partial x^k} h^{jk} \right) \tag{A.114}
+\end{equation}
+
+\begin{equation}
+H^{-1} = (h^{\frac{1}{2}}) . \tag{A.115}
+\end{equation}
+
+Lemma 4.3. Let $F$ be an invariant polynomial of even degree 2s. For the Levi-Civita connections of a conformal family of riemannian metrics we have
+
+\begin{equation}
+F \left( \frac{\partial \theta (\tau)}{\partial \tau}, 0(\tau) \right) = 0 . \tag{A.116}
+\end{equation}
+
+In fact, the left-hand side of this equation is equal to
+
+\begin{equation}
+d\sigma F(I,0(\tau)) + F(\alpha,0(\tau)) + F(\beta,0(\tau)) . \tag{A.117}
+\end{equation}
+
+By Lemma 4.2 the first term is zero. By the fundamental theorem on vector invariants every term in $F(\alpha,0(\tau))$ contains a factor $\Sigma dx^j \wedge \theta_j^i(\tau)$, which is zero by (104). Similarly, every term in $F(\beta,0(\tau))$ contains a factor $\Sigma_{j,k} h_{jk} dx^k \wedge \theta_j^i(\tau)$, which is also seen to be zero. Thus the lemma is proved.
+
+This lemma, together with the formula (88), gives the theorem:
+
+Theorem 4.2. Let $\pi: P \rightarrow M$ be the principal bundle of the tangent bundle of a manifold $M$ of dimension $n$. Let $F \in I(GL(n;R))$ be an invariant polynomial of degree 2s. Let $\phi$ and $\phi^*$ be the connection forms of the Levi-Civita connections of two riemannian metrics on $M$, which are conformal to each other. Then there exists a form $W$ of degree $4s-2$ in $P$, such that
+
+\begin{equation}
+TF(\phi^*) - TF(\phi) = dW . \tag{A.118}
+\end{equation}
+
+Corollary 4.1. The form $F(\phi)$ remains invariant under a conformal transformation of the riemannian metric.
+
+More precisely, A. Avez ([3]) expressed $F(\phi)$ in terms of the Weyl conformal tensor of the riemannian metric.
+
+Corollary 4.2. If $F(\phi) = 0$, then $TF(\phi)$ defines an element $\{TF(\phi)\} \in H^{HS-1}(P,R)$, which depends only on the underlying conformal structure of the riemannian manifold $M$.
+
+In exactly the same way one can establish results concerning a projective transformation of the riemannian metric, i.e., a change of the riemannian metric which leaves the geodesics invariant. Such a change is described by a form $\lambda = \Sigma_{\frac{1}{2}} a_{\frac{1}{2}}(x) dx^{\frac{1}{2}}$ and the connection forms are related by ([20], p. 132)
+
+\begin{equation}
+\theta^* - \theta = \lambda I + \alpha , \tag{A.119}
+\end{equation}
+
+where
+
+\begin{equation}
+\alpha = (a_{\frac{1}{2}} dx^{\frac{1}{2}} ) . \tag{A.120}
+\end{equation}
+
+The connections $\theta$ and $\theta^*$ can be joined by the family $\theta(\tau)$, $0 \leq \tau \leq 1$, given by
+
+\begin{equation}
+\frac{1}{\tau} (\theta(\tau) - \theta) = \lambda I + \alpha . \tag{A.121}
+\end{equation}
+
+The above arguments apply and we conclude that $F(\phi)$ is a projective invariant and that, if $F(\phi) = 0$, the cohomology class $\{TF(\phi)\}$ in $P$ is also a projective invariant.
+
+In order to utilize our secondary invariants we look for cases where $F(\phi) = 0$. One is the situation which occurs in Bott's theorem on foliations discussed above. Recently this has given rise to an active development in the works of Bott, Haefliger, etc. [35].
+
+Another case concerns with immersed submanifolds $M$ in the euclidean space $E^N$ of dimension $N = n + h$, which we will discuss in some detail. The basic fact is the commutative diagram
+
+\begin{equation}
+P \overset{\sim}{=} 0(n+h)/0(h) \tag{A.122}
+\end{equation}
+
+\begin{equation}
+M = 0(n+h)/0(n) \times 0(h). \tag{A.123}
+\end{equation}
+
+Here $P$ is the bundle of orthonormal frames over $M$ and $g$ and $\tilde{g}$ are the Gauss mappings defined by parallelisms in the ambient Euclidean space. The bundle at the right-hand side of the diagram has a canonical connection described at the end of §2. We denote its connection and curvature forms by $\tilde{\phi}$ and $\tilde{\Phi}$ respectively; they are therefore anti-symmetric matrices of forms. Then the Levi-Civita connection is given by $\phi = \tilde{g}^\alpha \tilde{\phi}$ and its curvature form is $\phi = \tilde{g}^\alpha \tilde{\Phi}$. In fact, this was the original definition of Levi-Civita of his connection, generalizing a classical construction for surfaces in $E^3$.
+
+We put
+
+\begin{equation}
+P_k(\phi) = E_{2k}(\phi), \tag{A.124}
+\end{equation}
+
+where the latter are defined in (84); these will be called the Pontrjagin forms. The dual Pontrjagin forms are introduced by the equation
+
+\begin{equation}
+\sum_{k\geq 0} P_k(\phi) \sum_{j\geq 0} P_j^l(\phi) = 1, \quad P_0 = P_0^l = 1, \tag{A.125}
+\end{equation}
+
+and are uniquely determined. By the duality theorem on Pontrjagin classes, the cohomology classes $\{P_j^l(\phi)\} \in H^{H^1}(M,R)$ are the Pontrjagin classes of the normal bundle of $M$ in $E^N$. Since the normal bundle has fiber dimension $h$, we have
+
+\begin{equation}
+\{P_j^l(\phi)\} = 0, \quad \left[ \frac{h}{2} \right] + 1 \leq j. \tag{A.126}
+\end{equation}
+
+We will show that the forms $P_j^l(\phi)$ themselves are zero. In fact, we have
+
+\begin{equation}
+\{P_j^l(\tilde{\phi})\} = 0. \quad \left[ \frac{h}{2} \right] + 1 \leq j. \tag{A.127}
+\end{equation}
+
+But the Grassmann manifold is a symmetric riemannian manifold and the form $P_j^l(\tilde{\phi})$ is invariant under the action of the group $0(n+h)$. Hence, in the range of $j$ described above, we have $P_j^l(\tilde{\phi}) = 0$ and therefore
+\begin{equation}
+P_j^l(\phi) = \tilde{\epsilon}^\phi P_j(\tilde{\phi}) = 0. \tag{A.128}
+\end{equation}
+
+It is thus possible to apply the construction of secondary invariants to the invariant polynomials $P_j^l$. We will state our general theorem as follows:
+
+Theorem 4.3. Let $M$ be a compact manifold of dimension $n$, with a riemannian metric $ds^2$. Necessary conditions for its conformal immersion in $E^{n+h}$ are:
+\begin{equation}
+P_j^l(ds^2) = 0, \quad [\frac{n}{2}] + 1 \leq j, \tag{A.129}
+\end{equation}
+\begin{equation}
+(\frac{1}{2} T P_j^l(ds^2)) \in H^{Hj-1}(P,Z), \quad [\frac{n}{2}] + 1 \leq j \leq [\frac{n-1}{2}], \tag{A.130}
+\end{equation}
+
+where we use the argument $ds^2$ to replace its Levi-Civita connection in the notation.
+
+Conditions (116) follows from the above discussions. The proof of (117) is lengthy and can be found in [19].
+
+We will carry out our construction for $P_1 = -P_1^l$. By (113) and (84) we have
+\begin{equation}
+P_1(\phi) = \frac{1}{8\pi^2} \int_{i,j} (\phi_i^{\frac{1}{2}} \phi_j^{\frac{1}{2}} - \phi_i^{\frac{1}{2}} \phi_j^{\frac{1}{2}}). \tag{A.131}
+\end{equation}
+
+In the notation of (72) we introduce the form
+\begin{equation}
+\phi_t = t(d\phi - t\phi \wedge \phi) = t(\phi + (1-t)\phi \wedge \phi), \tag{A.132}
+\end{equation}
+
+so that we find the polarized form
+
+\begin{equation}
+P_1(\phi, \phi_t) = \frac{t}{8\pi^2} \int_{i,j,k} \left\{ \phi_i^j \wedge \phi_j^j - \phi_i^j \wedge \phi_j^i - (1-t)\phi_i^j \wedge \phi_j^k \wedge \phi_k^j \right\} \tag{A.133}
+\end{equation}
+
+It follows that
+
+\begin{equation}
+TP_1(\phi) = 2 \int_{0}^{1} P_1(\phi, \phi_t) dt \tag{A.134}
+\end{equation}
+
+\begin{equation}
+= \frac{1}{8\pi^2} \int_{i,j,k} \left\{ \phi_i^j \wedge \phi_j^j - \phi_i^j \wedge \phi_j^i - \frac{1}{3} \phi_i^j \wedge \phi_j^k \wedge \phi_k^j \right\} \tag{A.135}
+\end{equation}
+
+When restricted to orthonormal frames the matrices
+\begin{equation}
+\phi = (\phi_{ij}), \quad \phi = (\phi_{ij}) \tag{A.136}
+\end{equation}
+are anti-symmetric and (121) simplifies to
+
+\begin{equation}
+TP_1(\phi) = \frac{1}{8\pi^2} \left\{ \int_{i,j} \phi_{ij} \wedge \phi_{ij} - \frac{1}{3} \int_{i,j,k} \phi_{ij} \wedge \phi_{jk} \wedge \phi_{ki} \right\} \tag{A.137}
+\end{equation}
+
+When M is of dimension 3, $P_1(\phi)$ vanishes for dimension reasons and we get a closed form $TP_1(\phi)$ in the bundle P of orthonormal frames. In view of Theorem 4.3 we write
+
+\begin{equation}
+\frac{1}{2} TP_1(\phi) = \frac{1}{8\pi^2} \int_{1 \leq i < j \leq 3} \phi_{ij} \wedge \phi_{ij} - \frac{1}{8\pi^2} \phi_{12} \wedge \phi_{23} \wedge \phi_{31}, \tag{A.138}
+\end{equation}
+
+and we find
+
+\begin{equation}
+\int_{\pi^{-1}(x)} \frac{1}{2} TP_1(\phi) = 1, \tag{A.139}
+\end{equation}
+
+when the fibers $\pi^{-1}(x), x \in M$, are properly oriented.
+
+Suppose M be compact and orientable. Our form $\frac{1}{2} TP_1(\phi)$ gives rise to an invariant $J(\phi) = J(ds^2) \in R/Z$ as follows: It is known that M is parallelizable, so that a section s: M \rightarrow P exists. The integral
+
+\begin{equation}
+I(s) = \int_{sM} \frac{1}{2} TP_1(\phi) \tag{A.140}
+\end{equation}
+
+is a real number. For another section $s' : M \rightarrow P$ the difference $I(s) - I(s')$ is an integer, since $P$ is homologically equivalent to the product $M \times \pi^{-1}(x)$ modulo torsion and $\frac{1}{2} TP_1(\phi)$ satisfies (124). The invariant $J(ds^2)$ is defined to be $I(s)$ mod 1. By Corollary 4.2 it depends only on the conformal structure on $M$ and by Theorem 4.3 it is zero if $M$ can be conformally immersed in $E^4$.
+
+To show that our invariants are not vacuous we wish to calculate $J(ds^2)$ for $M = S0(3)$ with its biinvariant riemannian metric. $M$ is therefore the elliptic space in non-euclidean geometry. Let $\omega_{ij} = -\omega_{ji}, 1 \leq i, j \leq 3$, be the Maurer-Cartan forms in $S0(3)$, so that the structure equations are
+
+\begin{equation}
+d\omega_{ik} = \left\{ \begin{array}{ll} \omega_{ij} \wedge \omega_{jk}, & 1 \leq i,j,k \leq 3. \end{array} \right. \tag{A.141}
+\end{equation}
+
+Its biinvariant metric is given by
+
+\begin{equation}
+ds^2 = \omega_{12}^2 + \omega_{13}^2 + \omega_{23}^2. \tag{A.142}
+\end{equation}
+
+In writing these equations we have chosen a basis in the Lie algebra of $S0(3)$ and hence, by right translations, a frame field in the manifold $S0(3)$. It will be convenient to choose our notation so that the equations remain invariant under a cyclic permutation of 1, 2, 3. We set
+
+\begin{equation}
+a_i = \omega_{jk}, i,j,k = \text{cyclic permutation of 1, 2, 3}. \tag{A.143}
+\end{equation}
+
+Then (127) becomes
+
+\begin{equation}
+ds^2 = a_1^2 + a_2^2 + a_3^2. \tag{A.144}
+\end{equation}
+
+The connection and curvature forms
+
+\begin{equation}
+\theta_{ij} = -\theta_{ji}, \quad \theta_{ij} = -\theta_{ji} \tag{A.145}
+\end{equation}
+
+are determined by the equations
+
+\begin{equation}
+d\alpha_i = \sum_{j} \alpha_j \wedge \theta_{ij}, \tag{A.146}
+\end{equation}
+
+\begin{equation}
+d\theta_{ik} - \sum_{j} \theta_{ij} \wedge \theta_{jk} = \theta_{ik}. \tag{A.147}
+\end{equation}
+
+Comparing these with the structure equations (126), we find
+
+\begin{equation}
+\theta_{ij} = \frac{1}{2} \alpha_k, \quad \theta_{ij} = -\frac{1}{4} \alpha_i \wedge \alpha_j. \tag{A.148}
+\end{equation}
+
+It follows that
+
+\begin{equation}
+\frac{1}{2} \text{TP}_1(\phi) = -\frac{1}{16\pi^2} \alpha_1 \wedge \alpha_2 \wedge \alpha_3. \tag{A.149}
+\end{equation}
+
+Since the total volume of $S0(3)$ is $8\pi^2$, we get $J = \frac{1}{2}$ for $M = S0(3)$ with the biinvariant metric. It is to be observed that $J$ remains unchanged when the metric is modified by a constant positive factor because it is a conformal invariant. As a consequence we have the theorem: The non-Euclidean elliptic space cannot be conformally immersed in $E^4$.
+
+This is a global theorem, because the space is isometrically covered by the three-dimensional sphere of constant curvature and can certainly be locally isometrically imbedded in $E^4$. On the other hand, by a theorem of M. Hirsch it can be globally differentially immersed in $E^4$.
+
+Remark. The cohomology classes $\{TF(\phi)\}$ with real coefficients, when they are defined, are in the principal bundle $P$. It is possible, using the connection, to define cohomology classes with coefficients $R/Z$ in the base manifold. These invariants are called Simons characters (unpublished).
+
+\subsection*{5. Vector Fields and Characteristic Numbers}
+
+We will give an account of results of Bott, Baum, and Cheeger on relations between the characteristic numbers of a manifold and the behavior at the zeroes of a vector field which satisfies certain conditions. As noted by these authors, the Weil homomorphism plays a fundamental role in these results.
+
+We will deal with the tangent bundle of a real or complex manifold, so that the structure group $G$ is the real or complex linear group and is, in the case of a riemannian manifold, the orthogonal group. As in previous sections we consider these groups as matrix groups and their Lie algebras as spaces of matrices. Adjoint action is given by
+
+\begin{equation}
+ad(A)X = AXA^{-1}, \quad A \in G, \quad X \in g. \tag{A.150}
+\end{equation}
+
+An h-linear function $F$ is invariant if
+
+\begin{equation}
+F(AX_1A^{-1}, \ldots, AX_hA^{-1}) = F(X_1, \ldots, X_h), \tag{A.151}
+\end{equation}
+
+\begin{equation}
+X_i \in g, \quad all \quad A \in G. \tag{A.152}
+\end{equation}
+
+Consider first the case of a complex hermitian manifold $M$ of complex dimension $m$. This means that in the complex tangent spaces $T_x, x \in M$, of $M$ there is given a $C^\infty$-family of positive definite hermitian scalar products $H(\xi, n), \xi, n \in T_x$, which is linear in $\xi$ and antilinear in $n$. In local coordinates $z^i$, $1 \leq i,j,k,l < m$, the hermitian structure is defined by the scalar products of the basis vectors:
+
+\begin{equation}
+h_{ik} = H\left[ \frac{\partial}{\partial z^i}, \frac{\partial}{\partial z^k} \right] = h_{ki}, \tag{A.153}
+\end{equation}
+
+and the matrix
+
+\begin{equation}
+H = t_H = (h_{ik}) \tag{A.154}
+\end{equation}
+
+is positive definite. A complex vector field is given by
+
+\begin{equation}
+\xi = \sum_i \xi^i \frac{\partial}{\partial z^i}. \tag{A.155}
+\end{equation}
+
+It is called holomorphic, if the components $\xi^{\frac{1}{2}}$ are holomorphic functions in $z^k$.
+
+A connection
+
+\begin{equation}
+D\left( \frac{\partial}{\partial z^{\frac{1}{2}}} \right) = \sum_{k} \omega_{\frac{1}{2}}^{k} \frac{\partial}{\partial z^{k}} \tag{A.156}
+\end{equation}
+
+is uniquely determined by the conditions:
+
+1. For two holomorphic vector fields $\xi, n$, defined locally,
+
+\begin{equation}
+dH(\xi,n) = H(D\xi,n) + H(\xi, Dn) \tag{A.157}
+\end{equation}
+
+2. The connection forms $\omega_{\frac{1}{2}}^{k}$ are of bidegree (1,0). In fact, the first condition can be written as
+
+\begin{equation}
+dh_{\frac{1}{2}k} = \sum_{j} \omega_{\frac{1}{2}}^{j} h_{\frac{1}{2}k} + \sum_{j} h_{\frac{1}{2}j} \omega_{k}^{j} \tag{A.158}
+\end{equation}
+
+and the second condition gives
+
+\begin{equation}
+dh_{\frac{1}{2}k} = \sum_{j} \omega_{\frac{1}{2}}^{j} h_{\frac{1}{2}k} \tag{A.159}
+\end{equation}
+
+which completely determines the connection.
+
+The equations can be shortened by the introduction of the matrix
+
+\begin{equation}
+\omega = (\omega_{\frac{1}{2}}^{j}) \tag{A.160}
+\end{equation}
+
+Then (139) can be written
+
+\begin{equation}
+\omega = \delta H \cdot H^{-1} \tag{A.161}
+\end{equation}
+
+On exterior differentiation we get
+
+\begin{equation}
+\delta \omega - \omega \wedge \omega = 0 \tag{A.162}
+\end{equation}
+
+On the other hand, the curvature matrix is defined by
+
+\begin{equation}
+\Omega = d\omega - \omega \wedge \omega \tag{A.163}
+\end{equation}
+
+Using (141) we get
+
+\begin{equation}
+\Omega = \bar{\partial} \omega , \tag{A.164}
+\end{equation}
+
+so that it is of bidegree (1,1).
+
+It is important to study the effect on these matrices under a change of chart. If the new coordinates are $z^{i}$ and if the new quantities are denoted by the same notations with asterisks, we have the easily verified equations
+
+\begin{equation}
+H^* = JH^TJ \tag{A.165}
+\end{equation}
+
+\begin{equation}
+\omega^* = 3JJ^{-1} + J\omega J^{-1}, \quad \Omega^* = J\Omega J^{-1}, \tag{A.166}
+\end{equation}
+
+where
+
+\begin{equation}
+J = \left( \frac{3z^j}{32^k} \right) \tag{A.167}
+\end{equation}
+
+is the Jacobian matrix. In particular, $\Omega$ is an endomorphism-valued two-form or, what is the same, a two-form with values in TM $\otimes$ T*M . Let
+
+\begin{equation}
+\omega_j^j = \sum_k r_{jk}^j dz^k . \tag{A.168}
+\end{equation}
+
+Then
+
+\begin{equation}
+T_{jk}^j = r_{jk}^j - r_{ki}^j \tag{A.169}
+\end{equation}
+
+are the components of a section of the bundle TM $\otimes$ T*M $\otimes$ T*M . It defines the so-called torsion tensor.
+
+Let $\xi$ be a holomorphic vector field. Then
+
+\begin{equation}
+D\xi = \sum_{i,j} \xi_{ij}^i dz^j \otimes \frac{\partial}{\partial z^i} \tag{A.170}
+\end{equation}
+
+is an element of $\Gamma(T*M \otimes TM)$ and is a field of endomorphisms. If we put
+
+\begin{equation}
+\Xi = (\xi_{ij}^i) \tag{A.171}
+\end{equation}
+
+we have
+
+\begin{equation}
+\bar{E}^* = J \bar{E} J^{-1}. \tag{A.172}
+\end{equation}
+
+Observe that at $\xi = 0$, $\bar{E}$ is the matrix of the partial derivatives of $\xi^{\frac{j}{2}}$. A zero of $\xi$ is called nondegenerate if det$\bar{\xi} \neq 0$.
+
+Another field of endomorphisms is given by the components 
+$\bar{x}_k T_{jk}^{j} \xi^k.$ Combining the two, we have the field of endomorphisms 
+$\bar{z}_k$ with the components $\xi_j^{\frac{j}{2}} + \lambda \bar{z}_k T_{jk}^{j} \xi^k$, having $\lambda$ as a parameter.
+
+Clearly under a change of chart we have 
+
+\begin{equation}
+\bar{z}_k^* = J \bar{z}_k J^{-1}. \tag{A.173}
+\end{equation}
+
+Using the local chart we immediately verify that 
+
+\begin{equation}
+\bar{\delta}\bar{z}_1 = -i(\xi)\bar{\delta}\omega, \tag{A.174}
+\end{equation}
+
+where $i(\xi)$ denotes the interior product by the vector $\xi$. It follows that 
+
+\begin{equation}
+i(\xi)\Omega = i(\xi)\bar{\delta}\omega = -\bar{\delta}\bar{z}_1. \tag{A.175}
+\end{equation}
+
+By putting $E = -\bar{z}_1$, we have 
+
+\begin{equation}
+\bar{\delta}E = i(\xi)\Omega. \tag{A.176}
+\end{equation}
+
+Perhaps the simplest result after the Hopf formula (2) on relations between characteristic numbers and vector fields is the following theorem of Bott.
+
+Theorem 5.1. Let $M$ be a compact complex hermitian manifold of complex dimension $m$, whose curvature matrix is $\Omega$. Let $F$ be an invariant polynomial of degree $m$ relative to the group $GL(m;C)$. Suppose $\xi$ be a holomorphic vector field on $M$ with nondegenerate isolated zeroes. Then 
+
+\begin{equation}
+\left( \frac{i}{2\pi} \right)^m \int_M F(\Omega) = \sum_{\text{zero of } \xi} F(\bar{\xi})/det\bar{\xi}. \tag{A.177}
+\end{equation}
+
+We will sketch a proof of this theorem, whose idea is quite simple. It is to write $F(\Omega)$ as a derived form in M-(zero of $\xi$) and to apply Stokes' Theorem. We polarize $F$ and insert as arguments both $\Omega$ and $E$, which are both endomorphism-valued, i.e., we put
+\begin{equation}
+F^{(r)} (\Omega) = \begin{pmatrix} m \\ r \end{pmatrix} \underbrace{F(E, \ldots, E, \Omega, \ldots, \Omega)}_{r \quad m-r}, \quad 0 \leq r \leq m, \tag{A.178}
+\end{equation}
+so that $F^{(r)} (\Omega)$ is a form of bidegree (m-r, m-r) in M. Using (153) we immediately get
+\begin{equation}
+i(\xi)F^{(r)} (\Omega) = \overline{\delta} F^{(r+1)} (\Omega), \quad 0 \leq r \leq m - 1. \tag{A.179}
+\end{equation}
+The vector field $\xi$ gives rise to the one-form
+\begin{equation}
+\pi = \sum_{i,j,k} h_{ijk} dz^{\frac{j}{2}} \xi^k \wedge \sum_{i,j,k} h_{ik} \xi^{\frac{j}{2}} \xi^k, \quad \xi \neq 0, \tag{A.180}
+\end{equation}
+satisfying $i(\xi) \pi = 1$. It is easily verified that
+\begin{equation}
+i(\xi) \overline{\delta} \pi = 0. \tag{A.181}
+\end{equation}
+Since both $i(\xi)$ and $\overline{\delta}$ are anti-derivations, we find
+\begin{equation}
+i(\xi) \overline{\delta} (\pi \wedge (\overline{\delta} \pi)^{r-1} \wedge F^{(r)} (\Omega)) = (\overline{\delta} \pi)^r i(\xi) F^{(r)} (\Omega) - (\overline{\delta} \pi)^{r-1} i(\xi) F^{(r-1)} (\Omega), \quad 1 \leq r \leq m, \tag{A.182}
+\end{equation}
+which gives
+\begin{equation}
+i(\xi) \left\{ \sum_{1 \leq r \leq m} \overline{\delta} (\pi \wedge (\overline{\delta} \pi)^{r-1} \wedge F^{(r)} (\Omega)) + F(\Omega) \right\} = 0. \tag{A.183}
+\end{equation}
+The form in the braces is of bidegree (m,m). Since we have assumed $\xi \neq 0$, it follows that
+\begin{equation}
+\overline{\delta} \left( \sum_{1 \leq r \leq m} \pi \wedge (\overline{\delta} \pi)^{r-1} \wedge F^{(r)} (\Omega) \right) + F(\Omega) = 0. \tag{A.184}
+\end{equation}
+By consideration of the bidegree the operator $\overline{\delta}$ at the left can be replaced by d. This gives
+
+\begin{equation}
+F(\Omega) = d\Pi, \quad \text{in M-(zero of } \xi), \tag{A.185}
+\end{equation}
+
+where
+\begin{equation}
+\Pi = - \int_{\Sigma} \pi \wedge (\bar{\delta}\pi)^{T-1} \wedge F^{(r)}(\Omega). \tag{A.186}
+\end{equation}
+
+The formula (159) localizes the problem of integrating $F(\Omega)$.
+
+To evaluate the integral of $F(\Omega)$ over $M$ it suffices to integrate $\Pi$ over the spheres $S_\epsilon$ of radius $\epsilon$ about the zeroes of $\xi$ and take the limit of the integral as $\epsilon \to 0$. Since the integral is a characteristic number, its value is independent of the choice of an hermitian metric on $M$. We choose the latter so that it has a simple behavior at the zeroes of $\xi$. In fact, let $z^i$ be a local coordinate system centered at an isolated zero of $\xi$. Let $\lambda_i$ be the eigenvalues of the matrix $\bar{z}$ at the origin. The nondegeneracy of the zero is equivalent to the condition $\lambda_1 \cdots \lambda_m \neq 0$. We can choose the coordinates $z^i$ so that in a sufficiently small neighborhood we have
+
+\begin{equation}
+\xi = \left\{ \begin{array}{ll} \lambda_i z^i \frac{\partial}{\partial z^i}. \end{array} \right. \tag{A.187}
+\end{equation}
+
+Suppose the metric be
+
+\begin{equation}
+ds^2 = \left\{ \frac{1}{|\lambda_i|^2} dz^i dz^i \right\}. \tag{A.188}
+\end{equation}
+
+Then we have
+
+\begin{equation}
+\pi = \left\{ \begin{array}{ll} \lambda_i^{-1}z^i dz^i / \left\{ |z^i|^2 \right\} \end{array} \right. \tag{A.189}
+\end{equation}
+
+and
+
+\begin{equation}
+(\Sigma |z^i|^2) \bar{\delta}\pi = - \left\{ \begin{array}{ll} \lambda_i^{-1} dz^i \wedge dz^i + \pi \wedge (\ldots), \end{array} \right. \tag{A.190}
+\end{equation}
+
+\begin{equation}
+(\Sigma |z^i|^2)^m \pi \wedge (\bar{\delta}\pi)^{m-1} = \pm \frac{(m-1)!}{\lambda_1 \cdots \lambda_m} \left\{ \begin{array}{ll} \int_{\Sigma} dz^1 \wedge dz^1 \wedge \ldots \wedge z^i dz^i \wedge \ldots \wedge dz^m \wedge dz^m \end{array} \right\} \tag{A.191}
+\end{equation}
+
+The expression between the braces is a multiple of the volume element (relative to the metric $\Sigma_j dz^i dz^j$) of $S_c = \{z|\Sigma|z^i|^2 = e^2\}$, when restricted to $S_c$. For the metric (162) we have clearly $\Omega = 0$, so that
+\begin{equation}
+\Pi = - \pi \wedge (\bar{\partial} \pi)^{m-1} F(E, \ldots, E). \tag{A.192}
+\end{equation}
+As $\epsilon \to 0$, we obtain
+\begin{equation}
+\int_M F \left( \frac{i}{2\pi} \Omega \right) = C \sum_{zero \text{ of } \xi} F(\xi)/det \xi, \tag{A.193}
+\end{equation}
+where $C$ is a universal constant independent of $F$. By putting $F = det$, we find $C = 1$. This proves the theorem.
+
+We can formulate Theorem 5.1 in terms of the Chern classes of $M$. In fact, let $F_k, 1 \leq k \leq m$, be the functions introduced in (82). There exists to $F$ a polynomial $\tilde{F}$ such that
+\begin{equation}
+F \left( \frac{i}{2\pi} \Omega \right) = \tilde{F}(F_1(\Omega), \ldots, F_m(\Omega)). \tag{A.194}
+\end{equation}
+Then
+\begin{equation}
+\int_M F \left( \frac{i}{2\pi} \Omega \right) = \int_M \tilde{F}(c_1(M), \ldots, c_m(M)). \tag{A.195}
+\end{equation}
+On the other hand, each summand at the right-hand side of (154) can be written
+\begin{equation}
+\tilde{F}(a_1, \ldots, a_m)/a_m, \tag{A.196}
+\end{equation}
+where $a_i, 1 \leq i \leq m$, is the ith elementary symmetric function of the eigenvalues of $\tilde{E}$. Theorem 5.1 can be stated as follows:
+
+Theorem 5.2. Let $M$ be a compact complex manifold of complex dimension $m$. Let
+\begin{equation}
+c^\alpha(M) = c_1^{\alpha_1}(M) \cdots c_m^{\alpha_m}(M), \quad a_1 + 2\alpha_2 + \cdots + ma_m = m. \tag{A.197}
+\end{equation}
+Suppose $\xi$ be a holomorphic vector field with non-degenerate isolated zeroes. Then
+
+\begin{equation}
+\int_{M} c^{\alpha}(M) = \sum_{zero \text{ of } \xi} \sigma_1^{a_1} \ldots \sigma_m^{a_m}/\sigma_m, \tag{A.198}
+\end{equation}
+
+where $\sigma_i, 1 \leq i \leq m$, is the $i$th elementary symmetric function of the eigenvalues of the matrix $E = (\partial \xi^i / \partial z^k)$ at $\xi = 0$.
+
+Baum and Bott extended Theorem 5.1 to meromorphic vector fields with isolated zeroes ([5]). They used an algebraic geometrical method (cf. also new differential geometrical proof by Chern [34]).
+
+The theorem has a real analogue treated by Bott and further pursued by Baum and Cheeger ([6], [18]). It concerns with the Killing vector fields of a compact oriented riemannian manifold of even dimension $2m$. The Killing equations are classically written ([20])
+
+\begin{equation}
+\xi_{i,j} + \xi_{j,i} = 0, \tag{A.199}
+\end{equation}
+
+so that the matrix $E = (\xi_{i,j})$ is anti-symmetric. Its eigenvalues are of the form $i  i \lambda_j, 1 \leq j \leq m$, where $\lambda_j$ is real. We denote by $\sigma_j$ the $j$th elementary symmetric function of $\lambda_1^2, \ldots, \lambda_m^2$ and let $\tau = \lambda_1 \ldots \lambda_m$. Then $\tau = \sigma_m^{1/2}$ depends on the orientation of $M$ and changes its sign under a reversal of the orientation. A zero of $\xi$ is called non-degenerate if $\tau \neq 0$. We consider an invariant polynomial $F$ of degree $m$ with respect to the group $SO(2m)$, so that its arguments are $(2m \times 2m)$ anti-symmetric matrices. Into $F$ we substitute the curvature forms of the riemannian metric. The study of its integral leads to the theorem:
+
+Theorem 5.3. Let $M$ be a compact oriented riemannian manifold of dimension $2m$. Let $p_i(M), 1 \leq i \leq [m/2]$, be the Pontrjagin classes of $M$ and $e(M)$ be its Euler class. Let $\xi$ be a Killing vector field with nondegenerate isolated zeroes. Then
+
+\begin{equation}
+\int_{M} \frac{\alpha_1}{p_1} \cdots p_n^{\alpha_n} e(M)^\beta = \sum_{z \in r_0} \frac{\alpha_1}{\sigma_f \xi} \cdot \frac{\alpha_1}{\sigma_1} \cdots \frac{\alpha_n}{\sigma_n} \beta^{-1}, \quad h = \left[ \frac{m}{2} \right], \tag{A.200}
+\end{equation}
+
+where
+
+\begin{equation}
+2(\alpha_1 + 2\alpha_2 + \cdots + h\alpha_n) + \beta m = m. \tag{A.201}
+\end{equation}
+
+If the vector field generates a compact group, such results have an alternative treatment by the Atiyah-Singer G-index theory. Cf. [2].
+
+\subsection*{6. Holomorphic Curves}
+
+We have given in the above several applications of the Weil homomorphism, i.e., the representation of characteristic classes by curvature forms. Perhaps the most important ones remain to come from the study of noncompact manifolds, which is a far more difficult subject than the case of compact manifolds. For non-compact manifolds standard approaches to characteristic classes (such as an axiomatic treatment) do not apply and the curvature representation plays a more vital role.
+
+To get deep results it is probably necessary to impose on the problems conditions in the form of differential equations or differential inequalities. An example of such conditions is the Cauchy–Kiemann equations in complex function theory; perhaps no other differential system has been as thoroughly studied. In this section we will consider non-compact holomorphic curves in the complex projective space and show that the curvature forms of hermitian line bundles over a curve play a fundamental role in the theory of value distributions of Nevanlinna–Weyl–Ahlfors. It is to be pointed out that a non-compact holomorphic curve in the complex projective line is exactly what is called a meromorphic function, which is generally non-algebraic. Thus the results do have wider scope than the compact holomorphic curves.
+
+Let $M$ be a complex manifold of complex dimension $m$ and let
+
+\begin{equation}
+π: E + M \quad \text{be a holomorphic line bundle}. \tag{A.202}
+\end{equation}
+
+This means that M has an open covering {U, V, ...} such that to each U there is a chart $\psi_{U}: \pi^{-1}(U) \rightarrow U \times C$, with $\psi_{U}(z) = (\pi(z) = x, y_{U}(z))$, $z \in \pi^{-1}(U)$; the local charts are related by the equation
+
+\begin{equation}
+y_{U}g_{UV} = y_{V}, \quad \text{in } U \cap V \neq \emptyset, \tag{A.203}
+\end{equation}
+
+where $g_{UV}: U \cap V \rightarrow C - \{0\}$ is holomorphic.
+
+The holomorphy of the transition functions $g_{UV}$ has important implications. Let an hermitian norm be given in E, i.e., a $C^\infty$-function $h_{U} > 0$ in each U, such that
+
+\begin{equation}
+|y|^2 = |h_{U}^{-1}|y_{U}|^2 = |h_{V}^{-1}|y_{V}|^2 \quad \text{in } U \cap V. \tag{A.204}
+\end{equation}
+
+Equation (172) is equivalent to
+
+\begin{equation}
+h_{U}|g_{UV}|^2 = h_{V} \tag{A.205}
+\end{equation}
+
+It follows that
+
+\begin{equation}
+\Omega = \frac{i}{2\pi} \partial \overline{\partial} \log h_{U} \tag{A.206}
+\end{equation}
+
+is independent of U. $\Omega$ defines a closed form of bidegree (1,1) in M, the curvature form of the hermitian line bundle E, whose cohomology class $c_1(E)$ is the first Chern class of E.
+
+It is desirable to allow the hermitian structure to have singularity on a divisor. If $\phi_{U} = 0$ is the local representation of a divisor, we suppose
+
+\begin{equation}
+h_{U} = |\phi_{U}|^{2s} h_{U}^{'}, \quad h_{U}^{'} > 0, \tag{A.207}
+\end{equation}
+
+where s is an integer. This generalized structure will be called semi-hermitian. If M is one-dimensional, the singularities of $h_{U}$ are isolated and, relative to a suitable local coordinate $\zeta$, $h_{U}$ will be of the form
+
+\begin{equation}
+h_{ij} = |\zeta|^{2s}  h_{ij}^t \quad , \quad h_{ij}^t > 0 \tag{A.208}
+\end{equation}
+
+The integer $s$ is called the order of the singularity. An application of Stokes' Theorem to (173) gives the theorem [17]:
+
+Theorem 6.1. (Gauss-Bonnet) Let $\pi: E \to M$ be a semi-hermitian holomorphic line bundle over a one-dimensional complex manifold $M$. Let $D$ be a compact domain of $M$ with smooth boundary $\partial D$ and $s:D \to E$ be a holomorphic section such that 1. $\partial D$ contains no singularity of the hermitian structure; 2. $s(\partial D)$ does not meet the zero section of the bundle. Then
+
+\begin{equation}
+n(s) - n(h) = -\int_D \Omega + \frac{1}{2\pi} \int_{\partial D} d^C \log\|s\|, \quad d^C = i(\bar{\delta}-\delta), \tag{A.209}
+\end{equation}
+
+where $n(s)$ is the number of zeroes of the section in $D$, $n(h)$ is the number of singularities of the semi-hermitian structure in $D$, and $\|s\|$ is the hermitian norm of the section on the boundary.
+
+We consider the complex projective space $P_n(C)$ of dimension $n$. To define it we take the complex vector space $C_{n+1}$ of dimension $n+1$ and identify its non-zero vectors which differ from each other by a factor. The identification
+
+\begin{equation}
+\pi: C_{n+1} - \{0\} \to P_n(C) \tag{A.210}
+\end{equation}
+
+defines a holomorphic line bundle over $P_n(C)$. To $x \in P_n(C)$, $\pi^{-1}(x)$ is a nonzero vector $Z = (z_0,\ldots,z_n)$ of $C_{n+1}$, determined up to a factor; $Z$ will be called a homogeneous coordinate vector of $x$.
+
+The geometry in $P_n(C)$ arises from the hermitian scalar product
+
+\begin{equation}
+(Z,W) = z_0 \overline{w}_0 + \cdots + z_n \overline{w}_n, \quad W = (w_0,\ldots,w_n) \tag{A.211}
+\end{equation}
+
+in $C_{n+1}$. We set
+
+\begin{equation}
+|Z,W| = |(Z,W)| , \quad |Z|^2 = (Z,Z) . \tag{A.212}
+\end{equation}
+
+Then $|Z|$ defines an hermitian norm in the bundle (177). By (173) the Chern class of its dual bundle, the hyperplane section bundle, is represented by the curvature form
+
+\begin{equation}
+\Omega = \frac{i}{\pi} \partial \bar{\partial} \log |Z| . \tag{A.213}
+\end{equation}
+
+This form has the further property that it is positive definite, in the following sense: The complex structure on $P_n(C)$ sets up a one-one correspondence between real forms of bidegree (1,1) and the hermitian differential forms; the hermitian form corresponding to $\Omega$ is positive definite. We can therefore use it to define an hermitian structure on $P_n(C)$, which gives the classical Fubini-Study metric (cf. [16]).
+
+It can be verified that
+
+\begin{equation}
+\int_{P_1} \Omega = 1 , \tag{A.214}
+\end{equation}
+
+so that $\{\Omega\}$, the cohomology class represented by $\Omega$, is a generator of $H^2(P_n(C),Z)$. It follows that $\Omega^n$ is a volume element of $P_n(C)$, with total volume equal to 1.
+
+Consider an algebraic curve
+
+\begin{equation}
+f: M \to P_n(C) , \tag{A.215}
+\end{equation}
+
+where $M$ is a compact one-dimensional complex manifold without boundary and $f$ is holomorphic. The above discussion identifies the area of the curve with its order and we have the formula of Wirtinger:
+
+\begin{equation}
+A(M) = \int_{f(M)} \Omega = n(f(M) \cap \alpha) = v(M) . \tag{A.216}
+\end{equation}
+
+Here $A(M)$ is the area, $v(M)$ is the order of the curve, and $n(f(M) \cap \alpha)$ is the number of common points of $f(M)$ with any hyperplane $\alpha$ ; the equalities at the two ends of (183) are definitions.
+
+The Gauss-Bonnet Theorem 6.1 extends this relationship to a compact domain $D$ with boundary and we have the theorem:
+
+Theorem 6.2 (Unintegrated first main theorem). Let $M$ be a one-dimensional complex manifold and $f: M \to P_n(C)$ be a holomorphic mapping. Let $D$ be a compact domain of $M$ with smooth boundary $\partial D$, such that $f(\partial D)$ does not meet a hyperplane $\alpha$. Then
+
+\begin{equation}
+n(D, \alpha) - A(D) = \frac{1}{2\pi} \int_{f(\partial D)} d^C \log \left| \frac{[Z, \alpha]}{[Z] \cdot [\alpha]} \right|, \tag{A.217}
+\end{equation}
+
+where $n(D, \alpha)$ is the number of points in $f(D) \cap \alpha$ and $\alpha^l$ is the "pole" of $\alpha$, i.e., the point orthogonal to all points of $\alpha$.
+
+Thus, while the formula (183) is not valid for a domain $D$ with boundary, Theorem 6.2 gives a useful expression for the difference $n(D, \alpha) - A(D)$. When $M$ is non-compact and $D$ exhausts $M$, each of $n(D, \alpha)$ and $A(D)$ could become infinite and our main concern is to estimate their relative growth and the growth of other geometrical quantities which eventually enter into play. The quantity against which the growths are measured is the exhaustion function. It is by definition a smooth function $\tau: M \to R^+$ satisfying the conditions: (1) The mapping $\tau$ is proper, i.e., the inverse of a compact set is compact; (2) The critical points are isolated. An example of a function satisfying (2) is a real harmonic function.
+
+Suppose $\tau$ be a harmonic exhaustion function of $M$. Let
+
+\begin{equation}
+D_u = \{ \zeta \in M | \tau (\zeta) \leq u \}. \tag{A.218}
+\end{equation}
+
+For simplicity we write
+
+\begin{equation}
+n(D_u, \alpha) = n(u, \alpha), \quad A(D_u) = v_0 (u). \tag{A.219}
+\end{equation}
+
+Then (18$^4$) can be written
+
+\begin{equation}
+n(u, \alpha) - v_0(u) = \frac{1}{2\pi} \int_{f(\partial D_u)} d^C \log \left| \frac{|Z(\zeta), \alpha^\perp|}{|Z(\zeta)| \cdot |\alpha^\perp|} \right| , \quad \zeta \in \partial D_u. \tag{A.220}
+\end{equation}
+
+By a standard argument the integration and the differential operator $d^C$ can be interchanged and we can integrate the above formula with respect to $u$. We put
+
+\begin{equation}
+N(u, \alpha) = \int_0^u n(t, \alpha) dt , \quad T_0(u) = \int_0^u v_0(t) dt \tag{A.221}
+\end{equation}
+
+and
+
+\begin{equation}
+m(u, \alpha) = \frac{1}{2\pi} \int_{\partial D_u} \log \left| \frac{|Z(\zeta)| \cdot |\alpha^\perp|}{|Z(\zeta), \alpha^\perp|} \right| d^C \tau \ge 0 , \quad \zeta \in \partial D_u \tag{A.222}
+\end{equation}
+
+Then the integration of (187) gives
+
+\begin{equation}
+N(u, \alpha) + m(u, \alpha) = T_0(u) + m(0, \alpha) . \tag{A.223}
+\end{equation}
+
+This is the integrated form of the first main theorem. As a corollary we have the fundamental inequality
+
+\begin{equation}
+N(u, \alpha) < T_0(u) + const. \tag{A.224}
+\end{equation}
+
+The function $T_0(u)$ is called the order function. Equation (191) shows that it dominates $N(u, \alpha)$ for all $\alpha$.
+
+The space of the hyperplanes of $P_n(C)$ has a measure defined to be the measure of their poles. That is, if $n$ is a hyperplane, we define
+
+\begin{equation}
+dn = dn^\perp , \quad n^\perp = pole \text{ of } n . \tag{A.225}
+\end{equation}
+
+It is easy to prove:
+
+Theorem 6.3 (Crofton-type formula). Let $f: M \to P_n(C)$ be a compact holomorphic curve with or without boundary. Then
+\begin{equation}
+\int n(f(M) \cap n)dn = A(M), \tag{A.226}
+\end{equation}
+where $A(M)$ is the area of the curve.
+
+When it is applied to the inequality (191), we have:
+
+Theorem 6.4 (Equidistribution in measure of holomorphic curves). Let $f: M \to P_n(C)$ be a holomorphic curve, which has an exhaustion function $u \to \infty$. Then the set of hyperplanes $n$ such that $n \cap f(M) = \emptyset$ is of measure zero.
+
+The strengthening of this theorem includes some of the most beautiful results in complex function theory. Following R. Nevanlinna we define the defect of hyperplane $\alpha$ by
+\begin{equation}
+\delta(\alpha) = \liminf_{u \to \infty} \frac{m(u,\alpha)}{T_0(u)} = 1 - \limsup_{u \to \infty} \frac{N(u,\alpha)}{T_0(u)}. \tag{A.227}
+\end{equation}
+
+Then we have by (190)
+\begin{equation}
+0 \leq \delta(\alpha) \leq 1 \tag{A.228}
+\end{equation}
+
+and $\delta(\alpha) = 1$ if $f(M) \cap \alpha = \emptyset$.
+
+The fundamental theorem on value distributions can be stated as follows:
+
+Theorem 6.5. Let $f: C \to P_n(C)$ be a holomorphic curve which is non-degenerate (i.e., it does not lie in a linear space of lower dimension). Let $\alpha_j, 1 \leq j \leq q,$ be $q$ hyperplanes in general position. Then
+\begin{equation}
+\sum_{1 \leq j \leq q} \delta(\alpha_j) \leq n + 1. \tag{A.229}
+\end{equation}
+
+The theorem was proved by R. Nevanlinna for the classical case $n = 1$ and by Ahlfors for general $n$. The proof in the general case is very long and we refer the reader to [32], [37] and, for the case $n = 2$, to [17]. Although the problem originates in analysis, it is most natural to regard it as a chapter in the complex differential geometry of curves.
+
+There are many technical details in the proof. But two main ideas stand out as guideposts. The first idea is the consideration of the osculating spaces of all dimensions of the curve. By taking the osculating spaces of dimension $k$, we get a holomorphic curve $f_k$ in the Grassmann manifold of all $k$-dimensional linear projective spaces in $P_n(C)$; $f_k(C)$ is called the $k$th associated curve. As in the case $k = 0$, this introduces the $k$th order function $T_k(u)$.
+
+The second idea can be described as finding a lower bound for $N(u,a)$, whereas the inequality (191) gives an upper bound. Following F. Nevanlinna and Ahlfors this is achieved by applying integral geometry with a singular density. The inequality in question can be written
+
+\begin{equation}
+(1-\lambda) \int_{0}^{u} dt \int_{D_t} \frac{|Z\Lambda z^i, Z\Lambda a^{\perp}|^2}{|Z|^4 |Z\Lambda a^{\perp}|^2} \left[ \frac{|Z|}{|Z,a^{\perp}|} \right]^{2\lambda} |dz d\bar{z}| < BT_0(u) + B', \tag{A.230}
+\end{equation}
+
+\begin{equation}
+0 < \lambda < 1, \quad \zeta \in C \tag{A.231}
+\end{equation}
+
+where $B$, $B'$ are positive constants. This inequality, and its analogues for the associated curves, play a fundamental role in the proof of (196).
+
+The broad outlines given above could well be the beginning of a long chapter on the global theory of holomorphic mappings of non-compact complex manifolds. We restrict ourselves in referring to the account of W. Stoll ([30]) and to recent studies by P. Griffiths and his coworkers ([36], [37]). It is conceivable that characteristic classes, in the spirit of this paper, will furnish the key to a satisfactory theory.

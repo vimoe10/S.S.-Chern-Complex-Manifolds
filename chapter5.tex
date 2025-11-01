@@ -1,0 +1,397 @@
+\chapter{Complex Vector Bundles; Connections}
+
+% \section*{Complex Vector Bundles; Connections}
+
+Throughout this section we will denote by $M$ a $C^\infty$ differentiable manifold, and we will develop the properties of complex vector bundles over $M$. For economy the adjective "complex" is sometimes omitted.
+
+Let
+\[F = \mathbb{C}^q = \mathbb{C} \times \cdots \times \mathbb{C} \quad (q \text{ factors})\]
+be the complex vector space of complex dimension $q$. Suppose $F$ is acted on to the right by $GL(q;\mathbb{C})$, the general linear group in $q$ complex variables, so that $\xi \cdot g \in F$ and
+\begin{equation}
+(\xi g)h = \xi(gh), \quad \xi \in F, \quad g,h \in GL(q;\mathbb{C}). \tag{5.1}
+\end{equation}
+
+A complex vector bundle $E$ over $M$ consists of a space $E$ and a projection
+\begin{equation}
+\psi: E \rightarrow M, \tag{5.2}
+\end{equation}
+such that the following conditions are fulfilled:
+
+(1) Every point $x \in M$ has a neighborhood $U$ for which there exists a homeomorphism (a "chart")
+\begin{equation}
+\phi_U: U \times F \rightarrow \psi^{-1}(U), \tag{5.3}
+\end{equation}
+with
+\begin{equation}
+\psi \circ \phi_U(y,\xi) = y, \quad y \in U, \quad \xi \in F. \tag{5.4}
+\end{equation}
+
+(2) In the intersection $U \cap V$ of two such neighborhoods $U,V$ there exists a $C^\infty$ map $g_{UV}: U \cap V \rightarrow GL(q;\mathbb{C})$, such that
+\begin{equation}
+\phi_U(x,\xi) = \phi_V(x,\xi'), \quad x \in U \cap V; \quad \xi,\xi' \in F, \tag{5.5}
+\end{equation}
+if and only if
+\begin{equation}
+\xi g_{UV}(x) = \xi'. \tag{5.6}
+\end{equation}
+
+These functions $g_{UV}$, the so-called transition functions, satisfy the compatibility relations
+\begin{equation}
+\begin{cases}
+g_{UV}^{-1} = g_{VU}, \\
+g_{UV}g_{VW}g_{WU} = 1 \quad \text{in} \quad U \cap V \cap W.
+\end{cases} \tag{5.7}
+\end{equation}
+
+If $q = 1$, the vector bundle is called a line bundle. The set $\psi^{-1}(x), x \in M$, is a complex vector space of dimension $q$, and is called the fiber at $x$. Our assumptions are such that the complex linear structures on the fibers have a meaning.
+
+As a consequence of this remark, operations on complex vector spaces which commute with the actions of the general linear groups can be extended to operations on bundles. Among the most important operations are:
+
+(1) The dual bundle $E^*$ of $E$. Its transition functions are $^t g_{UV}^{-1}$ (i.e., the transpose inverse of $g_{UV}$, when the latter is interpreted as a non-singular $(q \times q)$-matrix).
+
+(2) If $E'$ and $E''$ are two complex vector bundles over $M$ with the transition functions $g_{UV}', g_{UV}''$ respectively, their direct sum or Whitney sum $E' \oplus E''$ is defined by the transition functions
+\[\begin{pmatrix}
+g_{UV}' & 0 \\
+0 & g_{UV}'' 
+\end{pmatrix}.\]
+Similarly, their tensor product $E' \otimes E''$ is defined by the transition functions $g_{UV}' \otimes g_{UV}''$. If the dimensions of the fibers of $E', E''$ are $q', q''$ respectively, the fiber dimension of $E' \oplus E''$ is $q' + q''$ and that of $E' \otimes E''$ is $q' q''$.
+
+(3) The bundle $\text{Hom}(E', E'') \cong E'^* \otimes E''$.
+
+In order that the notion of a vector bundle be meaningful, it is desirable to introduce an equivalence relation which amounts to a change of the charts. Let $E$ and $E'$ be two vector bundles over $M$ with the same fiber dimension $q$ which, relative to an open covering $\{U,V,\ldots\}$ of $M$, are given by the charts $\phi_U$, $\phi_U'$ and the transition functions $g_{UV}, g_{UV}'$ respectively. They are called equivalent if to each $U$ there is a $C^\infty$-map $g_U: U \to GL(q;\mathbb{C})$, such that
+\begin{equation}
+\phi_U(x,f \cdot g_U) = \phi_U'(x,f), \quad x \in U, \quad f \in F. \tag{5.8}
+\end{equation}
+In terms of the transition functions condition (5.8) implies:
+\begin{equation}
+g_{UV}' = g_U g_{UV} g_V^{-1}. \tag{5.9}
+\end{equation}
+
+An immediate question is the scope of the equivalence classes of complex vector bundles over $M$, or, more specifically, whether there exist bundles which are (globally) not products of $M$ with $F$. For $q = 1$ the answer is given by the theorem:
+
+(A) All the $C^\infty$ complex line bundles over a differentiable manifold $M$ form a group which is isomorphic to $H^2(M,\mathbb{Z})$, the second cohomology group of $M$ with integer coefficients.
+
+To prove this theorem let $A$ be the sheaf of germs of complex-valued $C^\infty$ functions and let $A^*$ be the sheaf of germs of nowhere zero complex-valued $C^\infty$ functions, the latter with multiplication as the group operation. By the compatibility relations (5.7) and by (5.9) it follows that the equivalence classes of $C^\infty$ complex line bundles are in one-one correspondence with the elements of the cohomology group $H^1(M,A^*)$. Thus all the line bundles of $M$ form a group, and the multiplication of two line bundles is given by the tensor product. From now on we will not distinguish between a line bundle and an equivalence class of line bundles.
+
+Consider the sequence of sheaves
+\begin{equation}
+0 \rightarrow \mathbb{Z} \xrightarrow{i} A \xrightarrow{e} A^* \rightarrow 0, \tag{5.10}
+\end{equation}
+where $i$ is inclusion and $e$ is defined by
+\[e(f(x)) = \exp(2\pi i f(x)), \quad f(x) \in A.\]
+The sequence (5.10) is obviously an exact sequence. From its exactness follows the exactness of the following sequence of cohomology groups:
+\[H^1(M,A) \xrightarrow{e^1} H^1(M,A^*) \xrightarrow{\delta} H^2(M,\mathbb{Z}) \xrightarrow{i^2} H^2(M,A).\]
+Since $A$ is a fine sheaf, the groups at both ends of this sequence are zero, and we get the isomorphism stated in the theorem.
+
+If $E \in H^1(M,A^*)$ is a complex line bundle, $\delta E \in H^2(M,\mathbb{Z})$ is called its \textit{Chern class}.
+
+The simple conclusion in (A) is possible, because the group $GL(1;\mathbb{C})$ is abelian. For general $q$ there are Chern classes
+\[c_i(E) \in H^{2i}(M,\mathbb{Z}), \quad 1 \leq i \leq q,\]
+which are the simplest invariants of a complex vector bundle, but we will postpone their discussion to a later section.
+
+Let $E$ be a complex vector bundle over $M$, and let $T^*$ be the cotangent bundle of $M$. Denote by $\Gamma(E)$ and $\Gamma(T^* \otimes E)$ respectively the spaces of sections of $E$ and of the tensor product $T^* \otimes E$ (over $\mathbb{C}$). A connection on $E$ is an operator
+\begin{equation}
+D: \Gamma(E) \rightarrow \Gamma(T^* \otimes E) \tag{5.11}
+\end{equation}
+which satisfies the conditions:
+\begin{align}
+D(\gamma_1 + \gamma_2) &= D\gamma_1 + D\gamma_2, \quad \gamma_1, \gamma_2 \in \Gamma(E), \tag{5.12} \\
+D(f\gamma) &= df \cdot \gamma + fD\gamma, \quad \gamma \in \Gamma(E), \tag{5.13}
+\end{align}
+where $f \in A$ (= the space of complex-valued $C^\infty$ functions over $M$) and $df \cdot \gamma = df \otimes \gamma$, the tensor product here being over $A$.
+
+We will first study the local properties of a connection. Let $U$ be an open set of $M$, and let $s_1, \ldots, s_q$ be a frame field over $U$, i.e., $q$ sections of the bundle $E$ over $U$, such that $s_1(x), \ldots, s_q(x)$, $x \in U$, are linearly independent. Then we can write
+\begin{equation}
+Ds_i = \sum_j \omega_i^j s_j, \quad 1 \leq i,j \leq q, \tag{5.14}
+\end{equation}
+where $\omega_i^j$ are complex-valued 1-forms in $U$. For economy of writing we will express (5.14) in matrix form. In fact, let
+\[s = (s_1, \ldots, s_q), \quad \omega = (\omega_i^j),\]
+so that $s$ itself is a one-columned matrix of $q$ sections. Then (5.14) can be written
+\begin{equation}
+Ds = \omega s. \tag{5.15}
+\end{equation}
+The matrix $\omega$ completely determines the connection. In fact, any section $\xi$ of $E$ over $U$ can be written
+\[\xi = \sum_i \xi^i s_i,\]
+where $\xi^i$ are complex-valued $C^\infty$-functions in $U$. By (5.13), we have
+\begin{equation}
+D\xi = \sum_i \left(d\xi^i + \sum_j \xi^j \omega_j^i\right) s_i. \tag{5.16}
+\end{equation}
+We call $\omega$ the \textit{connection matrix}.
+
+The section $\xi$ is called \textit{horizontal} if
+\begin{equation}
+D\xi = 0 \tag{5.17}
+\end{equation}
+or
+\begin{equation}
+d\xi^i + \sum_j \xi^j \omega_j^i = 0. \tag{5.18}
+\end{equation}
+Equations (5.18) are a system of total differential equations and generally do not have a solution. However, when restricted to a parametrized curve $C$ with parameter $t$, they become a system of ordinary differential equations, and a solution $\xi^i(t)$ is determined by its initial values $\xi^i(t_0)$ at a given point $t=t_0$. The mapping $C \rightarrow \psi^{-1}(C)$ defined by assigning to the point $t \in C$ the vector $\gamma = \sum_i \xi^i(t)s_i$ is called a \textit{lifting} of the curve $C$ to the bundle $E$, and it is called a \textit{horizontal lifting} if $\gamma$ satisfies (5.17) or (5.18). In classical language a lifting is called a \textit{vector field} along $C$ and a horizontal lifting is called a \textit{parallel vector field} along $C$.
+
+Let
+\begin{equation}
+s' = g s \tag{5.19}
+\end{equation}
+be a new frame field, where $g$ is a non-singular $(q \times q)$-matrix of complex-valued $C^\infty$-functions in $U$. By (5.13), we have
+\begin{equation}
+Ds' = \omega' s', \tag{5.20}
+\end{equation}
+where
+\begin{equation}
+\omega' g = dg + g \omega. \tag{5.21}
+\end{equation}
+This is an important formula, giving the effect on the connection matrix under a change of the frame field.
+
+By taking the exterior derivative of (5.21) and using (5.21), we get
+\begin{equation}
+\Omega' g = g \Omega, \tag{5.22}
+\end{equation}
+where
+\begin{equation}
+\Omega = d\omega - \omega \wedge \omega, \tag{5.23}
+\end{equation}
+and $\Omega'$ is defined similarly in terms of the connection matrix $\omega'$. $\Omega$ is a $(q \times q)$-matrix of exterior 2-forms, and is called the curvature matrix relative to the frame field $s$.
+
+The simple transformation law (5.22) implies the following: The vanishing of $\Omega$ is a condition independent of the choice of $s$. A connection satisfying $\Omega = 0$ is called flat.
+
+Exterior differentiation of (5.23) gives
+\begin{equation}
+d\Omega + \Omega \wedge \omega - \omega \wedge \Omega = 0, \tag{5.24}
+\end{equation}
+which is called the Bianchi Identity.
+
+The example of the curvature matrix motivates the definition: Suppose there is associated to every frame field $s$ a $(q \times q)$-matrix $\phi_s$ of forms of degree $k$, such that under a change of the frame field (5.19) we have
+\begin{equation}
+\phi_{s'} = g \phi_s g^{-1}. \tag{5.25}
+\end{equation}
+Such a collection of matrices $\{\phi_s\}$ is called a tensorial matrix of the adjoint type. (The name arises from the adjoint representation of the group $GL(q;\mathbb{C})$.) By taking the exterior derivative of (5.25) and using (5.21), we get
+\begin{equation}
+D\phi_{s'} = g D\phi_s g^{-1}, \tag{5.26}
+\end{equation}
+where
+\begin{equation}
+D\phi_s = d\phi_s - \omega \wedge \phi_s + (-1)^k \phi_s \wedge \omega \tag{5.27}
+\end{equation}
+and $D\phi_{s'}$ is defined similarly with the connection matrix $\omega'$ relative to the frame field $s'$. Thus $D\phi_s$ is a tensorial matrix of $(k+1)$-forms of the adjoint type. It is called the covariant differential of $\phi_s$.
+
+The covariant differential of the curvature matrix will not lead to anything significant because the Bianchi identity (5.24) can be written
+\begin{equation}
+D\Omega = 0. \tag{5.28}
+\end{equation}
+Here and later we will frequently omit the subscript $s$, when the frame field is fixed through the discussion.
+
+By (5.27) it can be immediately verified that
+\begin{equation}
+D^2\phi = DD\phi = [\phi,\Omega], \tag{5.29}
+\end{equation}
+where the "commutator" is defined by
+\begin{equation}
+[\phi,\Omega] = \phi \wedge \Omega - \Omega \wedge \phi. \tag{5.30}
+\end{equation}
+
+We now consider a complex-valued function $P(A_1,\ldots,A_r)$, whose arguments are the $(q \times q)$-matrices $A_i$, $1 \leq i \leq r$, and which is $\mathbb{C}$-linear in each of the arguments. In fact, if
+\begin{equation}
+A_i = (a_{i,\alpha\beta}), \quad 1 \leq i \leq r, \quad 1 \leq \alpha,\beta \leq q, \tag{5.31}
+\end{equation}
+then
+\begin{equation}
+P(A_1,\ldots,A_r) = \sum \lambda_{\alpha_1\ldots\alpha_r\beta_1\ldots\beta_r} a_{1,\alpha_1\beta_1} \ldots a_{r,\alpha_r\beta_r}, \tag{5.32}
+\end{equation}
+where the $\lambda$'s are complex numbers and the summation is over the $\alpha$'s and the $\beta$'s from 1 to $q$. Such a function (or polynomial) is called invariant, if
+\begin{equation}
+P(gA_1g^{-1},\ldots,gA_rg^{-1}) = P(A_1,\ldots,A_r) \tag{5.33}
+\end{equation}
+for every non-singular matrix $g$. It will be called symmetric, if its value remains unchanged on a permutation of its arguments.
+
+Examples of symmetric invariant polynomials can be obtained as follows: Let $A$ be a $(q \times q)$-matrix, $I$ be the $(q \times q)$-unit matrix, and let
+\begin{equation}
+\det(I + \frac{1}{2\pi i} A) = \sum_{0 \leq j \leq q} \binom{q}{j} P_j(A), \tag{5.34}
+\end{equation}
+where $P_j(A)$ is a polynomial of degree $j$ in the elements of $A$. Let $P_j(A_1,\ldots,A_j)$ be the completely polarized polynomial of $P_j(A)$, so normalized that
+\begin{equation}
+P_j(A,\ldots,A) = P_j(A). \tag{5.35}
+\end{equation}
+From the definition (5.34), we have
+\begin{equation}
+P_j(gAg^{-1}) = P_j(A). \tag{5.36}
+\end{equation}
+Since $P_j(A_1,\ldots,A_j)$ can be expressed in terms of $P_j(A)$ for different arguments $A$, for instance,
+\begin{equation}
+P_2(A_1,A_2) = \frac{1}{2}(P_2(A_1+A_2)-P_2(A_1)-P_2(A_2)), \tag{5.37}
+\end{equation}
+it follows that $P_j(A_1,\ldots,A_j)$ are invariant.
+
+Suppose $P(A_1,\ldots,A_r)$ is an invariant polynomial, so that the equation (5.33) is fulfilled. Let
+\[g = I + g'.\]
+Then
+\[g^{-1} = I - g' + \cdots,\]
+where the dots involve terms containing higher powers of the elements of $g'$. Substituting into (5.33) and retaining only the terms which are linear in the elements of $g'$, we get
+\begin{equation}
+\sum_{1 \leq i \leq r} P(A_1,\ldots,g'A_i - A_i g',\ldots,A_r) = 0 \tag{5.38}
+\end{equation}
+for any matrix $g'$. This identity remains true, when $A_1, \ldots, A_r$ are matrices whose elements are differential forms (in which case $P$ is a complex-valued form).
+
+Suppose the elements of $A_i$ are forms of degree $d_i$. It follows from (5.38) that
+\begin{equation}
+\sum_{1 \leq i \leq r} (-1)^{d_1 + \cdots + d_{i-1}} P(A_1, \ldots, \theta \wedge A_i, \ldots, A_r) + \sum_{1 \leq i \leq r} (-1)^{d_1 + \cdots + d_i + 1} P(A_1, \ldots, A_i \wedge \theta, \ldots, A_r) = 0, \tag{5.39}
+\end{equation}
+where $\theta$ is a $(q \times q)$-matrix of 1-forms. In fact, $\theta$ is a sum of matrices of the form $g'\alpha$, where $g'$ is a matrix of functions and $\alpha$ is a one-form. Since (5.39) is linear in $\theta$, it suffices to prove it for the case $\theta = g'\alpha$. By moving $\alpha$ to the front of the expressions, we see that (5.39) for the case $\theta = g'\alpha$ follows immediately from (5.38).
+
+The invariant polynomials constitute a link between the local properties of a connection and its global properties. In fact, we say that a family of matrices $\{\phi_s\}$ is a tensorial matrix of $k$-forms of the adjoint type in $M$, if such a matrix $\phi_s$ is associated to every local frame field $s$ such that the relation (5.25) holds under a change of the frame field (5.19). If $P(A_1,\ldots,A_r)$ is an invariant polynomial and $A_i$ is a tensorial matrix of the adjoint type in $M$, whose elements are forms of degree $d_i$, $1 \leq i \leq r$, then $P(A_1,\ldots,A_r)$ is a form of degree $d_1 + \cdots + d_r$ which is globally defined in $M$. Moreover, it follows from (5.27) and (5.39) that its exterior derivative is
+\begin{equation}
+dP(A_1,\ldots,A_r) = \sum_{1 \leq i \leq r} (-1)^{d_1 + \cdots + d_{i-1}} P(A_1, \ldots, DA_i, \ldots, A_r). \tag{5.40}
+\end{equation}
+
+For the polynomials $P_j(A)$ defined in (5.34) we have therefore
+\begin{equation}
+dP_j(\Omega) = 0, \tag{5.41}
+\end{equation}
+because of the Bianchi identity (5.28). Thus $P_j(\Omega)$ is a closed form of degree $2j$ in $M$ and defines an element of the de Rham group $R_{2j} \cong H^{2j}(M, \mathbb{C})$ with complex coefficients.
+
+(B) Let $\psi: E \to M$ be a complex vector bundle with fiber dimension $q$. Let $\Omega$ be the curvature matrix of a connection in the bundle. Then a change of the connection modifies $P_j(\Omega)$, $1 \leq j \leq q$, by an additive term of the form $dQ$, where $Q$ is a form of degree $2j - 1$ in $M$.
+
+The following proof of (B) is due to Weil. Let $\omega, \Omega$ and $\widetilde{\omega}, \widetilde{\Omega}$ be respectively the connection and curvature matrices of two connections relative to the same frame field $s$. If $s$ and $s'$ are related by (5.19), we have (5.21) and the corresponding relation
+\[\widetilde{\omega}' g = dg + g \widetilde{\omega},\]
+for the second connection. Putting
+\begin{equation}
+\eta = \widetilde{\omega} - \omega, \quad \eta' = \widetilde{\omega}' - \omega', \tag{5.42}
+\end{equation}
+we get
+\begin{equation}
+\eta' g = g \eta. \tag{5.43}
+\end{equation}
+Thus, $\eta$, the difference of two connection matrices, is a tensorial matrix of 1-forms of the adjoint type. We put
+\begin{equation}
+\omega_t = \omega + t\eta, \quad 0 \leq t \leq 1. \tag{5.44}
+\end{equation}
+Then $\omega_t$ is a connection matrix depending on the parameter $t$, which reduces to $\omega$ and $\widetilde{\omega}$ for $t = 0$ and $t = 1$ respectively.
+
+The curvature matrix of the connection $\omega_t$ is by definition
+\begin{equation}
+\Omega_t = d\omega_t - \omega_t \wedge \omega_t = \Omega + tD\eta - t^2 \eta \wedge \eta, \tag{5.45}
+\end{equation}
+where the covariant differential is taken with respect to the connection $\omega$.
+
+Let $P(A_1, \ldots , A_p)$ be a symmetric invariant polynomial. Let
+\begin{align}
+P(A) &= P(A, \ldots , A), \tag{5.46} \\
+Q(B,A) &= p P(B,A, \ldots , A). \tag{5.47}
+\end{align}
+Then we have
+\begin{equation}
+\frac{d}{dt} P(\Omega_t) = Q(D\eta,\Omega_t) - 2tQ(\eta \wedge \eta,\Omega_t). \tag{5.48}
+\end{equation}
+
+On the other hand, we have, from (5.45) and (5.29),
+\begin{align*}
+D\Omega_t &= tD^2 \eta + t^2[\eta,D\eta] = t[\eta,\Omega] + t^2[\eta,D\eta] \\
+&= t[\eta,\Omega_t],
+\end{align*}
+so that
+\begin{align*}
+dQ(\eta,\Omega_t) &= Q(D\eta,\Omega_t) - p(p-1)P(\eta,D\Omega_t,\Omega_t, \ldots ,\Omega_t) \\
+&= Q(D\eta,\Omega_t) - p(p-1)tP(\eta,[\eta,\Omega_t], \Omega_t, \ldots ,\Omega_t).
+\end{align*}
+
+Equation (5.39) gives, with $\theta = A_1 = \eta$, $A_2 = \ldots = A_p = \Omega_t$,
+\begin{equation}
+2Q(\eta \wedge \eta,\Omega_t) - p(p-1)P(\eta,[\eta,\Omega_t],\Omega_t, \ldots ,\Omega_t) = 0. \tag{5.49}
+\end{equation}
+
+Combining the last two equations, we get
+\begin{equation}
+dQ(\eta,\Omega_t) = Q(D\eta,\Omega_t) - 2tQ(\eta \wedge \eta,\Omega_t). \tag{5.50}
+\end{equation}
+Therefore
+\begin{equation}
+\frac{d}{dt} P(\Omega_t) = dQ(\eta,\Omega_t). \tag{5.51}
+\end{equation}
+Integrating with respect to $t$, we get
+\begin{equation}
+P(\widetilde{\Omega}) - P(\Omega) = d \int_{0}^{1} Q(\eta,\Omega_t)  dt. \tag{5.52}
+\end{equation}
+This proves (B).
+
+Special cases of $P_j(\Omega)$ are:
+\begin{align}
+P_1(\Omega) &= \frac{i}{2\pi q} \sum_j \Omega_j^j, \tag{5.53} \\
+P_2(\Omega) &= \frac{-1}{(2\pi)^2 q(q-1)} \sum_{j<k} \left[ \Omega_j^j \Omega_k^k - \Omega_j^k \Omega_k^j \right], \tag{5.54}
+\end{align}
+where $\Omega_j^k, 1 \leq j, k \leq q$, are the elements of the curvature matrix $\Omega$.
+
+We will now define an hermitian structure on the bundle (5.2). We recall that an hermitian structure on a complex vector space $V$ is a complex-valued function $H(\xi, \eta)$, $\xi, \eta \in V$, such that
+\begin{align}
+(1)\quad & H(\lambda_1 \xi_1 + \lambda_2 \xi_2, \eta) = \lambda_1 H(\xi_1, \eta) + \lambda_2 H(\xi_2, \eta), \\
+& \lambda_1, \lambda_2 \in \mathbb{C}, \quad \xi_1, \xi_2, \eta \in V, \tag{5.55} \\
+(2)\quad & H(\xi, \eta) = \overline{H(\eta, \xi)}.
+\end{align}
+It is called positive definite if
+\[H(\xi, \xi) > 0, \quad \xi \neq 0.\]
+
+An \textit{hermitian structure} on the complex vector bundle (5.2) is a $C^\infty$ field of positive definite hermitian structures in the fibers of $E$. That is, if $\xi, \eta$ are two $C^\infty$-sections of the bundle, $H(\xi, \eta)$ is a complex-valued $C^\infty$-function having properties corresponding to (5.55). A complex vector bundle with an hermitian structure is called an \textit{hermitian vector bundle}. By a partition of unity argument, it can be shown that every complex vector bundle can be given an hermitian structure.
+
+To every frame field $s$ the hermitian structure defines an hermitian matrix
+\begin{equation}
+H_s = (H(s_i,s_j)), \quad 1 \leq i, j \leq q, \tag{5.56}
+\end{equation}
+and is in turn completely determined by this matrix. Under a change of frame field (5.19) this matrix is transformed according to
+\begin{equation}
+H_{s'} = g H_s \, ^t \overline{g}, \tag{5.57}
+\end{equation}
+where
+\[H_{s'} = (H(s_i',s_j')), \quad 1 \leq i,j \leq q.\]
+
+A connection in an hermitian vector bundle is called admissible, if $H(\xi,\eta)$ remains constant when $\xi,\eta$ are horizontal sections along arbitrary curves. Let
+\begin{equation}
+h_{ik} = H(s_i,s_k), \quad 1 \leq i, j, k \leq q \tag{5.58}
+\end{equation}
+and let
+\[\xi = \sum_i \xi^i s_i, \quad \eta = \sum_j \eta^j s_j.\]
+Then
+\[H(\xi,\eta) = \sum_{i,j,k} h_{ik} \xi^i \overline{\eta^k}.\]
+The sections $\xi,\eta$ being horizontal, we have (5.18) and a similar equation for $\eta^k$. It follows that
+\begin{align*}
+dH(\xi,\eta) = \sum_{i,j,k} \left( dh_{ik} - \sum_j h_{jk} \omega_i^j - \sum_j h_{ij} \overline{\omega_k^j} \right) \xi^i \overline{\eta^k}.
+\end{align*}
+Since horizontal sections along curves exist with arbitrary initial values of $\xi^i, \eta^k$, the condition for an admissible connection becomes
+\begin{equation}
+dh_{ik} - \sum_j h_{jk} \omega_i^j - \sum_j h_{ij} \overline{\omega_k^j} = 0, \tag{5.59}
+\end{equation}
+or, in matrix notation
+\begin{equation}
+dH = \omega H + H \, ^t \overline{\omega}, \tag{5.60}
+\end{equation}
+where the subscript $s$ is dropped. By an elementary extension argument, it follows from (5.60) that an admissible connection always exists in an hermitian vector bundle. By taking the exterior derivative of (5.60), we get
+\begin{equation}
+\Omega H + H \, ^t \overline{\Omega} = 0, \tag{5.61}
+\end{equation}
+i.e., $\Omega H$ is skew-hermitian.
+
+A frame field $s$ of an hermitian vector bundle is called unitary, if $H_s = I$ ($=$ the unit matrix). Relative to a unitary frame field, the equations (5.60) and (5.61) become respectively
+\begin{align}
+\omega + ^t \overline{\omega} &= 0, \tag{5.62} \\
+\Omega + ^t \overline{\Omega} &= 0, \tag{5.63}
+\end{align}
+i.e., the connection and curvature matrices $\omega$ and $\Omega$ are both skew-hermitian.
+
+It follows from (5.61) that for an hermitian vector bundle with an admissible connection, we have
+\begin{equation}
+\det(I + \frac{i}{2\pi} \Omega) = \det(I - \frac{i}{2\pi} \overline{\Omega}) = \overline{\det(I + \frac{i}{2\pi} \Omega)}. \tag{5.64}
+\end{equation}
+
+For the coefficients $P_j(A)$ defined in (5.34) and their polarized polynomials $P_j(A_1, \ldots, A_j)$ we write
+\begin{equation}
+P_j(A_1, \ldots, A_j) = (\text{Re } P_j)(A_1, \ldots, A_j) + i(\text{Im } P_j)(A_1, \ldots, A_j), \tag{5.65}
+\end{equation}
+so that $\text{Re } P_j$ and $\text{Im } P_j$ are real-valued and $\mathbb{R}$-linear in each of their arguments. Let
+\begin{align}
+(\text{Re } P_j)(\Omega) &= (\text{Re } P_j)(\Omega, \ldots, \Omega), \\
+(\text{Im } P_j)(\Omega) &= (\text{Im } P_j)(\Omega, \ldots, \Omega).
+\end{align}
+Then it follows from (5.64) that
+\begin{equation}
+(\text{Im } P_j)(\Omega) = 0 \tag{5.66}
+\end{equation}
+for the curvature matrix $\Omega$ of an admissible connection of an hermitian structure. It follows from Theorem (B) that for any connection the element of the de Rham group $R_{2j}$ determined by $(\text{Im } P_j)(\Omega)$ is zero. On the other hand, we will show later that the element determined by $(\text{Re } P_j)(\Omega)$ is what is called the $j$th Chern class of the bundle $E$ with real or integer coefficients.
+
+\endinput

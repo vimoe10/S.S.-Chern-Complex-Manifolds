@@ -1,0 +1,228 @@
+\chapter{Almost Complex Manifolds; Integrability Conditions}
+
+% \section*{Almost Complex Manifolds; Integrability Conditions}
+
+Let $M$ be a $C^\infty$ manifold of dimension $n$. To a point $x \in M$ we will denote by $T_x$ and $T^*_x$ the tangent and cotangent spaces respectively. An \textit{almost complex structure} on $M$ is a $C^\infty$ field of endomorphisms $J_x: T_x \to T_x$, such that $J^2_x = -1_x$, where $1_x$ denotes the identity endomorphism in $T_x$.
+
+A manifold which is given an almost complex structure is called \textit{almost complex}. Not all manifolds have this property. In fact, from the discussions in §2 follows the theorem:
+
+(A) An almost complex manifold is even-dimensional and orientable.
+
+\textit{Remark.} This condition is not sufficient for a manifold to have an almost complex structure. For instance, it was proved by Ehresmann and Hopf that the 4-sphere $S^4$ cannot be given an almost complex structure [11, p. 217].
+
+Alternatively, an almost complex structure can be defined by the space $A$ of its complex-valued $C^\infty$ forms of type (1,0). If $\bar{A}$ denotes the space consisting of forms which are conjugate complex to those of $A$, then at every $x \in M$ we have the direct sum decomposition
+\begin{equation}
+T^*_x \otimes \mathbb{C} = A_x \oplus \bar{A}_x, \tag{3.1}
+\end{equation}
+where $A_x$ (resp. $\bar{A}_x$) is the space of the forms of $A$ (resp. $\bar{A}$) at $x$.
+
+To establish the relation between the definitions let $x^\alpha$, $1 \leq \alpha, \beta \leq n$, be a local coordinate system. Then a basis in the tangent space $T_x$ is given by $\frac{\partial}{\partial x^\alpha}$ and its dual basis $T^*_x$ consists of the differential forms $dx^\beta$. The endomorphism $J_x$ will be defined by
+\begin{equation}
+J_x \left( \sum_\alpha \xi^\alpha \frac{\partial}{\partial x^\alpha} \right) = \sum_{\alpha, \beta} a^\alpha_\beta \xi^\beta \frac{\partial}{\partial x^\alpha} \tag{3.2}
+\end{equation}
+The condition that $J^2_x = -1_x$ is expressed by
+\begin{equation}
+\sum_\beta a^\alpha_\beta a^{\beta}_{\gamma} = -\delta^\alpha_{\gamma}, \quad 1 < \alpha, \beta, \gamma \leq n. \tag{3.3}
+\end{equation}
+
+At each point $x \in M$ the discussions of §2 apply, and we see that the forms
+\begin{equation}
+\sum_\beta \left[ a^\alpha_\beta + i\delta^\alpha_{\beta} \right] dx^\beta \tag{3.4}
+\end{equation}
+are of type (1,0). They are $n$ in number and exactly $m = n/2$ of them are linearly independent over the ring of complex-valued $C^\infty$-functions (cf. (2.3)). (The situation being local, we restrict ourselves to a sufficiently small neighborhood. As all our functions are $C^\infty$ unless otherwise specified, we will later on frequently omit the adjective "$C^\infty$".)
+
+(B) A complex manifold has an almost complex structure.
+
+In fact, the complex-valued 1-forms which, in terms of the local coordinates $z^k$, $1 \leq k \leq m$, are linear combinations of $dz^k$, are well-defined in a complex manifold $M$. These we define to be the forms of type (1,0). Since
+\[\left( \frac{i}{2} \right)^m \wedge \frac{dz^k}{\lambda} \wedge d\overline{z^k} \neq 0,\]
+we have defined an almost complex structure on $M$.
+
+To describe $J$ in terms of the local coordinates $z^k$ let
+\[z^k = x^k + iy^k.\]
+Then we have, using the fact that $dz^k$ is of type (1,0),
+\begin{align*}
+(dz^k) \left( \frac{\partial}{\partial x^j} \right) &= \delta_j^k, \quad (dz^k) \left( \frac{\partial}{\partial y^j} \right) = i\delta_j^k, \\
+(dz^k) \left( J \frac{\partial}{\partial x^j} \right) &= i\delta_j^k, \quad (dz^k) \left( J \frac{\partial}{\partial y^j} \right) = -\delta_j^k, \quad 1 \leq j, k \leq m.
+\end{align*}
+It follows that
+\begin{equation}
+J \left( \frac{\partial}{\partial x^j} \right) = \frac{\partial}{\partial y^j}, \quad J \left( \frac{\partial}{\partial y^j} \right) = -\frac{\partial}{\partial x^j}. \tag{3.6}
+\end{equation}
+
+The question arises whether this is the only way to get an almost complex manifold, i.e., whether every almost complex manifold is complex. This is the case for $n = 2$, but not in general. The question is whether local coordinates $x^k$, $y^k$, $1 \leq k \leq m = n/2$, can be introduced such that, if $z^k$ are defined by (3.5), the forms of type (1,0) are linear combinations of $dz^k$. Suppose the almost complex structure is locally defined by the forms $\theta^k$ of type (1,0) which are linearly independent (over the ring of complex-valued $C^\infty$-functions). Their exterior derivatives can be written
+\begin{equation}
+d\theta^k = \frac{1}{2} \sum_{j,\ell} A^k_{j\ell} \theta^j \wedge \theta^\ell + \sum_{j,\ell} B^k_{j\ell} \theta^j \wedge \overline{\theta^\ell} + \frac{1}{2} \sum_{j,\ell} C^k_{j\ell} \overline{\theta^j} \wedge \overline{\theta^\ell}, \tag{3.7}
+\end{equation}
+where $A^k_{j\ell}$, $B^k_{j\ell}$, $C^k_{j\ell}$ are complex-valued functions satisfying
+\begin{equation}
+A^k_{j\ell} + A^k_{\ell j} = 0, \quad C^k_{j\ell} + C^k_{\ell j} = 0, \quad 1 \leq j,k,\ell \leq m. \tag{3.8}
+\end{equation}
+
+The condition
+\begin{equation}
+d\theta^k \equiv 0 \quad \text{mod } \theta^j \tag{3.9}
+\end{equation}
+remains invariant under a linear transformation of the $\theta^k$. It is satisfied if $\theta^k = dz^k$. Thus it is a necessary condition for an almost complex structure to arise from a complex structure. We will call (3.9) the \textit{integrability condition}. By (3.7) it can also be written
+\begin{equation}
+C^k_{j\ell} = 0. \tag{3.9a}
+\end{equation}
+
+Before proceeding, we will express the integrability condition in terms of the tensor field which defines the endomorphism $J_x$. Suppose that our Greek indices range from 1 to $n$:
+\begin{equation}
+1 \leq \alpha,\beta,\gamma,\lambda,\mu,\rho,\sigma \leq n. \tag{3.10}
+\end{equation}
+Then we have:
+
+(C) (Eckmann-Frölicher) Let
+\begin{equation}
+t^\alpha_{\beta\gamma} = \frac{1}{4} \left( \frac{\partial \overset{\alpha}{\underset{\gamma}{\triangle}}}{\partial x^\beta} - \frac{\partial \overset{\alpha}{\underset{\beta}{\triangle}}}{\partial x^\gamma} + \sum_{\lambda,\mu} \left( \overset{\mu}{\underset{\gamma}{\triangle}} \overset{\alpha}{\underset{\mu}{\triangle}} \overset{\lambda}{\underset{\beta}{\triangle}} - \overset{\mu}{\underset{\beta}{\triangle}} \overset{\alpha}{\underset{\mu}{\triangle}} \overset{\lambda}{\underset{\gamma}{\triangle}} \right) \right). \tag{3.11}
+\end{equation}
+The integrability condition of the almost complex structure defined by the tensor field $\overset{\alpha}{\underset{\beta}{\triangle}}$ is $t^\alpha_{\beta\gamma} = 0$.
+
+Since the forms of type (1,0) are linear combinations of those in (3.4), the integrability condition can be expressed by
+\[\sum_\beta d\overset{\alpha}{\underset{\beta}{\triangle}} \wedge dx^\beta \equiv 0, \quad \text{mod } \sum_\lambda (\overset{\lambda}{\underset{\gamma}{\triangle}} + i\delta^\lambda_\gamma) dx^\lambda\]
+or
+\[\sum_{\beta, \gamma} \frac{\partial \overset{\alpha}{\underset{\beta}{\triangle}}}{\partial x^\gamma} dx^\beta \wedge dx^\gamma \equiv 0, \quad \text{mod } \sum_\lambda (\overset{\lambda}{\underset{\gamma}{\triangle}} + i\delta^\lambda_\gamma) dx^\lambda.\]
+
+If we equate to zero the forms in (3.4), a fundamental system of solutions of the resulting linear equations in $dx^\beta$ can be selected from $\overset{\lambda}{\underset{\gamma}{\triangle}} - i\delta^\lambda_\gamma$ (cf. (2.1)). The condition above can therefore be written
+\[\sum_{\beta, \gamma} \frac{\partial \overset{\alpha}{\underset{\beta}{\triangle}}}{\partial x^\gamma} (\overset{\lambda}{\underset{\beta}{\triangle}} - i\delta^\lambda_\beta)(\overset{\mu}{\underset{\gamma}{\triangle}} - i\delta^\mu_\gamma) = 0.\]
+Equating to zero either the real or the imaginary part of this equation, we get $t^\alpha_{\beta\gamma} = 0$.
+
+\textit{Remark.} It can be verified that $t^\alpha_{\beta\gamma}$ are the components of a tensor field.
+
+The integrability condition is identically satisfied when $n = 2$, as can be seen from (3.9a). For $n \geq 4$ the condition is clearly non-trivial. An almost complex structure satisfying the integrability condition is called \textit{integrable}, otherwise \textit{non-integrable}. An almost complex manifold of dimension $\geq 4$ always has a non-integrable almost complex structure, for even if the given one is integrable, it can be perturbed slightly to give a non-integrable one.
+
+A significant example of an almost complex manifold is the 6-sphere $S^6$. From the theory of Lie groups it is known that $S^6$ can be considered as a coset space $G_2/SU(3)$, where $G_2$ is the exceptional simple Lie group of $14$ dimensions and $SU(3)$ is the special unitary group in three variables. From the definition of $G_2$ and its structure equations one sees immediately that $S^6$ has a non-integrable almost complex structure.
+
+Suppose that we have an integrable almost complex structure. The condition (3.9) suggests us to apply the theorem of Frobenius on completely integrable differential systems. Since the forms are complex-valued, it will be necessary to suppose that the almost complex structure is real analytic, i.e., that the functions $\overset{\alpha}{\underset{\beta}{\triangle}}$ are real analytic. Under this hypothesis it follows from Frobenius's theorem that there exist complex local coordinates $z^k$ such that the forms of type $(1,0)$ are linear combinations of $dz^k$. In a neighborhood where two such local coordinate systems $z^k$ and $w^j$ are both valid $dw^j$ are linear combinations of $dz^k$, which implies that $w^j$ are holomorphic functions of $z^k$. Thus the manifold has a complex structure.
+
+This theorem that a complex structure can be introduced in a manifold with an integrable almost complex structure is also true if the latter is $C^\infty$ or satisfies even weaker smoothness conditions. This was first proved by A. Newlander and L. Nirenberg [20]. Subsequent proofs were given by A. Nijenhuis and W. B. Woolf, J. Kohn and L. Hörmander. These proofs are rather difficult. The case $n = 2$ is a classical theorem of Korn and Lichtenstein which asserts that a two-dimensional riemannian metric of class $C^{1,\alpha}$ ($0 < \alpha < 1$) is locally conformal to a flat metric. Even the proof of the Korn-Lichtenstein theorem is not simple [16].
+
+Thus we see that integrable almost complex structures and complex structures are essentially identical. In some of the problems it is not necessary to make use of the local complex coordinates $z^k$, and the Newlander-Nirenberg theorem will not be needed. But we will not insist on this point.
+
+The integrability condition (3.9) or $t^\alpha_{\beta\gamma} = 0$ (by (C)) is a criterion for deciding whether a given almost complex structure is integrable. It gives no information on the problem whether an almost complex manifold can be given a complex structure, whose underlying almost complex structure may be different from the given one. Recently van de Ven gave examples of compact four-dimensional almost complex manifolds which do not have any complex structure; his proof makes use of the Atiyah-Singer index theorem [21]. It is an outstanding problem whether $S^6$ can have a complex structure.
+
+Let $M$ be an almost complex manifold of dimension $n = 2m$. All complex-valued $C^\infty$-forms of type $(p,q)$ constitute a module $A_{pq}$ over the ring of complex valued $C^\infty$-functions. The following properties are easily verified:
+
+(1) If $\alpha \in A_{pq}$, then $\bar{\alpha} \in A_{qp}$.
+
+(2) If $\alpha \in A_{pq}$, $\beta \in A_{rs}$, then $\alpha \land \beta \in A_{p+r,q+s}$.
+
+(3) $dA_{pq} \subset A_{p+2,q-1} + A_{p+1,q} + A_{p,q+1} + A_{p-1,q+2}$.
+
+(4) $A_{pq} = 0$ if $p$ or $q > m$.
+
+From (3) we define, for $\alpha \in A_{pq}$, the operators
+\begin{equation}
+\partial \alpha = \Pi_{p+1,q} d\alpha, \quad \bar{\partial} \alpha = \Pi_{p,q+1} d\alpha. \tag{3.12}
+\end{equation}
+
+If the almost complex structure is integrable, (3) becomes
+\begin{equation}
+dA_{pq} \subset A_{p+1,q} + A_{p,q+1}, \tag{3.13}
+\end{equation}
+as follows immediately from (3.7). We can then write
+\begin{equation}
+d = \partial + \bar{\partial}. \tag{3.14}
+\end{equation}
+Since $d^2 = 0$, we get
+\[\partial^2 + \partial \bar{\partial} + \bar{\partial} \partial + \bar{\partial}^2 = 0.\]
+Equating to zero the terms of different types, we find
+\begin{equation}
+\partial^2 = \partial \bar{\partial} + \bar{\partial} \partial = \bar{\partial}^2 = 0. \tag{3.15}
+\end{equation}
+
+The last condition gives rise to the following form of the integrability condition:
+
+(D) An almost complex structure is integrable if and only if $\bar{\partial}^2 = 0$.
+
+It remains to prove that the integrability condition is satisfied if $\bar{\partial}^2 = 0$. In fact, let $F$ be a complex-valued $C^\infty$-function. We write
+\[dF = \sum_k F_k \theta^k + \sum_k G_k \bar{\theta}^k.\]
+Then we have
+\[\partial F = \sum_k F_k \theta^k, \quad \bar{\partial}F = \sum_k G_k \bar{\theta}^k,\]
+and
+\begin{align*}
+\bar{\partial}^2 F &= \Pi_{0,2} d\bar{\partial}F = \Pi_{0,2} d(\bar{\partial}-d)F = -\Pi_{0,2} d\partial F \\
+&= -\sum_{j,k,\ell} F_\ell c_{jk}^\ell \bar{\theta}^j \wedge \bar{\theta}^k.
+\end{align*}
+Since this expression is zero for any $F$, we get $c_{jk}^\ell = 0$, which is the integrability condition (3.9a).
+
+From now on suppose $M$ is a complex manifold. A form $\alpha \in A_{pq}$ is called $\bar{\partial}$-closed if $\bar{\partial}\alpha = 0$. Let $C_{pq}$ be the space of $\bar{\partial}$-closed forms of type $(p,q)$. The quotient groups
+\begin{equation}
+D_{pq}(M) = C_{pq}/\bar{\partial}A_{p,q-1} \tag{3.16}
+\end{equation}
+are called the Dolbeault groups of $M$.
+
+The Dolbeault groups are analogous to the de Rham groups of a real manifold, whose definitions we recall as follows: Let $A_r$ be the space of real-valued $C^\infty$-forms of degree $r$, and $C_r$ be the subspace of the forms of $A_r$ which are annihilated by $d$. Then the de Rham groups are
+\begin{equation}
+R_r(M) = C_r/dA_{r-1}. \tag{3.17}
+\end{equation}
+
+Both the de Rham groups and the Dolbeault groups are isomorphic to cohomology groups with coefficient sheaves, which will be treated in §4. Before concluding this section, we will prove an important lemma:
+
+(E) (The Dolbeault-Grothendieck Lemma)
+
+In the number space $C_m$ with the coordinates $z^k$, $1 \leq k \leq m$, let $D$ be the polydisc $|z^k| < r^k$, and let $D'$ be the smaller polydisc $|z^k| < r'^k$, $r'^k < r^k$. Let $\alpha$ be a form of type $(p,q)$, $q \geq 1$, in $D$ such that $\bar{\partial}\alpha = 0$. There exists a form $\beta$ of type $(p,q-1)$ in $D$ such that $\bar{\partial}\beta = \alpha$ in $D'$.
+
+We consider first a special case of this lemma, i.e., $m = 1$, $(p,q) = (0,1)$. We write $z$ for $z^1$. Then
+\[\alpha = f(z)d\bar{z},\]
+where $f(z)$ is a complex-valued $C^\infty$-function. The form $\beta$ sought is a function which satisfies the partial differential equation
+\begin{equation}
+\frac{\partial \beta}{\partial \bar{z}} = f(z), \tag{3.18}
+\end{equation}
+where
+\begin{equation}
+\frac{\partial}{\partial \bar{z}} = \frac{1}{2}\left(\frac{\partial}{\partial x} + i\frac{\partial}{\partial y}\right), \quad z = x + iy. \tag{3.19}
+\end{equation}
+
+We note that if the equation (3.18) is split into its real and imaginary parts we get an elliptic system of two equations of the first order in two independent and two dependent variables.
+
+Let $z,\zeta \in D$ and regard $z$ to be fixed. We have the relation
+\[d\left(\frac{\beta d\zeta}{\zeta - z}\right) = \beta \frac{d\bar{\zeta} \wedge d\zeta}{\zeta - z}.\]
+Suppose $z \in D'$ and let $\Delta_\epsilon$ be a disc of radius $\epsilon$ about $z$, $\epsilon$ being sufficiently small. Applying Stokes' theorem to the domain $D' - \Delta_\epsilon$, we get
+\[\int_{\partial D'} \frac{\beta(\zeta)d\zeta}{\zeta - z} - \int_{\partial \Delta_\epsilon} \frac{\beta(\zeta)d\zeta}{\zeta - z} = \int_{D' - \Delta_\epsilon} \frac{\partial \beta}{\partial \bar{\zeta}} \frac{d\bar{\zeta} \wedge d\zeta}{\zeta - z}.\]
+The second integral at the left-hand side tends to $2\pi i\beta(z)$ as $\epsilon \to 0$. We have therefore the generalized Cauchy integral formula
+\begin{equation}
+2\pi i\beta(z) = \int_{\partial D'} \frac{\beta d\zeta}{\zeta - z} + \int_{D'} \frac{\partial \beta}{\partial \bar{\zeta}} \frac{d\zeta \wedge d\bar{\zeta}}{\zeta - z}. \tag{3.20}
+\end{equation}
+Taking the conjugate complex of this equation and replacing $\bar{\beta}$ by $\beta$, we have also
+\begin{equation}
+-2\pi i\beta(z) = \int_{\partial D'} \frac{\beta d\bar{\zeta}}{\overline{\zeta - z}} - \int_{D'} \frac{\partial \beta}{\partial \bar{\zeta}} \frac{d\zeta \wedge d\bar{\zeta}}{\overline{\zeta - z}}. \tag{3.20a}
+\end{equation}
+
+Equation (3.20) shows that if (3.18) has a solution $\beta(z)$, it is given by
+\begin{equation}
+2\pi i\beta(z) = \int_{D'} \frac{f(\zeta)d\zeta \wedge d\bar{\zeta}}{\zeta - z} + g(z) \tag{3.21}
+\end{equation}
+where $g(z)$ is a holomorphic function. It remains to verify that the function in (3.21) satisfies the equation (3.18).
+
+For this purpose we consider the relation
+\[d(f(\zeta)\log|\zeta - z|^2 d\bar{\zeta}) = \frac{\partial f}{\partial \zeta} \log|\zeta - z|^2 d\zeta \wedge d\bar{\zeta} + \frac{f}{\zeta - z} d\zeta \wedge d\bar{\zeta},\]
+and apply Stokes' theorem to the domain $D' - \Delta_\epsilon$. As $\epsilon \to 0$, the integral
+\[\int_{\partial \Delta_\epsilon} f(\zeta)\log|\zeta - z|^2 d\bar{\zeta}\]
+tends to zero, because, if $|f(\zeta)| \leq B$, we have
+\[\left| \int_{\partial \Delta_\epsilon} f(\zeta) \log |\zeta - z|^{2} d\bar{\zeta} \right| \leq 4\pi B \epsilon |\log \epsilon|.\]
+We have therefore
+\begin{align*}
+\int_{\partial D'} f(\zeta) \log |\zeta - z|^{2} d\bar{\zeta} &= \int_{D'} \frac{\partial f}{\partial \zeta} \log |\zeta - z|^{2} d\zeta \wedge d\bar{\zeta} \\
+&\quad + \int_{D'} \frac{f(\zeta)}{\zeta - z} d\zeta \wedge d\bar{\zeta} = 2\pi i \beta(z) - g(z),
+\end{align*}
+by (3.21). Differentiating under the integral sign with respect to $\bar{z}$, we get
+\[- \int_{\partial D'} \frac{f(\zeta)}{\overline{\zeta - z}} d\bar{\zeta} + \int_{D'} \frac{\partial f}{\partial \bar{\zeta}} \frac{d\zeta \wedge d\bar{\zeta}}{\overline{\zeta - z}} = 2\pi i \frac{\partial \beta}{\partial \bar{z}}.\]
+This differentiation can be justified, essentially because the resulting integrals exist. By (3.20a) (with $\beta$ replaced by $f$) we see that the function $\beta(z)$ in (3.21) satisfies the equation (3.18).
+
+It is important to remark that the proof shows that if the function $f(z)$ is holomorphic in some complex parameters, the same is true for the solution $\beta$.
+
+To prove the general case we introduce the hypothesis $(H_j): \alpha$ does not contain $d\bar{z}^{j+1}, \ldots, d\bar{z}^{m}$. We shall prove that if the lemma is true with the additional hypothesis $(H_{j-1})$, it is true with the additional hypothesis $(H_j)$. Under the hypothesis $(H_0)$, we have $\alpha = 0$, and the lemma is true. On the other hand, the hypothesis $(H_m)$ is empty. Thus the above induction statement will imply the lemma.
+
+Suppose therefore that the lemma is true with the additional hypothesis $(H_{j-1})$. If $\alpha$ does not involve $d\bar{z}^{j+1}, \ldots, d\bar{z}^{m}$, we write
+\[\alpha = (d\bar{z}^{j} \wedge \lambda) + \mu,\]
+where $\lambda$ and $\mu$ are forms of types $(p,q-1)$ and $(p,q)$ respectively and do not contain $d\bar{z}^{j},\ldots,d\bar{z}^{m}$. Since $\bar{\partial}\alpha = 0$, their coefficients are holomorphic in $z^{j+1},\ldots,z^{m}$. By the special case proved above, we can find a form $\lambda'$ of type $(p,q-1)$ which satisfies the equation
+\[\frac{\partial}{\partial \bar{z}^{j}} \lambda' = \lambda\]
+in $D'$ and whose coefficients are holomorphic in $z^{j+1},\ldots,z^{m}$; here the operator $\partial / \partial \bar{z}^{j}$ means the operator applied to each of the coefficients. Then $\bar{\partial}\lambda' - d\bar{z}^{j} \wedge \lambda = v$ (say) does not contain $d\bar{z}^{j},\ldots,d\bar{z}^{m}$, and
+\[\alpha = \bar{\partial}\lambda' + \mu - v.\]
+Since $\bar{\partial}\alpha = 0$, we have $\bar{\partial}(\mu-v) = 0$. But $\mu - v$ does not contain $d\bar{z}^{j},\ldots,d\bar{z}^{m}$, so that, by our induction hypothesis we can find a form $\rho$ of type $(p,q-1)$ in $D$ satisfying
+\[\mu - v = \bar{\partial}\rho \quad \text{in} \quad D'.\]
+Thus $\alpha = \bar{\partial}(\lambda' + \rho)$ and the induction is complete.
+
+\endinput

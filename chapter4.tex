@@ -1,0 +1,175 @@
+\chapter{Sheaves and Cohomology}
+
+% \section*{Sheaves and Cohomology}
+
+Sheaf theory is a basic tool in the study of complex manifolds. We will review its main ideas and the cohomology theory built on it. For details cf. [5] or [2].
+
+Let $M$ be a topological space. A sheaf of abelian groups is a topological space $S$ together with mapping $\pi: S \rightarrow M$, such that the following conditions are satisfied:
+
+(1) $\pi$ is a local homeomorphism;
+(2) for each point $x \in M$ the set $\pi^{-1}(x)$ (called the stalk over $x$) has the structure of an abelian group;
+(3) the group operations are continuous in the topology of $S$.
+
+Let $U$ be an open set of $M$. A section of the sheaf $S$ over $U$ is a continuous mapping $f: U \rightarrow S$, such that $\pi \circ f = \text{identity}$. The set $\Gamma(U,S)$ of all the sections over $U$ forms an abelian group, for if $f,g \in \Gamma(U,S)$, we can define $f-g$ by $(f-g)(x) = f(x) - g(x)$, $x \in U$. The zero of the group $\Gamma(U,S)$ is the zero section which assigns the zero of the stalk $\pi^{-1}(x)$ to every $x \in U$.
+
+If $V$ is an open subset of $U$, there is a homomorphism $\rho_{VU}: \Gamma(U,S) \rightarrow \Gamma(V,S)$ defined by restriction. These conditions motivate the following definition:
+
+A presheaf of abelian groups over $M$ consists of:
+(1) a basis for the open sets of $M$;
+(2) an abelian group $S_U$ assigned to each open set $U$ of the basis; and
+(3) a homomorphism $\rho_{VU}: S_U \rightarrow S_V$ associated to each inclusion $V \subset U$, such that $\rho_{WV} \rho_{VU} = \rho_{WU}$ whenever $W \subset V \subset U$.
+
+From the presheaf one can construct the sheaf by a limit process.
+
+Suppose now that $M$ is a complex manifold. The following sheaves will play an important rôle in future discussions:
+
+(1) the sheaf $A_{pq}$ of germs of complex-valued $C^\infty$ forms of type $(p,q)$. In particular, we will write $A = A_{00}$, the sheaf of germs of complex-valued $C^\infty$-functions.
+(2) the sheaf $C_{pq}$ of germs of complex valued $C^\infty$ forms of type $(p,q)$, which are closed under $\overline{\delta}$. We write $O = C_{00}$, the sheaf of germs of holomorphic functions. For complex manifolds this is the most important sheaf.
+(3) the sheaf $O^*$ of germs of holomorphic functions which vanish nowhere. Here the group operation is the multiplication of germs of holomorphic functions.
+
+A section of the sheaf $A_{pq}$ is a form of type $(p,q)$, etc. Thus, in the notation of §3,
+\begin{equation}
+A_{pq} = \Gamma (M,A_{pq}), \quad C_{pq} = \Gamma (M,C_{pq}), \text{etc.} \tag{4.1}
+\end{equation}
+
+Let
+\[\pi: S \rightarrow M, \quad \tau: T \rightarrow M\]
+be two sheaves of abelian groups over the same space $M$. A sheaf mapping $\phi: S \rightarrow T$ is a continuous mapping such that $\pi = \tau \circ \phi$, i.e., a mapping which preserves the stalks: $\phi(\pi^{-1}(x)) \subset \tau^{-1}(x)$. $\phi$ is called a sheaf homomorphism if its restriction to every stalk is a homomorphism of the groups.
+
+If $Q \rightarrow M$ is a third sheaf over $M$, the sequence of sheaves
+\begin{equation}
+0 \rightarrow S \overset{i}{\longrightarrow} T \overset{\phi}{\longrightarrow} Q \rightarrow 0 \tag{4.2}
+\end{equation}
+connected by homomorphisms is called an exact sequence if at each stage the kernel of one homomorphism is identical to the image of the preceding homomorphism. We describe this by saying that $S$ is a sub-sheaf of $T$ and $Q$ is the quotient sheaf of $T$ by $S$.
+
+It follows from the Dolbeault-Grothendieck lemma proved in §3 that the sequence
+\begin{equation}
+0 \rightarrow C_{pq} \overset{i}{\longrightarrow} A_{pq} \overset{\overline{\delta}}{\longrightarrow} C_{p,q+1} \rightarrow 0 \tag{4.3}
+\end{equation}
+is exact. Here $i$ is the inclusion homomorphism and $\overline{\delta}$ is the homomorphism on sheaves induced by the $\overline{\delta}$-operator. The Dolbeault-Grothendieck lemma says that $\overline{\delta}$ is onto; the exactness of the sequence at the other stages is obvious.
+
+To develop the cohomology theory with a coefficient sheaf we suppose that $M$ is a paracompact Hausdorff space. Let $U = \{U_i\}$ be a locally finite open covering of $M$. The nerve $N(U)$ of the covering $U$ is a simplicial complex whose vertices are the members $U_i$ of the covering such that $U_{i_0}, U_{i_1}, \ldots, U_{i_q}$ span a $q$-dimensional simplex if and only if the intersection $U_{i_0} \cap U_{i_1} \cap \ldots \cap U_{i_q} \neq \emptyset$.
+Let $\pi: S \rightarrow M$ be a sheaf of abelian groups over $M$. A $q$-cochain of $N(U)$ with coefficients in the sheaf $S$ is a function $f$ which associates to each $q$-simplex $\sigma = U_{i_0}U_{i_1}\ldots U_{i_q} \in N(U)$ a section $f(\sigma) \in \Gamma(U_{i_0} \cap \ldots \cap U_{i_q}, S)$. Since the set of sections is an abelian group, the set of all $q$-cochains form an abelian group $C^q(N(U),S)$.
+
+A coboundary operator
+\[\delta_q : C^q(N(U),S) \rightarrow C^{q+1}(N(U),S)\]
+is defined as follows: if $f \in C^q(N(U),S)$ and $\sigma = U_0 \cdots U_{q+1}$, then $\delta_q f \in C^{q+1}(N(U),S)$ has for $\sigma$ the value
+\begin{equation}
+(\delta_q f)(\sigma) = \sum_{j=0}^{q+1} (-1)^j \rho_0 f(U_0 \cdots U_{j-1}U_{j+1} \cdots U_{q+1}), \tag{4.4}
+\end{equation}
+where $\rho_0$ denotes the restriction of the sections to the open set $U_0 \cap \ldots \cap U_{q+1}$.
+
+It is immediately verified that
+\begin{equation}
+\delta_{q+1}\delta_q = 0, \quad q \geq 0. \tag{4.5}
+\end{equation}
+
+The kernel of $\delta_q$ is called the group of all $q$-cocycles and will be denoted by $Z^q(N(U),S)$. The image of $\delta_{q-1}$ is called the group of all $q$-coboundaries and will be denoted by $B^q(N(U),S)$. As a consequence of (4.5), a $q$-coboundary is a $q$-cocycle, and the quotient group
+\begin{equation}
+H^q(N(U),S) = Z^q(N(U),S)/B^q(N(U),S), \quad B^0 = 0, \tag{4.6}
+\end{equation}
+is called the \textit{$q$-th cohomology group of the nerve} $N(U)$ \textit{with the coefficient sheaf} $S$.
+
+The zeroth cohomology group has the simple interpretation:
+\[H^0(N(U),S) = \Gamma(M,S).\]
+
+By a standard process initiated by Čech, one can pass from the cohomology groups $H^q(N(U),S)$ relative to all the locally finite open coverings $U$ of $M$, to the cohomology groups $H^q(M,S)$, $q \geq 0$, of the space $M$ itself.
+
+Let $\pi: S \to M$ be a sheaf of abelian groups over $M$ and let $U = \{U_i\}$ be a locally finite open covering of $M$. A partition of unity of the sheaf $S$ subordinate to the covering $U$ is a collection of sheaf homomorphisms $\eta_i: S \to S$ with the properties:
+
+(1) $\eta_i$ is the zero map in an open neighborhood of $M - U_i$;
+
+(2) $\Sigma_{i}\eta_i = 1$, the latter being the identity mapping of the sheaf $S$.
+
+A sheaf $S$ of abelian groups is \textit{fine} if it admits a partition of unity subordinate to any locally finite open covering.
+
+Examples of fine sheaves are $A_{pq}$. Examples of sheaves which are generally not fine include:
+
+(1) the constant sheaf;
+
+(2) the sheaf $C_{pq}$.
+
+Fine sheaves play a catalytic rôle in the cohomology theory of sheaves, because of the theorem:
+
+If $S$ is fine, then $H^q(M,S) = 0$, $q \geq 1$.
+
+A sheaf homomorphism $i: S \to T$ induces a homomorphism $\Gamma(U,S) \to \Gamma(U,T)$ for every open set $U$ of $M$, and hence a homomorphism
+\[i^q: C^q(N(U),S) \to C^q(N(U),T).\]
+This leads to an induced homomorphism
+\[i^q: H^q(M,S) \to H^q(M,T), \quad q \geq 0.\]
+
+As a result of the exact sequence (4.2) we wish to describe a homomorphism
+\[\delta^q: H^q(M,Q) \rightarrow H^{q+1}(M,S)\]
+and to connect the homomorphisms into a long exact sequence. The exact sequence (4.2) induces the exact sequence
+\[0 \rightarrow C^q(N(U),S) \xrightarrow{i^q} C^q(N(U),T) \xrightarrow{\phi^q} C^q(N(U),Q).\]
+We put
+\begin{equation}
+\bar{C}^q(N(U),Q) = \phi^q C^q(N(U),T) \subset C^q(N(U),Q), \tag{4.8a}
+\end{equation}
+so that the sequence
+\[0 \rightarrow C^q(N(U),S) \xrightarrow{i^q} C^q(N(U),T) \xrightarrow{\phi^q} \bar{C}^q(N(U),Q) \rightarrow 0\]
+is exact. Let
+\begin{align*}
+\bar{Z}^q(N(U),Q) &= \{f \in \bar{C}^q(N(U),Q) | \delta_q f = 0\}, \\
+\bar{H}^q(N(U),Q) &= \bar{Z}^q(N(U),Q)/\delta_{q-1} \bar{C}^{q-1}(N(U),Q). \tag{4.8b}
+\end{align*}
+
+Consider the diagram
+\[
+\begin{array}{ccccccc}
+0 & \rightarrow & C^q(N(U),S) & \xrightarrow{i^q} & C^q(N(U),T) & \xrightarrow{\phi^q} & \bar{C}^q(N(U),Q) \rightarrow 0 \\
+& & \downarrow \delta^q & & \downarrow \delta^q & & \downarrow \delta^q \\
+0 & \rightarrow & C^{q+1}(N(U),S) & \xrightarrow{i^{q+1}} & C^{q+1}(N(U),T) & \xrightarrow{\phi^{q+1}} & \bar{C}^{q+1}(N(U),Q) \rightarrow 0 \\
+& & \downarrow \delta^{q+1} & & \downarrow \delta^{q+1} & & \downarrow \delta^{q+1} \\
+0 & \rightarrow & C^{q+2}(N(U),S) & \xrightarrow{i^{q+2}} & C^{q+2}(N(U),T) & \xrightarrow{\phi^{q+2}} & \bar{C}^{q+2}(N(U),Q) \rightarrow 0 \\
+\end{array}
+\]
+This diagram is commutative, in the sense that the image of a cochain depends only on its final position and is independent of the paths taken. Moreover, the horizontal sequences are exact. To an element of $\bar{H}^q(M,Q)$ we take a representative $q$-cocycle, i.e., an element $u \in C^q(N(U),Q)$, such that $\delta^q u = 0$. There exists $v \in C^q(N(U),T)$, such that $\phi^q v = u$. Then $\phi^{q+1} \circ \delta^q v = \delta^q \circ \phi^q v = \delta^q u = 0$, and there exists $w \in C^{q+1}(N(U),S)$, satisfying $i^{q+1} w = \delta^q v$. $w$ is a cocycle, for
+\[i^{q+2} \circ \delta^{q+1} w = \delta^{q+1} \circ i^{q+1} w = \delta^{q+1} \circ \delta^q v = 0,\]
+so that $\delta^{q+1} w = 0$. By further "chasing" of the diagram, it can be shown that the element of $H^{q+1}(N(U),S)$ defined by $w$ is independent of the various choices made. This defines a homomorphism
+\[\delta^q: H^q(N(U),Q) \rightarrow H^{q+1}(N(U),S).\]
+This definition is valid for a general topological space $M$. It can be proved that if $M$ is Hausdorff and paracompact, then
+\[H^q(M,Q) \cong \bar{H}^q(M,Q).\]
+
+A fundamental fact in cohomology theory is the result: If the sequence of sheaves (4.2) is exact, the sequence of cohomology groups
+\begin{equation}
+0 \longrightarrow H^0(M,S) \xrightarrow{i^0} H^0(M,T) \xrightarrow{\phi^0} H^0(M,Q) \xrightarrow{\delta^0} H^1(M,S) \xrightarrow{i^1} H^1(M,T) \xrightarrow{\phi^1} H^1(M,Q) \xrightarrow{\delta^1} H^2(M,S) \longrightarrow \ldots \tag{4.9}
+\end{equation}
+is exact.
+
+We apply this result to the exact sequence (4.3). A section of the induced sequence of cohomology groups will be
+\begin{equation}
+\ldots \rightarrow H^{r-1}(M,A_{pq}) \rightarrow H^{r-1}(M,C_{p,q+1}) \rightarrow H^r(M,C_{pq}) \rightarrow H^r(M,A_{pq}) \rightarrow \ldots \tag{4.10}
+\end{equation}
+Since the sheaf $A_{pq}$ is fine, we have
+\[H^r(M,A_{pq}) = 0, \quad r \geq 1\]
+and it follows from the exactness of (4.10) that we have the isomorphisms
+\begin{equation}
+H^r(M, C_{pq}) \cong H^{r-1}(M, C_{p,q+1}) \cong \ldots \cong H^1(M, C_{p,q+r-1}) \cong H^0(M, C_{p,q+r}) / \overline{\delta}H^0(M, A_{p,q+r-1}). \tag{4.11}
+\end{equation}
+
+Comparing with (4.1), we see that the latter is the Dolbeault group $D_{p,q+r}(M)$. By changing notation, we get
+\begin{equation}
+D_{pq}(M) \cong H^q(M, C_{p0}). \tag{4.12}
+\end{equation}
+This gives a sheaf-theoretic interpretation of the Dolbeault groups. Notice that $C_{p0}$ is the sheaf of germs of forms of type $(p, 0)$ with holomorphic coefficients, and, in particular, $C_{0,0} = O$.
+
+The sequences (4.3) can be combined into one sequence
+\begin{equation}
+0 \rightarrow C_{p0} \xrightarrow{i} A_{p0} \xrightarrow{\overline{\delta}} A_{p1} \xrightarrow{\overline{\delta}} \ldots \xrightarrow{\overline{\delta}} A_{pq} \rightarrow \ldots, \tag{4.13}
+\end{equation}
+where $i$ is inclusion and $\overline{\delta}$ is defined by the $\overline{\delta}$-operator. The Dolbeault-Grothendieck lemma says that the sequence (4.13) is exact; the subsheaf of $A_{pq}$ which is the image of the preceding homomorphism and the kernel of the next one is precisely $C_{pq}$. Since $A_{pq}$ is fine, (4.13) is called a \textit{fine resolution of the sheaf} $C_{p0}$.
+
+A similar, but simpler, situation prevails in the case of a real differentiable manifold $M$. Let $A^r$ be the sheaf of germs of $C^\infty$ real-valued differential forms of degree $r$, and let $c^r$ be the subsheaf of $A^r$ consisting of germs of closed $r$-forms. Then the sequence
+\begin{equation}
+0 \rightarrow \mathbb{R} \xrightarrow{i} A^0 \xrightarrow{d} A^1 \rightarrow \ldots \xrightarrow{d} A^r \rightarrow \ldots, \tag{4.14}
+\end{equation}
+where $\mathbb{R}$ is the constant sheaf of real numbers and $i$ is inclusion, is exact. (4.14) is a fine resolution of the sheaf $\mathbb{R}$. From the exactness of (4.14) follows the de Rham isomorphism
+\begin{equation}
+R_r(M) \cong H^r(M; \mathbb{R}), \tag{4.15}
+\end{equation}
+where the left-hand side is the $r$-dimensional de Rham group of $M$ (cf. (3.17)).
+
+The sheaf theory discussed above can be extended to other algebraic structures, such as sheaf of rings, sheaf of modules, etc. Moreover, the group operation on a stalk may not be abelian, in which case, however, there will not be a cohomology theory.
+
+\endinput

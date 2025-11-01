@@ -1,0 +1,329 @@
+\chapter{The Grassmann Manifold}
+
+% \section*{The Grassmann Manifold}
+
+Let
+\begin{equation}
+C_{N+1} = \mathbb{C} \times \cdots \times \mathbb{C}, \quad N + 1 \text{ factors} \tag{8.1}
+\end{equation}
+be the complex number space of $N + 1$ dimensions. Let $GL(N+1,\mathbb{C})$ be the general linear group in $N + 1$ complex variables, which we identify with the group of all $(N+1) \times (N+1)$ non-singular matrices with complex elements. Suppose $GL(N+1,\mathbb{C})$ acts on $C_{N+1}$ to the right, as described by
+\begin{equation}
+(z^0, \ldots, z^N) \rightarrow (z^0, \ldots, z^N)g, \quad g \in GL(N+1,\mathbb{C}). \tag{8.2}
+\end{equation}
+
+Among the subgroups of $GL(N+1,\mathbb{C})$ are: (1) the unitary group $U(N+1)$, which consists of all matrices $g$ satisfying
+\begin{equation}
+^t \overline{g} g = I, \tag{8.3}
+\end{equation}
+where $I$ is the identity matrix; (2) the group $GL(k+1, N-k, \mathbb{C})$, consisting of all non-singular matrices of the form
+\begin{equation}
+\begin{pmatrix}
+* & 0 \\
+* & *
+\end{pmatrix}
+\begin{array}{c}
+k+1 \\
+N-k
+\end{array} \tag{8.4}
+\end{equation}
+where the elements at the upper-right corner are zero. The group $GL(k+1, N-k, \mathbb{C})$ is the subgroup of all elements of $GL(N+1, \mathbb{C})$ leaving fixed the $(k+1)$-dimensional subspace of $C_{N+1}$ spanned by the first $k + 1$ coordinate vectors.
+
+The space of all $(k+1)$-dimensional linear subspaces of $C_{N+1}$, $k \geq 0$, is called a \textit{Grassmann manifold}, to be denoted by $Gr(N,k)$. Using the projection
+\begin{equation}
+\psi: C_{N+1} - 0 \rightarrow P_N \tag{8.5}
+\end{equation}
+in Example 2, §1, the notation suggests that it is also the space of all $k$-dimensional linear (projective) subspaces in $P_N$.
+
+From the above discussion $Gr(N,k)$ can be represented as a right coset space in two different ways:
+\begin{equation}
+Gr(N,k) = \frac{GL(N+1,\mathbb{C})}{GL(k+1,N-k,\mathbb{C})} = \frac{U(N+1)}{U(k+1) \times U(N-k)}. \tag{8.6}
+\end{equation}
+The first representation shows that it is a complex manifold of dimension $(k+1)(N-k)$. The second representation shows that it is compact.
+
+An element of $Gr(N,k)$ can be given by a non-zero decomposable $(k+1)$-vector
+\begin{equation}
+\Lambda = X_0 \wedge X_1 \wedge \cdots \wedge X_k \neq 0 \tag{8.7}
+\end{equation}
+defined up to a constant factor. If $e_0, \ldots, e_N$ denote a fixed frame in $C_{N+1}$, we can write
+\begin{equation}
+\Lambda = \sum_{\alpha} P_{\alpha_0, \ldots, \alpha_k} e_{\alpha_0} \wedge \cdots \wedge e_{\alpha_k}, \quad 0 \leq \alpha_0, \ldots, \alpha_k \leq N, \tag{8.8}
+\end{equation}
+where the $P$'s are skew-symmetric in their indices. The $P_{\alpha_0 \ldots \alpha_k}$ are called the Cayley-Plücker-Grassmann coordinates in $Gr(N,k)$. By considering $P_{\alpha_0 \ldots \alpha_k}$ as the homogeneous coordinates of a projective space of dimension $\binom{N+1}{k+1} - 1$, we get an imbedding of $Gr(N,k)$ in the latter.
+
+We propose to study the topological properties of $Gr(N,k)$. Our main step is to obtain a cell decomposition of $Gr(N,k)$ by means of the Schubert varieties. This was first accomplished by C. Ehresmann in 1934. Let
+\begin{equation}
+0 \leq a_0 \leq a_1 \leq \cdots \leq a_k \leq N - k \tag{8.9}
+\end{equation}
+be a sequence of integers, and let
+\begin{equation}
+L_{a_0} \subset L_{a_1+1} \subset \cdots \subset L_{a_k+k} \subset P_N \tag{8.10}
+\end{equation}
+be a nested sequence of linear spaces whose dimensions are given by the subscripts. (We will deal with linear spaces of $P_N$; their images under $\psi^{-1}$ will have one dimension higher.) A Schubert variety $(a_0 a_1 \ldots a_k)$ is the set of all $k$-dimensional linear spaces $X \in Gr(N,k)$ such that
+\begin{equation}
+\dim(X \cap L_{a_j+j}) \geq j, \quad 0 \leq j \leq k. \tag{8.11}
+\end{equation}
+By definition, $(a_0 a_1 \ldots a_k)$ is a closed subset of $Gr(N,k)$ and is determined by the $a$'s up to a projective collineation. Its (complex) dimension is
+\begin{equation}
+\dim(a_0 a_1 \ldots a_k) = a_0 + a_1 + \ldots + a_k. \tag{8.12}
+\end{equation}
+
+\textit{Example:} 1. $(N-k \ldots N-k) = Gr(N,k)$; 2. $(0 \ldots 0) = L_k$; 3. $(0 \ldots 0 1 \ldots 1)$ ($r$ ones) is the set of all $X$ satisfying the condition
+\begin{equation}
+L_{k-r} \subset X \subset L_{k+1}, \tag{8.13}
+\end{equation}
+where $L_{k-r}$ and $L_{k+1}$ are fixed linear spaces of dimensions $k-r$ and $k+1$ respectively.
+
+We take a fixed sequence of linear spaces in $P_N$:
+\begin{equation}
+L_0 \subset L_1 \subset \cdots \subset L_{N-1} \subset P_N \tag{8.14}
+\end{equation}
+and suppose the Schubert varieties are constructed from the linear spaces of this sequence. Put
+\begin{equation}
+(a_0 \cdots a_k)^* = (a_0 \cdots a_k) - \sum_{a_{j-1} < a_j} (a_0 \cdots a_{j-1} a_{j-1} \cdots a_k), \quad (a_{-1} = 0). \tag{8.15}
+\end{equation}
+Then any $X \in Gr(N,k)$ belongs to a unique $(a_0 \cdots a_k)^*$. That is, the sets $(a_0 \cdots a_k)^*$ are mutually disjoint and their union is $Gr(N,k)$.
+
+(A) $(a_0 \cdots a_k)^*$ is an open cell of real dimension $2(a_0 + \cdots + a_k)$.
+
+\textit{Example.} For $k = 0$ we have
+\begin{align*}
+P_N &= (N)^* + (N-1)^* + \ldots + (1)^* + (0)^* \\
+&= (P_N - L_{N-1}) + (L_{N-1} - L_{N-2}) + \ldots + (L_1 - L_0) + L_0.
+\end{align*}
+That is, $P_N$ is a union of cells of dimensions $0,2,4,\ldots,2N$ respectively, which are mutually disjoint.
+
+We prove (A) by induction on $k$. The example shows that it is true for $k = 0$. For definiteness we suppose $a_0 > 0$; the treatment of the case $a_0 = 0$ requires only slight modifications. We take a hyperplane $\pi$ in $P_N$ such that
+\begin{align*}
+\pi \cap L_{a_0} &= L_{a_0-1}, \\
+\pi \cap L_q &= L'_{q-1}, \quad a_0 < q,
+\end{align*}
+where $L'_{q-1}$ is of dimension $q-1$. Consider the set
+\[\Sigma = (a_0 a_1 \cdots a_k) - (a_0^{-1} a_1 \cdots a_k).\]
+If $X \in \Sigma$, it meets $L_{a_0}$, but not $L_{a_0-1}$. Hence it meets $L_{a_0} - L_{a_0-1}$ in exactly one point $y$ (say). Moreover the intersection $\xi = X \cap \pi$ is of dimension $k-1$, satisfying $\xi \cap L_{a_0-1} = \emptyset$. We therefore have the continuous mapping
+\begin{equation}
+\phi: \Sigma \rightarrow (L_{a_0} - L_{a_0-1}) \times A \tag{8.16}
+\end{equation}
+defined by
+\[\phi(X) = (y, \xi),\]
+where $A$ is the subset of the Grassmann manifold $Gr(N-1,k-1)$ of all $(k-1)$-dimensional linear spaces in $\pi$ such that $\xi \cap L_{a_0-1} = \emptyset$.
+
+To describe the image $\phi(\Sigma)$ we consider in $\pi$ the sequence of linear spaces
+\begin{equation}
+L_{a_0-1} \subset L'_{a_0} \subset \cdots \subset L'_{N-2} \subset \pi. \tag{8.17}
+\end{equation}
+The Schubert varieties of $Gr(N-1, k-1)$ to be considered will be defined relative to the sequence (8.17) and will be denoted by the same symbols with dashes. We have, for $j \geq 1$,
+\begin{align*}
+\dim(\xi \cap L'_{a_j+j-1}) &= \dim(X \cap \pi \cap L_{a_j+j}) \geq j - 1,
+\end{align*}
+so that $\xi \in (a_1 \cdots a_k)'$. Conversely, if 
+\[(y,\xi) \in (L_{a_0} - L_{a_0-1}) \times (a_1 \cdots a_k)',\]
+they span a $k$-dimensional space $X$ whose intersection $X \cap L_{a_j+j}$ ($j \geq 1$) contains $y$ and $\xi \cap L'_{a_j+j-1}$ and is hence of dimension $\geq j$. If moreover, $\xi \in A$, then $X \in \Sigma$. Thus $\phi$ is a homeomorphism of $\Sigma$ onto the set 
+\[(L_{a_0} - L_{a_0-1}) \times ((a_1 \cdots a_k)' \cap A).\]
+
+Analogous to (8.15) we set 
+\begin{equation}
+(a_1 \cdots a_k)^{*'} = (a_1 \cdots a_k)' - \sum_{a_{j-1} < a_j} (a_1 \cdots a_{j-1}a_{j-1} \cdots a_k)'. \tag{8.18}
+\end{equation}
+Then $\xi \in (a_1 \cdots a_k)^{*'}$ implies that $\xi \cap L'_{a_0-1} = \emptyset$ so that $\xi \in A$. Our induction hypothesis says that $(a_1 \cdots a_k)^{*'}$ is an open cell.
+
+The homeomorphism $\phi$ depends only on $a_0$ and on the choice of $\pi$; it is independent of the integers $a_1, \cdots, a_k$, provided that the conditions (8.9) are fulfilled. It follows that, for $j \geq 1$, $a_{j-1} < a_j$, $\phi$ restricts to a homeomorphism 
+\begin{align*}
+\phi: &(a_0 a_1 \cdots a_{j-1}a_{j-1} \cdots a_k) - (a_0-1 a_1 \cdots a_{j-1}a_{j-1} \cdots a_k) \\
+&\rightarrow (L_{a_0} - L_{a_0-1}) \times ((a_1 \cdots a_{j-1}a_{j-1} \cdots a_k)' \cap A).
+\end{align*}
+From this we see easily that $\phi$ establishes a homeomorphism between $(a_0 \cdots a_k)^*$ and $(L_{a_0} - L_{a_0-1}) \times (a_1 \cdots a_k)^{*'}$. This proves (A).
+
+The Schubert varieties relative to the sequence (8.14) give a cell decomposition of $Gr(N,k)$ whose cells are all of even dimensions. From known theorems in algebraic topology (cf. [9]) we are thus able to draw the following conclusions on the topological properties of $Gr(N,k)$:
+
+(B) The Schubert varieties are cycles. $Gr(N,k)$ is simply connected. It has no torsion coefficients and its homology groups of odd dimensions are zero. A homology basis of $Gr(N,k)$ of dimension $2r$ is formed by the Schubert varieties $(a_0 a_1 \cdots a_k)$, where $a_0, a_1, \ldots, a_k$ run over all sets of integers satisfying $0 \leq a_0 \leq a_1 \leq \cdots \leq a_k \leq N - k$ and $a_0 + a_1 + \cdots + a_k = r$.
+
+\textit{Example.} $Gr(3,1)$ is the space of all lines in $P_3$. Its (complex) dimension is $4$. Its Schubert cycles of different dimensions are respectively
+\[(00), (01), (11), (02), (12), (22).\]
+Hence its Betti numbers are
+\[b^0 = b^8 = 1, \quad b^2 = b^6 = 1, \quad b^4 = 2,\]
+where the superscripts indicate the (real) dimensions.
+
+Of geometrical significance is the structure of the homology or cohomology rings of $Gr(N,k)$, i.e., the intersection properties of the Schubert varieties. These are at the basis of enumerative geometry and have been completely determined (cf. [8], [23]). We will, however, not enter into this question.
+
+The Grassmann manifold has been playing an important role in recent developments of mathematics, because it is a so-called classifying space for complex vector bundles. In fact, when $Gr(N,k)$ is considered to be the manifold of all $(k+1)$-dimensional linear subspaces through the origin of $C_{N+1}$, it is the base space of a complex vector bundle whose fibers are these linear subspaces themselves.
+
+More precisely, let $\Lambda \in Gr(N,k)$ as defined by (8.7) and let $v \in C_{N+1}$ be such that $v \wedge \Lambda = 0$, i.e., $v \in \Lambda$. Also let
+\begin{equation}
+E_0 = \{ (v,\Lambda) | v \wedge \Lambda = 0 \}. \tag{8.19}
+\end{equation}
+Then
+\begin{equation}
+\psi_0: E_0 \rightarrow Gr(N,k), \tag{8.20}
+\end{equation}
+with the projection $\psi_0$ defined by
+\[\psi_0(v,\Lambda) = \Lambda,\]
+is a complex vector bundle with the fiber dimension $k + 1$.
+
+The bundle (8.20) has an important property. To describe it we define a $(k+1)$-frame to be an ordered set of $k + 1$ vectors $e_0, \ldots, e_k \in C_{N+1}$ such that $e_0 \wedge \cdots \wedge e_k \neq 0$. The space of all $(k+1)$-frames in $C_{N+1}$ is called a \textit{Stiefel manifold}, to be denoted by $St(N+1, k+1)$. It is the total space of a fiber bundle
+\begin{equation}
+\lambda: St(N+1, k+1) \rightarrow E_0 \tag{8.21}
+\end{equation}
+over $E_0$, with the projection $\lambda$ defined by
+\[\lambda(e_0, \ldots, e_k) = (e_0, e_0 \wedge \cdots \wedge e_k) \in E_0.\]
+The total space $St(N+1, k+1)$ has a string of vanishing homotopy groups expressed by
+\begin{equation}
+\pi_i(St(N+1, k+1)) = 0, \quad i \leq 2N - 2k \tag{8.22}
+\end{equation}
+(cf. [11], p. 134). Following Steenrod's terminology the bundle (8.20) is $(2N-2k+1)$-universal in the following sense: Let $M$ be a compact manifold of real dimension $\leq 2N - 2k$. The equivalence classes of complex vector bundles of fiber dimension $k+1$ over $M$ are in one-one correspondence with the homotopy classes of continuous mappings $f: M \rightarrow Gr(N,k)$, the correspondence being established by assigning to each mapping $f$ the bundle $f^*E_0$ induced from $E_0$.
+
+On account of this theorem the bundle (8.20) is called a universal bundle and its base space a classifying space.
+
+The universal $r$th Chern class $\mathcal{C}_r$, $0 \leq r \leq k+1$, is the element of $H^{2r}(Gr(N,k),\mathbb{Z})$ such that its value is 1 over the Schubert cycle $(0 \ldots 01 \ldots 1)$ ($r$ ones) and is 0 over all other Schubert cycles. By the above theorem if $\psi: E \to M$ is a complex vector bundle with fiber dimension $k+1$, it is induced from $E_0$ by a mapping $f: M \to Gr(N,k)$ (real dim $M \leq 2N - 2k$), and $f$ is defined up to a homotopy. It follows that $f^*\mathcal{C}_r \in H^{2r}(M,\mathbb{Z})$ is completely determined by the bundle $E$. We define
+\begin{equation}
+c_r(E) = f^*\mathcal{C}_r \in H^{2r}(M,\mathbb{Z}), \quad 0 \leq r \leq k + 1; \tag{8.23}
+\end{equation}
+$c_r(E)$ is called the $r$th Chern class of $E$. Clearly $c_0(E) = 1$.
+
+In applications it will be essential to identify $c_r(E)$ with geometric or analytic invariants defined in other ways. We will sketch one such application without insisting on details. Let $M$ be a compact almost complex manifold of real dimension $2n$. Its tangent bundle $T(M)$ is then a complex vector bundle over $M$ with fiber dimension $n$. Then we have
+\begin{equation}
+c_n(T(M)) \cdot M = \chi(M), \tag{8.24}
+\end{equation}
+where the left-hand side stands for the value of $c_n(T(M))$ on the fundamental cycle of $M$ and the right-hand side $\chi(M)$ is the Euler-Poincaré characteristic of $M$.
+
+To see this we consider the universal Chern class $\mathcal{C}_n \in H^{2n}(Gr(N,n-1),\mathbb{Z})$, with $N$ sufficiently large. By definition this is the class which has the value one over the Schubert cycle $(1 \ldots 1)$ ($n$ ones) and the value zero over all other Schubert cycles. By Poincaré duality this can be realized by taking a fixed Schubert cycle $(N-n, \ldots, N-n)$ of complementary real dimension $2n(N - n)$ and taking its intersection with the Schubert cycles of real dimension $2n$. By definition $(N-n \ldots N-n)$ consists of all the $n$-dimensional linear spaces through 0 in $C_{N+1}$ which lie in a fixed hyperplane $L$ of dimension $N$. Let $v_0$ be a vector through 0 in $C_{N+1}$ orthogonal to $L$. By using the mapping $f: M \rightarrow Gr(N,n-1)$ and by taking the orthogonal projection of $v_0$ to $f(x)$, $x \in M$, we define a vector field over $M$, which will have singularities exactly at the points $x \in M$ such that $f(x) \in L$. One verifies that $c_n(T(M)) \cdot M$ is equal to the sum of the indices at the singularities of a vector field with a finite number of singularities. This proves (8.24).
+
+By studying the homotopy groups of the unitary group, Bott proved the theorem: Let $E$ be a complex vector bundle of fiber dimension $n$ over the $2n$-sphere $S^{2n}$. Then $c_n(E) \cdot S^{2n}$ is divisible by $(n-1)!$ If $S^{2n}$ has an almost complex structure and $E$ is the tangent bundle, then by (8.24) $c_n(T(S^{2n})) \cdot S^{2n}$ is equal to 2, the Euler-Poincaré characteristic of $S^{2n}$. It follows from Bott's theorem that $S^{2n}$ has an almost complex structure only when $n \leq 3$. On the other hand, it can be proved by a different method that $S^4$ does not have an almost complex structure. Thus $S^2$ and $S^6$ are the only even-dimensional spheres which have almost complex structures.
+
+We now study the geometry in $Gr(N,k)$. For this purpose it is necessary to introduce an hermitian structure in the bundle (8.20). This is most easily achieved by introducing in $C_{N+1}$ the hermitian scalar product
+\begin{equation}
+(Z,W) = \overline{(W,Z)} = Z_0 \overline{W}_0 + \ldots + Z_N \overline{W}_N, \tag{8.25}
+\end{equation}
+where
+\begin{align}
+Z &= (Z_0, \ldots, Z_N) \in C_{N+1}, \tag{8.26} \\
+W &= (W_0, \ldots, W_N) \in C_{N+1}. \tag{8.27}
+\end{align}
+This induces an hermitian structure in $E_0$ in an obvious way.
+
+The definition (8.25) can be extended to decomposable $(k+1)$-vectors. In fact, let
+\begin{align}
+\Lambda &= X_0 \wedge \ldots \wedge X_k, \tag{8.28} \\
+M &= Y_0 \wedge \ldots \wedge Y_k. \tag{8.29}
+\end{align}
+We define the hermitian scalar product
+\begin{equation}
+(\Lambda,M) = \det(X_\alpha, Y_\beta), \quad 0 \leq \alpha,\beta \leq k. \tag{8.30}
+\end{equation}
+The product $(\Lambda,M)$ in (8.30) depends only on the $(k+1)$-vectors and is independent of the ways that they are decomposed in (8.28)-(8.29). By the hermitian property of $(\Lambda,M)$ and the fact that any $(k+1)$-vector is a linear combination of decomposable $(k+1)$-vectors, the definition of $(\Lambda,M)$ is extended to arbitrary $(k+1)$-vectors $\Lambda,M$. For simplicity of writing we will introduce the notations
+\begin{align}
+|\Lambda,M| &= |(\Lambda,M)|, \tag{8.31} \\
+|\Lambda| &= +(\Lambda,\Lambda)^{1/2}. \tag{8.32}
+\end{align}
+$|\Lambda|$ is called the norm of $\Lambda$. Clearly the norm determines the scalar product. The quotient $|\Lambda,M|/|\Lambda||M|$ depends only on the elements of $Gr(N,k)$ determined by the $(k+1)$-vectors $\Lambda, M$, and we have the Schwarz inequality
+\begin{equation}
+|\Lambda,M| \leq |\Lambda||M|. \tag{8.33}
+\end{equation}
+
+Utilizing the scalar product (8.25) we will restrict ourselves to unitary frames. A unitary $(h+1)$-frame is an ordered set of $h + 1$ vectors $Z_0, Z_1, \ldots, Z_h$ satisfying
+\begin{equation}
+(Z_i,Z_j) = \delta_{ij}, \quad 0 \leq i,j \leq h. \tag{8.34}
+\end{equation}
+If $h = N$, we will call it simply a unitary frame. We will identify $U(N+1)$ with the space of all unitary frames. Then we have the fiberings
+\begin{equation}
+U(N+1) \xrightarrow{\lambda} St(N+1, k+1) \xrightarrow{\mu} Gr(N,k), \tag{8.35}
+\end{equation}
+where $St(N+1, k+1)$ is the Stiefel manifold of all unitary $(k+1)$-frames in $C_{N+1}$ and the projections $\lambda, \mu$ are defined by
+\begin{align}
+\lambda(Z_0, Z_1, \ldots, Z_N) &= (Z_0, Z_1, \ldots, Z_k), \tag{8.36} \\
+\mu(Z_0, Z_1, \ldots, Z_k) &= Z_0 \land Z_1 \land \cdots \land Z_k, \tag{8.37}
+\end{align}
+the last $(k+1)$-vector defining an element of $Gr(N,k)$.
+
+In $U(N+1)$ we put
+\begin{equation}
+\theta_{AB} = (dZ_A, Z_B), \quad 0 \leq A, B, C \leq N. \tag{8.38}
+\end{equation}
+From the orthogonality relations (8.34) we get by differentiation
+\begin{equation}
+\theta_{AB} + \overline{\theta}_{BA} = 0. \tag{8.39}
+\end{equation}
+Equation (8.38) can also be written
+\begin{equation}
+dZ_A = \sum_B \theta_{AB} Z_B. \tag{8.40}
+\end{equation}
+Taking its exterior derivative, we get
+\begin{equation}
+d\theta_{AB} = \sum_C \theta_{AC} \land \theta_{CB}. \tag{8.41}
+\end{equation}
+These are called the Maurer-Cartan equations of the unitary group $U(N+1)$.
+
+Under the projection $\mu \lambda$ in (8.35) the differential forms of $Gr(N,k)$ are mapped into forms of $U(N+1)$, and this mapping is an isomorphism, i.e., a form $\omega$ on $Gr(N,k)$ is completely determined by its image $(\mu \lambda)^* \omega$. We will utilize this fact by studying the forms on $U(N+1)$ and consider a relation to be on $Gr(N,k)$ when all the forms involved belong to the image of $(\mu \lambda)^*$. Moreover for simplicity the mapping $(\mu \lambda)^*$ will be omitted in the formulas.
+
+With these conventions, let $\Lambda$ be a decomposable $(k+1)$-vector and let
+\begin{equation}
+\Lambda_0 = \Lambda / |\Lambda|, \tag{8.42}
+\end{equation}
+so that $\Lambda_0$ is a unit $(k+1)$-vector. We write
+\begin{equation}
+\Lambda_0 = Z_0 \land \cdots \land Z_k, \tag{8.43}
+\end{equation}
+$Z_0, \ldots, Z_k$ being a unitary $(k+1)$-frame. Then we get, by means of (8.40),
+\begin{align}
+(d\Lambda_0, \Lambda_0) &= \sum_\alpha \theta_{\alpha \alpha} = - \sum_\alpha \overline{\theta}_{\alpha \alpha}, \tag{8.44} \\
+(d\Lambda_0, d\Lambda_0) &= + \left[ \sum_\alpha \theta_{\alpha \alpha} \right] \left[ \sum_\alpha \overline{\theta}_{\alpha \alpha} \right] + \sum_{\alpha, r} \theta_{\alpha r} \overline{\theta}_{\alpha r}, \tag{8.45}
+\end{align}
+$0 \leq \alpha \leq k, \quad k+1 \leq r \leq N$,
+where the multiplication of differential forms is in the sense of ordinary commutative multiplication. It follows that
+\begin{equation}
+(d\Lambda_0, d\Lambda_0) - (d\Lambda_0, \Lambda_0)(\Lambda_0, d\Lambda_0) = \sum_{\alpha, r} \theta_{\alpha r} \overline{\theta}_{\alpha r}. \tag{8.46}
+\end{equation}
+By substituting the expression in (8.42), we get
+\begin{equation}
+\frac{1}{|\Lambda|^4} [(\Lambda, \Lambda)(d\Lambda, d\Lambda) - (d\Lambda, \Lambda)(\Lambda, d\Lambda)] = \sum_{\alpha, r} \theta_{\alpha r} \overline{\theta}_{\alpha r}. \tag{8.47}
+\end{equation}
+This defines an hermitian structure in $Gr(N,k)$. In fact, the left-hand side of (8.47) shows that it is hermitian and the right-hand side shows that the metric is positive definite.
+
+The Kähler form of (8.47) is
+\begin{align}
+\hat{H}_k &= \frac{i}{2} \sum_{\alpha, r} \theta_{\alpha r} \land \overline{\theta}_{\alpha r} = \frac{1}{2i} \sum_{\alpha, r} \theta_{\alpha r} \land \theta_{r\alpha} = \frac{1}{2i} d \left[ \sum_\alpha \theta_{\alpha \alpha} \right]. \tag{8.48}
+\end{align}
+It is therefore closed, and the metric (8.47) is Kählerian. By (8.42) and (8.44) we can further write
+\begin{equation}
+\sum_\alpha \theta_{\alpha \alpha} = (\partial - \bar{\partial}) \log |\Lambda|, \tag{8.49}
+\end{equation}
+so that
+\begin{equation}
+\hat{H}_k = i \partial \bar{\partial} \log |\Lambda|. \tag{8.50}
+\end{equation}
+
+We summarize the results in the theorem:
+
+(C) The Grassmann manifold $Gr(N,k)$ has a Kählerian structure invariant under the action of $U(N+1)$. Its Kähler form is equal to $\pi$ times the curvature form of the hyperplane section bundle over $Gr(N,k)$ defined by the imbedding by the Cayley-Plücker-Grassmann coordinates and the hermitian norm $|\Lambda|$.
+
+The first statement has been proved. The second statement may need some explanation. All the $(k+1)$-vectors $\Lambda$ of $C_{N+1}$, decomposable or not, form a complex vector space $C_\nu$ of dimension $\nu = \binom{N+1}{k+1}$. As in Example 2, §1 and Example 2, §6, $C_\nu - \{0\} \rightarrow P_{\nu-1}$ defines the universal line bundle over $P_{\nu-1}$ and an hermitian structure is introduced in this bundle by the norm $|\Lambda|$. The restriction of this bundle to $Gr(N,k) \subset P_{\nu-1}$ is the negative of the hyperplane section bundle meant in the theorem, and $|\Lambda|^{-1}$ defines an hermitian structure on it.
+
+By (6.5) the curvature form of this bundle is $\frac{1}{2\pi i} \partial \bar{\partial} \log h$, where $h = |\Lambda|^{-2}$ is the square of the norm of a local holomorphic section. It is therefore equal to $\frac{i}{\pi} \partial \bar{\partial} \log |\Lambda| = +\frac{1}{\pi} \hat{H}_k$, by (8.50).
+
+This proves the second statement in (C).
+
+\textit{Remark.} Consider the universal bundle (8.20). Let $V$ be a neighborhood in $Gr(N,k)$ and let $Z_A$, $0 \leq A \leq N$, be a frame field over $V$ into $U(N+1)$. Then $Z_0,\ldots, Z_k$ define a frame field of the bundle $E_0$ over $V$. The matrix $(\theta_{\alpha\beta}, 0 \leq \alpha, \beta \leq k)$, depends only on the $(k+1)$-frame field $Z_\alpha$ and follows the transformation law (5.21) under a change of the frame field. It therefore defines a connection in the bundle $E_0$. The curvature matrix of this connection is $\Theta = (\Theta_{\alpha\beta})$, where, by (8.41),
+\begin{equation}
+\Theta_{\alpha\beta} = d\theta_{\alpha\beta} - \sum_\gamma \theta_{\alpha\gamma} \land \theta_{\gamma\beta} = \sum_r \theta_{\alpha r} \land \theta_{r\beta} = -\sum_r \theta_{\alpha r} \land \overline{\theta}_{\beta r}, \tag{8.51}
+\end{equation}
+$0 \leq \alpha, \beta, \gamma \leq k , \quad k + 1 \leq r \leq N$.
+It follows that
+\begin{equation}
+\Theta + ^t \overline{\Theta} = 0 \tag{8.52}
+\end{equation}
+and hence, as in (5.64), that the determinant $\det(I + \frac{i}{2\pi} \Theta)$ is real. Using the notation of §5, we have therefore $(\text{Im } P_r)(\Theta) = 0$, $0 \leq r \leq k + 1$.
+
+By actual integration one can show that
+\begin{equation}
+\binom{k+1}{r} \int_{(0\ldots 01\ldots 1)} (\text{Re } P_r)(\Theta) = 1, \tag{8.53}
+\end{equation}
+where $(0\ldots 01\ldots 1)$ is the Schubert cycle with $r$ ones and that the same integral over any other Schubert cycle is zero. This means that the element of $H^{2r}(Gr(N,k),\mathbb{R})$ defined by $\binom{k+1}{r} (\text{Re } P_r)(\Theta)$ via the de Rham isomorphism is $j\mathcal{C}_r$, where $\mathcal{C}_r$ is the $r$th universal Chern class and
+\[j: H^{2r}(Gr(N,k),\mathbb{Z}) \rightarrow H^{2r}(Gr(N,k),\mathbb{R})\]
+is induced by the coefficient homomorphism.
+
+Let $M$ be a compact manifold and $\psi: E \rightarrow M$ be a complex vector bundle of fiber dimension $k+1$ induced from $E_0$ by the mapping $f: M \rightarrow Gr(N,k)$. Then the above relationship remains true for the induced connection. By Theorem (B), §5, we conclude that
+\begin{equation}
+\binom{k+1}{r} P_r(\Omega), \quad 0 \leq r \leq k + 1, \tag{8.54}
+\end{equation}
+where $\Omega$ is the curvature matrix of any connection in $E$, corresponds to the Chern class $j c_r(E)$ by the de Rham isomorphism. This is a relationship between the curvature of a connection of a complex vector bundle and its characteristic classes and contains as a special case the Gauss-Bonnet formula in high dimensions.
+
+\endinput

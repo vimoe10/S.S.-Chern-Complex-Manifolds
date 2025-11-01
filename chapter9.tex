@@ -1,0 +1,415 @@
+\chapter{Curves in a Grassmann Manifold}
+As in \S 8 we will denote by $Gr(N,k)$ the Grassmann manifold of all $k$-dimensional linear subspaces of the projective space $P_N$ of dimension $N$. Let $M$ be a one-dimensional complex manifold or Riemann surface. A holomorphic curve in $Gr(N,k)$ is a holomorphic mapping $f: M \to Gr(N,k)$. In particular, a holomorphic curve $f: M \to Gr(1,0) = P_1$ is a meromorphic function on $M$, given by the ratio of the homogeneous coordinates in $P_1$.
+
+Let $\Lambda$ be a non-zero decomposable $(k+1)$-vector which defines an element of $Gr(N,k)$, so that $\Lambda$ is determined up to a factor. Let $\Sigma_B$ be the subset of all $\Lambda \in Gr(N,k)$ such that
+
+\begin{equation}
+(\Lambda,B) = 0', \tag{9.1}
+\end{equation}
+
+where $B$ is a fixed $(k+1)$-vector, decomposable or not. $\Sigma_B$ is then a submanifold of codimension one in $Gr(N,k)$.
+
+This set $\Sigma_B$ has a simple geometrical interpretation if $B$ is decomposable. In fact, we shall say that two points $Z,W \in P_N$ are orthogonal if $(Z,W) = 0$. (We will identify points of $P_N$ with their homogeneous coordinate vectors, and the same with elements of $Gr(N,k)$.) If $B$ is decomposable, it determines an element $B \in Gr(N,k)$. Associated to the latter there is an element $B^I \in Gr(N,N-k-1)$, which is completely orthogonal to $B$, i.e., $B^I$ is the set of all points of $P_N$ which are orthogonal to all points of $B$. This relationship is obviously symmetrical: $(B^I)^I = B$. For a decomposable $B$, $\Sigma_B$ is the set of all $\Lambda \in Gr(N,k)$ which meet $B^I$.
+
+Since $(\Lambda,B)$ is holomorphic in $Gr(N,k)$ we have
+
+\begin{equation}
+\partial \bar{\partial} \log |\Lambda,B|^2 = \partial \bar{\partial} \{ \log (\Lambda,B) + \log (B,A) \} = 0. \tag{9.2}
+\end{equation}
+
+Combining with (8.46) we can write
+\begin{equation}
+\hat{H}_k = i \delta \log \frac{|\Lambda| \cdot |B|}{|\Lambda, B|}. \tag{9.2a}
+\end{equation}
+
+This formula is valid in $Gr(N,k) - \Sigma_B$ (while (8.46) is valid only locally).
+
+Let
+\begin{equation}
+f: M \rightarrow Gr(N,k) \tag{9.3}
+\end{equation}
+
+be a holomorphic curve such that the image $f(M)$ does not belong to $\Sigma_B$. Let $D$ be a compact domain in $M$ with smooth boundary set $\partial D$ and consider the restriction $f|D$. Since the points of the set $f^{-1}(f(D) \cap \Sigma_B)$ are the zeros of the holomorphic function $(\Lambda(\zeta), B)$, $\zeta \in D$, which is itself not identically zero, the set $f^{-1}(f(D) \cap \Sigma_B)$ consists only of a finite number of points. Let $\zeta_0 \in D$ be such a point, with $\zeta$ the local coordinate in a neighborhood of $\zeta_0$. We define the order of $\zeta_0$ to be the order of zero of the holomorphic function
+\begin{equation}
+w(\zeta) = (\Lambda(\zeta), B) \tag{9.3a}
+\end{equation}
+at $\zeta_0$. The sum of the orders of all such points we define to be the order $n(D,B)$ of the domain $D$ relative to $B$ or the intersection number of $f(D)$ and $\Sigma_B$. About the point $\zeta_0$ draw a circle $\gamma_\epsilon$ of radius $\epsilon$. By a local consideration it is easily seen that the order of $\zeta_0$ is equal to
+\begin{equation}
+\frac{1}{2\pi i} \lim_{\epsilon \to 0} \int_{\gamma_\epsilon} (\delta - \overline{\delta}) \log |w|. \tag{9.3b}
+\end{equation}
+
+Define
+\begin{equation}
+v(D) = \frac{1}{\pi} \int_{f(D)} \hat{H}_k, \tag{9.4}
+\end{equation}
+
+so that $v(D)$ is the normalized volume of $f(D)$. By applying Stokes' theorem to the formula (9.2), we get the theorem:
+
+(A) (First main theorem for holomorphic curves.) Let
+$f: M + Gr(N,k)$ be a holomorphic curve and let $D$ be a compact domain of $M$ with smooth boundary $\partial D$ . Let $B$ be a fixed $(k+1)$-vector such that $f(\partial D) \cap \Sigma_B = \theta$ . Then
+
+\begin{equation}
+n(D,B) - v(D) = \frac{1}{2\pi i} 
+\begin{pmatrix}
+(3-\bar{5}) \log \frac{|A,B|}{|A|\cdot |B|},
+\end{pmatrix} \tag{9.5}
+\end{equation}
+
+where $n(D,B)$ is the order of $D$ relative to $B$ and $v(D)$ is the normalized volume of $f(D)$ .
+
+Corollary. If $M$ is a compact holomorphic curve without boundary in $Gr(N,k)$, then
+
+\begin{equation}
+n(M,B) = v(M) \tag{9.6}
+\end{equation}
+
+i.e., $f(M)$ meets all $\Sigma_B$ the same number $v(M)$ of times.
+
+With the classical theory of meromorphic functions as an example, we will study holomorphic curves (9.3) where $M$ is non-compact. The right-hand side of (9.5) motivates us to introduce the operator
+
+\begin{equation}
+d^C = i(\bar{5}-3) \tag{9.7}
+\end{equation}
+
+$d^C$ acts on complex-valued $c^{\infty}$-forms and is of degree 1, i.e., it maps a form of degree $r$ to a form of degree $r+1$. It is also a real operator in the sense that it maps a real form into a real form. We have
+
+\begin{equation}
+dd^C = 2i\partial\bar{3} \tag{9.8}
+\end{equation}
+
+A smooth function $\tau$ on $M$ is called harmonic, if
+
+\begin{equation}
+dd^C_{\tau} = 0 \tag{9.9}
+\end{equation}
+
+If $\tau$ and $g$ are two smooth functions on $M$, we have
+\begin{equation}
+d\tau \wedge d^C g - dg \wedge d^C \tau = 2i(3g \wedge 3\tau - \overline{3}g \wedge \overline{3}\tau). \tag{9.9a}
+\end{equation}
+
+Since $M$ is one-dimensional, the right-hand side is zero and we have
+
+\begin{equation}
+d\tau \wedge d^C g = dg \wedge d^C \tau. \tag{9.10}
+\end{equation}
+
+Example. Suppose $M = C^* = C - \{0\}$. Let $\zeta \in C^*$, $\zeta = re^{i\theta}$, $r \neq 0$. Then
+\begin{equation}
+\log \zeta = \log r + i\theta, \tag{9.10a}
+\end{equation}
+\begin{equation}
+\log \overline{\zeta} = \log r - i\theta. \tag{9.10b}
+\end{equation}
+
+If $\tau = \log r$, we have
+\begin{equation}
+d\tau = d \log r = 1/2(d \log \zeta + d \log \overline{\zeta}) \tag{9.10c}
+\end{equation}
+
+and
+
+\begin{equation}
+d^C \tau = -1/2(d \log \zeta - d \log \overline{\zeta}) = d\theta. \tag{9.11}
+\end{equation}
+
+Now suppose $\tau$ is a real-valued smooth function on $M$.
+
+With a local coordinate $\zeta$ we have
+
+\begin{equation}
+d\tau = \tau_{\zeta} d\zeta + \tau_{\overline{\zeta}} d\overline{\zeta}, \tag{9.12}
+\end{equation}
+
+so that
+
+\begin{equation}
+d^C \tau = i(-\tau_{\zeta} d\zeta + \tau_{\overline{\zeta}} d\overline{\zeta}) \tag{9.13}
+\end{equation}
+
+and
+
+\begin{equation}
+d\tau \wedge d^C \tau = 2\tau_{\zeta} \tau_{\overline{\zeta}}(id\zeta \wedge d\overline{\zeta}). \tag{9.14}
+\end{equation}
+
+An exhaustion function on $M$ is a smooth function $\tau: M \to R^+$ (= set of real numbers $\geq 0$) which satisfies the conditions: (1) the mapping $\tau$ is proper, i.e., $\tau^{-1}(A)$ is compact whenever $A \subset R^+$ is compact; (2) the critical points of $\tau$, i.e., points at which $d\tau = 0$, are isolated. An example of a function satisfying the second condition is a real-valued harmonic function.
+
+Suppose that $M$ has an exhaustion function $\tau$ ; such a function exists on every non-compact manifold, cf. [25], p. 36. Let
+
+\begin{equation}
+D_u = \{ \zeta \in M | \tau(\zeta) \leq u \} \tag{9.15}
+\end{equation}
+
+and write
+
+\begin{equation}
+n(D_u, B) = n(u, B), \quad v(D_u) = v(u). \tag{9.16}
+\end{equation}
+
+Then (9.5) can be written
+
+\begin{equation}
+n(u, B) - v(u) = \frac{1}{2\pi} \int_{f(\partial D_u)} d^C \log \frac{|A, B|}{|A| \cdot |B|}. \tag{9.17}
+\end{equation}
+
+By (9.10) we have
+
+\begin{equation}
+d^C g = \frac{\partial g}{\partial \tau} d^C \tau, \quad mod \, dr. \tag{9.17a}
+\end{equation}
+
+The boundary $\partial D_u$ is the curve $\tau = u$, along which $dr = 0$. Hence the right-hand side of (9.17) is equal to
+
+\begin{equation}
+\frac{1}{2\pi} \int_{\partial D_u} f^* \frac{\partial}{\partial \tau} \log \frac{|A, B|}{|A| \cdot |B|} d^C \tau. \tag{9.17b}
+\end{equation}
+
+By an argument which we will not give here (cf. [13], p. 70 or [15]), the integral and the differential operator $\partial/\partial\tau$ can be interchanged, and we have
+
+\begin{equation}
+n(u, B) - v(u) = \frac{1}{2\pi} \frac{\partial}{\partial u} \int_{\partial D_u} \log \frac{|A(\zeta), B|}{|A(\zeta)| \cdot |B|} d^C \tau, \tag{9.18}
+\end{equation}
+
+where $\zeta \in \partial D_u$.
+
+We put
+
+\begin{equation}
+N(u, B) = \int_0^u n(t, B) dt, \tag{9.19}
+\end{equation}
+
+\begin{equation}
+T(u) = \int_{0}^{u} v(t)dt . \tag{9.20}
+\end{equation}
+
+The function $T(u)$ is called the order function or the characteristic function of Nevanlinna. Integrating the above equation with respect to $u$, we get the theorem (the integration needs justification; cf. [13]):
+
+(B) (Integrated form of the first main theorem). Let $f: M \to Gr(N,k)$ be a holomorphic curve, where $M$ is a Riemann surface with an exhaustion function $\tau$. Let $\gamma(u)$ be the real curve defined by $\tau = u$. Let $B$ be a fixed $(k+1)$-vector such that $f(\gamma(u)) \cap \Sigma_B = \emptyset$. Introduce the function 
+
+\begin{equation}
+m(u,B) = -\frac{1}{2\pi} \int_{\gamma(u)} \log \left| \frac{\Lambda(\zeta),B}{\Lambda(\gamma) || B} \right| d^C\tau , \quad \zeta \in \gamma(u) . \tag{9.20a}
+\end{equation}
+
+Then 
+
+\begin{equation}
+N(u,B) - T(u) = -m(u,B) + m(0,B) . \tag{9.21}
+\end{equation}
+
+The function $m(u,B)$ is called the compensating function with respect to $B$. In fact, (9.21) can be written 
+
+\begin{equation}
+N(u,B) + m(u,B) = T(u) + m(0,B) . \tag{9.21a}
+\end{equation}
+
+Thus $m(u,B)$ measures the "deficiency" of $N(u,B)$ from the order function $T(u)$.
+
+By the Schwarz inequality (8.32) we have 
+
+\begin{equation}
+\log \left| \frac{\Lambda(\zeta),B}{\Lambda(\zeta) || B} \right| \leq 0 . \tag{9.21b}
+\end{equation}
+
+By (9.14) we see that $d^C\tau$ is positive along $\gamma(u)$. It follows that
+
+\begin{equation}
+m(u,B) \geq 0. \tag{9.21c}
+\end{equation}
+
+From (9.21a) we get the inequality
+
+\begin{equation}
+N(u,B) \leq T(u) + m(0,B), \tag{9.22}
+\end{equation}
+
+which expresses the remarkable fact that $T(u)$ is an upper bound for $N(u,B)$ for all $B$, $m(0,B)$ being a constant relative to $u$.
+
+The classical problem of value distribution of meromorphic functions in the sense of Picard-Borel-Nevanlinna can be generalized to holomorphic curves in a Grassmann manifold. We see from the Corollary to Theorem (A) that if $M$ is compact and without boundary and if $f$ is not a constant map, then $f(M)$ meets every $\Sigma_B$. The question is whether a similar statement can be made on the equidistribution of $f(M)$ relative to all the $\Sigma_B$ when $M$ is non-compact but is "conformally large."
+
+The inequality (9.22) furnishes a key to such results. To make the main ideas clear we restrict ourselves to the classical case of a holomorphic mapping $f: M \to P_1$, where
+
+\begin{equation}
+M = C_0 = \{z \in C| |z| > 1\}. \tag{9.23}
+\end{equation}
+
+In other words, $C_0$ is the complex line with a unit disk removed. As its exhaustion function we take $\tau = \log r > 0, z = re^{i\theta}$. We suppose that $f$ is not a constant map.
+
+We will derive from (9.22) the theorem that $f(C_0)$ is dense in $P_1$. In fact, suppose that $P_1 - \overline{f(C_0)} \neq \emptyset$. Let $dB$ be the element of area in $P_1$ so normalized that
+
+\begin{equation}
+\int_{P_1} dB = 1. \tag{9.24}
+\end{equation}
+
+Let $A$ be the area of $\overline{f(C_0)}$, so that $A < 1$. We integrate the inequality (9.22) with respect to $dB$ over $\overline{f(C_0)}$. Since $v(u)$ is the area of the image $f(D_u)$ (cf. (9.15)), we have
+\begin{equation}
+\int_{F(C_0)} n(u, B)dB = v(u), \tag{9.24a}
+\end{equation}
+and the integration gives
+\begin{equation}
+T(u) < AT(u) + const. \tag{9.24b}
+\end{equation}
+Since $T(u) \to \infty$ as $u \to \infty$, this leads to a contradiction.
+
+A deeper study of the value distribution of the meromorphic function $f$ or, what is the same, of the equidistribution of the image set $f(C_0)$ consists in the investigation of the relation of $f(C_0)$ with respect to a given set $A_i \in P_1$, $1 \leq i \leq s$, of mutually distinct points. An idea originating from F. Nevanlinna and Ahlfors is to integrate the inequality (9.22) over a density with singularities at the points $A_i$. Let
+\begin{equation}
+\rho(B) = c \prod_i \left( \frac{|B,A_i|}{|B||A_i|} \right)^{-2\lambda}, \quad 0 < \lambda < 1, \tag{9.25}
+\end{equation}
+where the constant $c$ is so chosen that
+\begin{equation}
+\int_{P_1} \rho(B)dB = 1. \tag{9.26}
+\end{equation}
+
+Under the mapping $f$ we have
+\begin{equation}
+f^*dB = o^2r dr \wedge d\theta, \tag{9.27}
+\end{equation}
+so that $o^2$ is the ratio of the elements of area. $o$ is zero at the points where the linear mapping induced by $f$ on the tangent spaces is not an isomorphism, i.e., at the branch points of the meromorphic function $f$. Integration of (9.22) over $P_1$ gives the inequality
+
+\begin{equation}
+\int_{0}^{u} du \int_{1}^{exp u} r  dr \int_{0}^{2\pi} \rho \sigma^2 d\theta < T(u) + const. \tag{9.28}
+\end{equation}
+
+The inequality (9.28) has an implication given by the lemma:
+
+(C) Suppose (9.28) is valid. Then
+
+\begin{equation}
+\frac{1}{2\pi} \int_{0}^{2\pi} \log (\rho \sigma^2) d\theta < \kappa^2 \log T(u) - 2u + const., \quad \kappa > 1, \tag{9.29}
+\end{equation}
+
+with the exception of a subset $E$ of $u \in R^+$ such that 
+\begin{equation}
+\int_E du < \infty. \tag{9.29a}
+\end{equation}
+
+To prove this let $F(r), G(r)$ be positive-valued functions such that $F(r)$ is of class $C^1$ and increasing. Suppose that 
+
+\begin{equation}
+F'(r) > F(r)^K G(r), \tag{9.29b}
+\end{equation}
+
+where $\kappa > 1$ is a constant. Integration gives 
+
+\begin{equation}
+\frac{1}{\kappa-1} (F^{-K+1}(1) - F^{-K+1}(r)) > \int_{1}^{r} G(r) dr, \tag{9.29c}
+\end{equation}
+
+so that 
+
+\begin{equation}
+\int_{1}^{\infty} G(r) dr < +\infty. \tag{9.30}
+\end{equation}
+
+Thus with the exception of a set of $r$-intervals for which (9.30) holds we have 
+
+\begin{equation}
+F'(r) \leq F^K(r) G(r), \tag{9.30a}
+\end{equation}
+
+and hence 
+
+\begin{equation}
+\log F' \leq \kappa \log F + \log G. \tag{9.30b}
+\end{equation}
+
+Successive applications of this formula give respectively
+
+\begin{equation}
+\log \left\{ \int_{0}^{2\pi} \rho\sigma^2  d\theta + \log r \leq k \log \left\{ \int_{1}^{r} r  dr \int_{0}^{2\pi} \rho\sigma^2  d\theta \right\} + \log G, \right. \tag{9.30c}
+\end{equation}
+
+\begin{equation}
+\log \left\{ \int_{1}^{r} r  dr \int_{0}^{2\pi} \rho\sigma^2  d\theta \right\} - \log r \leq k \log T(u) + 0(1) + \log G. \tag{9.30d}
+\end{equation}
+
+Combining them we get
+
+\begin{equation}
+\log \left\{ \int_{0}^{2\pi} \rho\sigma^2  d\theta \leq k^2 \log T(u) + (k-1) \log r + (k+1) \log G + 0(1). \right. \tag{9.30e}
+\end{equation}
+
+Choosing $G(r) = 1/r$ and using the concavity of the logarithmic function
+
+\begin{equation}
+\frac{1}{2\pi} \int_{0}^{2\pi} \log(\rho\sigma^2)  d\theta \leq \log \left\{ \frac{1}{2\pi} \int_{0}^{2\pi} \rho\sigma^2  d\theta \right\}, \tag{9.31}
+\end{equation}
+
+we get $(9.29)$.
+
+To draw meaningful conclusions from the inequality $(9.29)$ we need an estimate for the integral
+
+\begin{equation}
+\frac{1}{2\pi} \int_{0}^{2\pi} \log \sigma  d\theta. \tag{9.31a}
+\end{equation}
+
+For such an estimate consider the projective line $P_1 = Gr(1,0)$. Let $\Lambda = (1,t)$ be its homogeneous coordinate vector so that $0 \leq |t| \leq \infty$, including infinity. By $(8.43)$ its metric is
+
+\begin{equation}
+ds^2 = \frac{dt  dt}{(1+t\tau)^2} \tag{9.32}
+\end{equation}
+
+By $(8.46)$ its K\"ahler form is
+
+\begin{equation}
+\hat{H}_0 = \frac{i}{2} \frac{dt  \Lambda  dt}{(1+t\tau)^2} = \frac{i}{2} \delta \log (1+t\tau), \tag{9.32a}
+\end{equation}
+
+as can be directly verified. A direct computation gives
+\begin{equation}
+\int_{P_1} \hat{H}_0 = \pi \tag{9.33}
+\end{equation}
+so that
+\begin{equation}
+dB = \frac{i}{2\pi} \partial \overline{\partial} \log (1+t\overline{t}). \tag{9.34}
+\end{equation}
+Under the mapping $f$, $t$ is a holomorphic function of $z$ and we have by definition
+\begin{equation}
+\sigma = (1+t\overline{t})^{-1} \pi^{-1/2} \left| \frac{\partial t}{\partial z} \right| \tag{9.34a}
+\end{equation}
+It follows that
+\begin{equation}
+f^*dB = -\frac{1}{4\pi i} d(\partial - \overline{\partial}) \log \sigma, \quad \sigma \neq 0. \tag{9.34b}
+\end{equation}
+Applying Stokes' theorem to the domain $D_u$ and supposing that $\partial D_u$ contains no branch point, we get
+\begin{equation}
+-2v(u) = \frac{1}{2\pi i} \int_{\partial D_u} (\partial - \overline{\partial}) \log \sigma - w(u), \tag{9.35}
+\end{equation}
+where $w(u)$ is the sum of the orders of the branch points in $D_u$, necessarily finite in number ($D_u$ being compact). Integrating with respect to $u$, we get
+\begin{equation}
+-2T(u) = \frac{1}{2\pi} \int_0^{2\pi} \log \sigma d\sigma - W(u) + const. \tag{9.36}
+\end{equation}
+where
+\begin{equation}
+W(u) = \int_0^u w(u)du. \tag{9.37}
+\end{equation}
+
+We have thus the inequality
+
+\begin{equation}
+\frac{1}{2\pi} \int_{0}^{2\pi} \log \sigma  d\theta > -2T(u) + const. \tag{9.38}
+\end{equation}
+
+By (9.25), (9.20), and (9.38) we get
+
+\begin{equation}
+\frac{1}{2\pi} \int_{0}^{2\pi} \log (\rho\sigma^2)d\theta > const. + 2\lambda \sum_{i} m(u,A_i) - 4T(u). \tag{9.39}
+\end{equation}
+
+We introduce the defect of the point $A \in P_1$ by
+
+\begin{equation}
+\delta(A) = \lim \inf \frac{m(u,A)}{T(u)} \quad \text{as } u \to \infty. \tag{9.40}
+\end{equation}
+
+Thus $\delta(A) = 1$ if $A \notin f(C_0)$ (cf. (9.21)). By letting $\lambda \to 1$ in (9.39), we immediately get, by using (9.29), the theorem:
+
+(D) (Nevanlinna's defect relation.) Let $f: C_0 \to P_1$ be a non-constant holomorphic mapping. Let $A_i, 1 \leq i \leq s$, be a set of mutually distinct points of $P_1$. Then
+
+\begin{equation}
+\sum_{i} \delta(A_i) \leq 2. \tag{9.41}
+\end{equation}
+
+Corollary. (Picard's Theorem) A non-constant meromorphic function in $C$ omits at most two values.
+
+\endinput

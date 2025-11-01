@@ -1,0 +1,201 @@
+\chapter{Holomorphic Vector Bundles and Line Bundles}
+
+% \section*{Holomorphic Vector Bundles and Line Bundles}
+
+Let $M$ be a complex manifold of dimension $m$ and let $\psi: E \to M$ be a complex vector bundle over $M$ with fiber dimension $q$. Relative to a covering $\{U,V,\ldots\}$ of $M$ let $g_{UV}$ be the transition functions of $E$. The bundle is called holomorphic if all these functions $g_{UV}$ are holomorphic (i.e., $g_{UV}$, considered as a non-singular $(q\times q)-$matrix, is a matrix of holomorphic functions in $U \cap V$). If $q = 1$, $E$ is called a holomorphic line bundle.
+
+An example of a holomorphic vector bundle over $M$ is the tangent bundle of $M$. Let $z_U^1, \ldots, z_U^m$ (respectively $z_V^1, \ldots, z_V^m$) be the local coordinates in $U$ (resp. in $V$). Then the tangent bundle has as transition functions the Jacobian matrices
+\begin{equation}
+j_{UV} = \frac{\partial(z_U^1, \ldots, z_U^m)}{\partial(z_V^1, \ldots, z_V^m)}. \tag{6.1}
+\end{equation}
+
+Let $E$ be a holomorphic bundle. A section $\gamma$ of $E$ over a neighborhood $U \subset M$ is holomorphic if the components of $\gamma$ relative to a chart are holomorphic functions. A frame field $s = (s_1, \ldots, s_q)$ is holomorphic if each $s_i$ is a holomorphic section. When $s$ and $s'$ are holomorphic frame fields, the matrix $g$ in the equation (5.19) is a matrix of holomorphic functions. A connection such that the connection matrix is a matrix of 1-forms of type $(1,0)$ relative to a holomorphic frame field will be called a connection of type $(1,0)$.
+
+Suppose an hermitian structure is defined in $E$. From (5.60) it follows that it has a uniquely defined admissible connection of type $(1,0)$. In fact, its connection matrix is
+\begin{equation}
+\omega = \partial H \cdot H^{-1}. \tag{6.2}
+\end{equation}
+From (6.2) we find that its curvature matrix is
+\begin{equation}
+\Omega = -\partial \bar{\partial} H \cdot H^{-1} + \partial H \cdot H^{-1} \wedge \bar{\partial} H \cdot H^{-1}, \tag{6.3}
+\end{equation}
+so that $\Omega$ is of type $(1,1)$. (A matrix of differential forms is said to be of type $(p,q)$ if each element is a form of type $(p,q)$.)
+
+In case $q = 1$, the matrices in question are $(1\times 1)$-matrices:
+\begin{equation}
+H = (h), \quad \Omega = (\Omega), \quad h > 0, \tag{6.4}
+\end{equation}
+and (6.3) can be written
+\begin{equation}
+\Omega = -\partial \bar{\partial} \log h. \tag{6.5}
+\end{equation}
+Notice that for $q = 1$ a tensorial matrix of the adjoint type is a form in $M$, so that $\Omega$ is globally defined in $M$. We call $\frac{i}{2\pi} \Omega$ the \textbf{curvature form} of the connection.
+
+On $M$ let $O$ be the sheaf of germs of holomorphic functions and $O^*$ be the sheaf of germs of nowhere zero holomorphic functions, the latter with multiplication as the group operation. A meromorphic function is locally the ratio of two holomorphic functions. Let $\mathcal{M}$ be the sheaf of germs of meromorphic functions. Then $O^*$ is a subsheaf of $\mathcal{M}$ and the quotient sheaf $D$ is by definition a sheaf of germs of divisors. The latter is locally represented by a meromorphic function defined up to the multiplication by a nowhere zero holomorphic function. We have the exact sequence
+\begin{equation}
+0 \rightarrow O^* \xrightarrow{i} \mathcal{M} \xrightarrow{k} D \rightarrow 0. \tag{6.6}
+\end{equation}
+Its induced exact cohomology sequence has the part
+\begin{equation}
+0 \rightarrow H^0 (M, O^*) \xrightarrow{i} H^0 (M, \mathcal{M}) \xrightarrow{k} H^0 (M, D) \xrightarrow{\delta} H^1 (M, O^*) \rightarrow \cdots. \tag{6.7}
+\end{equation}
+From the exactness it follows that the quotient group
+\begin{equation}
+H^0 (M, D)/kH^0 (M, \mathcal{M}) \tag{6.8}
+\end{equation}
+is isomorphic to a subgroup of $H^1 (M, O^*)$. An element of $H^0 (M, D)$ is called a divisor. Two divisors are called linearly equivalent if they differ from each other (multiplicatively) by a meromorphic function in $M$. Thus the group (6.8) is the group of divisor-classes with respect to linear equivalence. On the other hand, $H^1 (M, O^*)$ is the group of all holomorphic line bundles over $M$, the group operation being defined by tensor product. Kodaira and Spencer proved that if $M$ is a non-singular projective variety the group (6.8) is isomorphic to $H^1 (M, O^*)$, [19].
+
+We wish to study the group $H^1 (M, O^*)$. For this purpose we consider the exact sequence of sheaves:
+\begin{equation}
+0 \rightarrow \mathbb{Z} \xrightarrow{i} O \xrightarrow{e} O^* \rightarrow 0, \tag{6.9}
+\end{equation}
+where $e$ is defined by
+\begin{equation}
+e(f(x)) = \exp(2\pi i f(x)), \quad f(x) \in O. \tag{6.10}
+\end{equation}
+The sequence (6.9) leads to the homomorphism
+\begin{equation}
+\delta^1 : H^1 (M, O^*) \rightarrow H^2 (M, \mathbb{Z}), \tag{6.11}
+\end{equation}
+and we wish to describe the image of $\delta^1$.
+
+Let $A_R^r$ be the sheaf of germs of real-valued $C^\infty$ $r$-forms in $M$ and $C_R^r$ be the subsheaf of $A_R^r$ consisting of those germs which are closed under $d$, so that $C_R^0$ is the constant sheaf $\mathbb{R}$. Then we have the exact sequence
+\begin{equation}
+0 \rightarrow C_R^r \xrightarrow{g^r} A_R^r \xrightarrow{d} C_R^{r+1} \rightarrow 0, \tag{6.12}
+\end{equation}
+whose induced exact cohomology sequence is
+\begin{equation}
+\cdots \rightarrow H^r(M, C_R^r) \rightarrow H^r(M, A_R^r) \rightarrow H^r(M, C_R^{r+1}) \rightarrow H^{r+1}(M, C_R^r) \rightarrow \cdots. \tag{6.13}
+\end{equation}
+We note that $A_R^r$ is a fine sheaf.
+
+We now write the following diagram of cohomology groups of $M$ connected by homomorphisms:
+\[
+\begin{tikzcd}
+& H^1(A_R^0) = 0 & \\
+& \arrow{d}{\delta^{0,1}} & \\
+H^0(A_R^1) \arrow{r}{d} & H^0(C_R^2) & H^1(C_R^1) \arrow{l}{\delta^{1,0}} \\
+& \arrow{d}{\Pi_{02}} & \arrow{d}{\Pi_{01}} \\
+H^1(O^*) \arrow{r}{\delta^1} & H^2(\mathbb{Z}) \arrow{r}{j} & H^2(\mathbb{R}) \\
+& \arrow{d}{\Pi_{00}} & \\
+& H^2(A_R^0) = 0 &
+\end{tikzcd}
+\]
+In this diagram the manifold $M$ is omitted in the notation of the cohomology groups for the sake of simplicity. The vertical sequence and the top horizontal sequence are exact, being parts of the sequence (6.13). The homomorphism $j$ in the second horizontal sequence is induced by the coefficient homomorphism $j: \mathbb{Z} \to \mathbb{R}$. For an hermitian line bundle $E \in H^1(M,O^*)$ we wish to determine $j \circ \delta^1 E \in H^2(M,\mathbb{R})$, which is a real-valued closed 2-form in $M$. In fact, we wish to show that the negative of the form (6.15) is the curvature form $\frac{i}{2\pi} \Omega$, up to an additive term $d\alpha$, where $\alpha$ is a real-valued 1-form in $M$. This "diagram chasing" is not difficult, the main point being to remember the definitions of the homomorphisms in question. Before proceeding we will give some more discussion of the hermitian structure of a holomorphic line bundle $E$ and its curvature form.
+
+In fact, let $U = \{U,V,W,\ldots\}$ be an open covering of $M$ which is sufficiently fine. Let $s_U$ be a holomorphic frame field over $U$. The fiber dimension being one, $s_U$ is given by a nowhere zero holomorphic function in $U$. Let
+\begin{equation}
+h_U = H(s_U,s_U) > 0. \tag{6.14}
+\end{equation}
+The change of frame field in $U \cap V$ is given by
+\begin{equation}
+s_U g_{UV} = s_V, \tag{6.15}
+\end{equation}
+where $g_{UV}$ is a nowhere zero holomorphic function in $U \cap V$. From (6.14) and (6.15) we derive
+\begin{equation}
+h_U |g_{UV}|^2 = h_V \quad \text{in } U \cap V. \tag{6.16}
+\end{equation}
+It follows that
+\begin{equation}
+\partial \bar{\partial} \log h_U = \partial \bar{\partial} \log h_V \quad \text{in } U \cap V, \tag{6.17}
+\end{equation}
+which gives a verification of the remark following formula (6.5).
+
+Suppose $M$ is equipped with a riemannian metric and that the members of the covering $U$ are convex. Then the intersection of any number of the members of the covering, if non-empty, is convex. In $U \cap V$ ($\neq \emptyset$) we construct the holomorphic function $f_{UV}$ satisfying
+\begin{equation}
+g_{UV} = \exp(2\pi i f_{UV}). \tag{6.18}
+\end{equation}
+In $U \cap V \cap W \neq \emptyset$ let
+\begin{equation}
+c_{UVW} = f_{UV} + f_{VW} + f_{WU}. \tag{6.19}
+\end{equation}
+Then
+\begin{equation}
+\exp(2\pi i c_{UVW}) = g_{UV}g_{VW}g_{WU} = 1, \tag{6.20}
+\end{equation}
+so that $c_{UVW}$ is an integer. The two-cochain of the nerve $N(U)$ of the covering $U$ defined by assigning to the simplex $UVW$ the integer $c_{UVW}$ is a two-cocycle and defines a representative of $\delta^1 E$ and hence of $j \circ \delta^1 E$.
+
+Next we wish to find a representative of the element of $H^1(C_R^1)$ which is mapped by $\delta^{1,0}$ to $j \circ \delta^1 E$. This will be given by a real-valued closed 1-form in every $U \cap V \neq \emptyset$, and we see that the form $\frac{1}{2} d(f_{UV} + \overline{f_{UV}})$ has the desired property. In fact, by (6.18) and (6.16) we have
+\begin{align*}
+\frac{1}{2} d(f_{UV} + \overline{f_{UV}}) &= \frac{1}{4\pi i} \left( \partial \log g_{UV} - \bar{\partial} \log \overline{g_{UV}} \right) \\
+&= \frac{1}{4\pi i} (\partial - \bar{\partial}) \log |g_{UV}|^2 \\
+&= \frac{1}{4\pi i} (\partial - \bar{\partial}) (-\log h_U + \log h_V).
+\end{align*}
+By the definition of $\delta^{0,1}$ we get a representative of $j \circ \delta^1 E$ as
+\begin{equation}
+\frac{1}{4\pi i} d(\partial - \bar{\partial}) \log h_U = \frac{i}{2\pi} \partial \bar{\partial} \log h_U = -\frac{i}{2\pi} \Omega. \tag{6.21}
+\end{equation}
+Thus we have the theorem:
+
+(A) Let $E \in H^1 (M, O^*)$ be a holomorphic line bundle over a complex manifold $M$. Let $c(E) = -\delta^1 E \in H^2 (M, \mathbb{Z})$ be its Chern class. Suppose that $E$ has an hermitian structure with the curvature form $\frac{i}{2\pi} \Omega$. Then the element of the de Rham group $R_2 (M)$ defined by $\frac{i}{2\pi} \Omega$ corresponds to the element $j c (E) \in H^2 (M, \mathbb{R})$ via the de Rham isomorphism (4.15), $j$ being induced by the coefficient homomorphism $j: \mathbb{Z} \to \mathbb{R}$.
+
+Consider the de Rham isomorphism
+\begin{equation}
+R_2 (M) \xrightarrow{\rho} H^2 (M, \mathbb{R}). \tag{6.22}
+\end{equation}
+There is a subgroup $R_{11} (M)$ of $R_2 (M)$, whose elements have as representatives forms of type $(1, 1)$. (Recall that an element $\gamma$ of $R_2 (M)$ is a class of forms $\alpha + d\beta$, where $\alpha$ is a given real-valued closed 2-form in $M$ and $\beta$ runs over all real-valued 1-forms in $M$. Any such form $\alpha + d\beta$ is called a representative of $\gamma$.) Let
+\begin{align}
+\rho R_{11}(M) &= H_{(1,1)}^{2}(M,\mathbb{R}), \tag{6.23} \\
+H_{(1,1)}^{2}(M,\mathbb{Z}) &= j^{-1}H_{(1,1)}^{2}(M,\mathbb{R}). \tag{6.24}
+\end{align}
+Then we have the theorem:
+
+(B) The image of the homomorphism $\delta^{1}$ in (6.11) is $H_{(1,1)}^{2}(M,\mathbb{Z})$.
+
+Since the curvature form $\frac{i}{2\pi} \Omega$ is of type $(1,1)$, we have proved
+\[\delta^{1}H^{1}(M,O^*) \subset H_{(1,1)}^{2}(M,\mathbb{Z}).\]
+To prove inclusion in the other direction, consider the following exact sequence induced by (6.9):
+\begin{equation}
+\cdots \rightarrow H^{1}(M,\mathbb{Z}) \xrightarrow{i^{1}} H^{1}(M,O) \xrightarrow{e^{1}} H^{1}(M,O^*) \xrightarrow{\delta^{1}} H^{2}(M,\mathbb{Z}) \xrightarrow{i^{2}} H^{2}(M,O) \rightarrow \cdots. \tag{6.25}
+\end{equation}
+It suffices to prove that $i^{2}H_{(1,1)}^{2}(M,\mathbb{Z}) = 0$.
+
+As previously let $A^{r}$ be the sheaf of germs of complex-valued $C^\infty$ $r$-forms and $C^{r}$ be the subsheaf of the germs of $A^{r}$ closed under $d$. Also let $A^{pq}$ be the sheaf of germs of $C^\infty$-forms of type $(p,q)$ and $C^{pq}$ be the subsheaf of germs of $A^{pq}$ closed under $\bar{\partial}$. Thus by definition $C^{0} = \mathbb{C}$ and $C^{00} = O$. We have the diagram
+\[
+\begin{tikzcd}
+0 \arrow{r} & C^{r} \arrow{r}{k} \arrow{d}{\Pi_{0r}} & A^{r} \arrow{r}{d} \arrow{d}{\Pi_{0r}} & C^{r+1} \arrow{r} \arrow{d}{\Pi_{0,r+1}} & 0 \\
+0 \arrow{r} & C^{0r} \arrow{r}{k'} & A^{0r} \arrow{r}{\bar{\partial}} & C^{0,r+1} \arrow{r} & 0
+\end{tikzcd}
+\]
+where $k$ and $k'$ are inclusions. This diagram is clearly commutative. Moreover both horizontal sequences are exact. The above diagram implies the following commutative diagram of cohomology groups, where the manifold $M$ is omitted in the notation:
+\[
+\begin{tikzcd}
+H^0(C^2)/dH^0(A^1) \arrow{r}{\Delta^0} & H^1(C^1) \arrow{r}{\Delta^1} & H^2(\mathbb{C}) \\
+H^0(C^{02})/\bar{\partial}H^0(A^{01}) \arrow{r}{\Delta'^0} \arrow{u}{\Pi_{02}} & H^1(C^{01}) \arrow{r}{\Delta'^1} \arrow{u}{\Pi_{01}} & H^2(O) \arrow{u}{\Pi_{00}}
+\end{tikzcd}
+\tag{6.26}
+\]
+Moreover, $\Delta^0$, $\Delta^1$, $\Delta'^0$, $\Delta'^1$ are isomorphisms (cf. §4, in particular (4.11)). We decompose the inclusion $i$ in (6.9) by
+\begin{equation}
+\mathbb{Z} \xrightarrow{h} \mathbb{C} \xrightarrow{\Pi_{00}} O, \tag{6.27}
+\end{equation}
+so that $i = \Pi_{00} \circ h$. For any $\beta \in H^2(\mathbb{Z})$ we have then
+\[i^2\beta = \Pi_{00} \circ h \beta = \Delta'^1 \circ \Delta'^0 \circ \Pi_{02} (\Delta^0)^{-1}(\Delta^1)^{-1} h\beta,\]
+by the commutativity of the diagram (6.26). If $\beta \in H^2_{(1,1)}(M,\mathbb{Z})$ we have
+\[\Pi_{02} (\Delta^0)^{-1} (\Delta^1)^{-1} h\beta = 0,\]
+so that $i^2\beta = 0$. This completes the proof of (B).
+
+To study $H^1(M,O^*)$ the next step is to consider the subgroup of all $E \in H^1(M,O^*)$ such that $c(E) = 0$. By the exactness of the sequence (6.25) this is isomorphic to
+\begin{equation}
+H^1(M,O)/i^1H^1(M,\mathbb{Z}). \tag{6.28}
+\end{equation}
+For a non-singular projective variety $M$ the group (6.28) is compact and is called the Picard variety of $M$, [19].
+
+The following are some important examples of holomorphic line bundles:
+
+\textit{Example 1.} The determinant bundle $\Lambda^q(E)$ of a holomorphic vector bundle $E$ of fiber dimension $q$. If $g_{UV}$ are the transition functions of $E$, so that $g_{UV}$ are non-singular $(q\times q)$-matrices with elements which are holomorphic functions in $U \cap V$, the bundle $\Lambda^q(E)$ is defined by the transition functions $\det g_{UV}$. If $T^*$ is the cotangent bundle of $M$ and $\dim M = m$, then $\Lambda^m(T^*)$ is called the canonical bundle of $M$; it will be denoted as $K(M)$. If $z_U^1,\ldots,z_U^m$ and $z_V^1,\ldots,z_V^m$ are the local coordinates in $U$ and $V$ respectively, the transition functions of $K(M)$ are the Jacobian determinants
+\begin{equation}
+k_{UV} = \frac{\partial(z_U^1,\ldots,z_U^m)}{\partial(z_V^1,\ldots,z_V^m)}. \tag{6.29}
+\end{equation}
+
+\textit{Example 2.} Consider the line bundle in Example 2, §1. We will call it the universal line bundle over $P_m$. Here the base space $P_m$ has the covering $\{U_i\}$, and the bundle has the transition functions $g_{ij} = j\xi^i = \frac{z^j}{z^i}$, $0 \leq i,j \leq m$, $i \neq j$. The linear form $\sum a_i z^i$ in $C_{m+1} - 0$, where the $a$'s are constants, has in the local coordinates in $\psi^{-1}(U_i)$ the expression
+\[\sum_j a_j z^j = z^i(a_0 \xi_0^i + \ldots + 1 + \ldots + a_m \xi_m^i).\]
+The expression in parentheses, which is essentially the linear form at the left-hand side in "non-homogeneous" coordinates in $U_i$, defines a section in the line bundle whose transition functions are
+\begin{equation}
+g_{ij}' = \frac{z^i}{z^j} = (g_{ij})^{-1}. \tag{6.30}
+\end{equation}
+Because of this origin the latter bundle, to be denoted by $H$, is called the hyperplane section bundle of $P_m$; it is the negative or dual of the universal line bundle.
+
+Moreover, a holomorphically immersed submanifold $f: M \rightarrow P_m$ has an induced bundle $f^*H$, called the hyperplane section bundle of $M$.
+
+\endinput

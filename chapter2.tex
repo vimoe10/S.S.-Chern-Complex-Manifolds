@@ -1,0 +1,135 @@
+\chapter{Complex and Hermitian Structures on a Vector Space}
+
+% \section*{Complex and Hermitian Structures on a Vector Space}
+
+Let $V$ be a real vector space of dimension $n$. $V$ is said to have a complex structure if there exists a linear endomorphism $J: V \to V$, such that $J^2 = -1$, where $1$ denotes the identity endomorphism. An eigenvalue of $J$ is a complex number $\lambda$ such that the equation $Jx = \lambda x$ has a non-zero solution $x \in V$. Applying $J$ to this equation, we get
+\[-x = J^2 x = \lambda Jx = \lambda^2 x.\]
+It follows that $\lambda^2 = -1$ or $\lambda = \pm i$. Since the complex eigenvalues occur in conjugate pairs, it follows that $V$ must be of even dimension $n = 2m$. The following relations are immediately verified:
+\begin{equation}
+(J - i)(J + i) = (J + i)(J - i) = 0. \tag{2.1}
+\end{equation}
+
+Let $V^*$ be the dual space of $V$, i.e., the space of all real-valued linear functions over $V$. We denote the pairing of $V$ and $V^*$ by $\langle x, y^* \rangle$, $x \in V$, $y^* \in V^*$, so that this function is $\mathbb{R}$-linear in each of the arguments. Alternatively, we also write $y^*(x) = \langle x, y^* \rangle$. In addition to $V^*$ we consider $V^* \otimes \mathbb{C}$, i.e., the space of all complex-valued $\mathbb{R}$-linear functions over $V$. Then $V^* \otimes \mathbb{C}$ is a complex vector space of complex dimension $n$. An element $f \in V^* \otimes \mathbb{C}$ is said to be of type $(1,0)$ (respectively $(0,1)$) if
+\[f(Jx) = if(x) \quad (\text{resp.} \ f(Jx) = -if(x)), \quad x \in V.\]
+
+Let $e^{A^Q}$, $1 \leq \alpha \leq n$, be a basis of $V^*$. Consider the functions
+\[\lambda^Q(x) = \langle(J + i)x,e^{A^Q}\rangle = \langle Jx,e^{A^Q}\rangle + i \langle x,e^{A^Q}\rangle.\]
+Since $-i$ is an eigenvalue of $J$ of multiplicity $m$, exactly $m$ of these functions are linearly independent with respect to $\mathbb{C}$. It can be immediately verified that $\lambda^Q(x)$ are of type $(1,0)$, and their complex conjugates
+\[\bar{\lambda}^Q(x) = \langle(J-i)x,e^{A^Q}\rangle\]
+are of type $(0,1)$.
+
+Suppose our basis $e^{A^Q}$ is so chosen that $\lambda^K(x)$, $1 \leq k \leq m$, are linearly independent with respect to $\mathbb{C}$. We split them into the real and imaginary parts:
+\[\lambda^K(x) = \lambda^{1K}(x) + i\lambda^{1K}(x).\]
+We wish to show that $\lambda^{1K}(x)$, $\lambda^{1K}(x)$, $1 \leq k \leq m$, are linearly independent with respect to $\mathbb{R}$. In fact, suppose that
+\[\sum_k r_k\lambda^{1K}(x) + \sum_k s_k\lambda^{1K}(x) = 0, \quad x \in V,\]
+where $r_k, s_k \in \mathbb{R}$. This relation can be written as
+\[\frac{\Sigma}{k} (r_k - is_k)^{\lambda^k(x)} + \frac{\Sigma}{k} (r_k + is_k)^{\lambda^k(x)} = 0.\]
+Replacing $x$ by $Jx$ and using the fact that $\lambda^k(x)$ and $\lambda^k(x)$ are of types $(1,0)$ and $(0,1)$ respectively, we get
+\[\frac{\Sigma}{k} (r_k - is_k)^{\lambda^k(x)} - \frac{\Sigma}{k} (r_k + is_k)^{\lambda^k(x)} = 0.\]
+Adding these two equations, we find
+\[\Sigma(r_k - is_k)^{\lambda^k(x)} = 0.\]
+which gives $r_k - is_k = 0$, and hence $r_k = s_k = 0$, since $\lambda^k(x)$ are linearly independent over $\mathbb{C}$.
+
+Using the exterior algebra $\wedge (\mathcal{W}^* \otimes \mathbb{C})$, we can express the fact proved above by
+\[(\frac{i}{2})^m \wedge \lambda^{\lambda^k} = \lambda^{\lambda^k} \lambda^{nk} \neq 0. \tag{2.5}\]
+
+It follows from (2.5) that $\lambda^k, \lambda^k$ are linearly independent over $\mathbb{C}$ and that $\mathcal{W}^* \otimes \mathbb{C}$ is a direct sum of $V_{\mathbb{C}} \oplus V_{\mathbb{C}}$, where $V_{\mathbb{C}}$ (resp. $V_{\mathbb{C}}$) is the space of all elements of $\mathcal{W}^* \otimes \mathbb{C}$ of type $(1,0)$ (resp. $(0,1)$). Conversely, a direct sum decomposition of $\mathcal{W}^* \otimes \mathbb{C}$ over $\mathbb{C}$ into two subspaces, complex conjugate to each other, defines a complex structure on $V$, if the subspaces are defined to be consisting of the elements of types $(1,0)$ and $(0,1)$ respectively. This follows from the fact that when $x$ is given the equations in (2.2) determine the values of the elements of $\mathcal{W}^* \otimes \mathbb{C}$ at $Jx$, whereby $Jx$ is determined.
+
+As an example, let $e_k, e_{m+k}$ be a dual basis of $\lambda^{1k}, \lambda^{1k}$, so that
+\[(\lambda^k(e_h) = \lambda^{1k}(e_{m+h}) = \delta_h^k, \quad 1 \leq h, k \leq m,\]
+all other pairings being zero. This can be written
+\[(\lambda^k(e_h) = \frac{1}{i} \lambda^k(e_{m+h}) = \delta_h^k. \tag{2.6a}\]
+
+On the other hand, we have
+\[\lambda^{k}(Jx) = i\lambda^{k}(x) = -\lambda^{nk}(x) + i\lambda^{1k}(x),\]
+from which it follows that
+\[(\lambda^{k}(Je_{h}) = \frac{1}{i}\lambda^{k}(Je_{m+h}) = i\delta_{h}^{k}. \tag{2.7}\]
+Comparing (2.6a) and (2.7), we get
+\begin{equation}
+Je_{h} = e_{m+h}, \quad Je_{m+h} = -e_{h}. \tag{2.8}
+\end{equation}
+
+The elements $\lambda^{k}$ form a basis of $V_{\mathbb{C}}$ over $\mathbb{C}$. Under a change of basis the real-valued $2m$-form in (2.5) will be multiplied by a positive factor. Hence the complex structure $J$ in $V$ defines an orientation of $V$.
+
+If $J$ defines a complex structure in $V$, $-J$ does too. The two complex structures are said to be \textit{conjugate} to each other. A form of type $(1,0)$ (resp. type $(0,1)$) in the structure $J$ is a form of type $(0,1)$ (resp. $(1,0)$) in the structure $-J$ and vice versa.
+
+Suppose $V$ is provided with a complex structure $J$. An hermitian structure in $V$ is a complex-valued function $H(x,y)$, $x,y \in V$, which satisfies the following conditions:
+\begin{align*}
+(1)\quad & H(\lambda_{1}x_{1} + \lambda_{2}x_{2},y) = \lambda_{1}H(x_{1},y) + \lambda_{2}H(x_{2},y), \\
+& x_{1},x_{2},y \in V,\quad \lambda_{1},\lambda_{2} \in \mathbb{R}; \\
+(2)\quad & H(x,y) = \overline{H(y,x)}; \\
+(3)\quad & H(Jx,y) = iH(x,y).
+\end{align*}
+In view of (2), (3) is equivalent to the following:
+\[(3^{\prime})\quad H(x,Jy) = -iH(x,y).\]
+
+We split $H(x,y)$ into its real and imaginary parts:
+\begin{equation}
+H(x,y) = F(x,y) + iG(x,y). \tag{2.9}
+\end{equation}
+Then (2) is equivalent to
+\begin{equation}
+F(x,y) = F(y,x), \quad G(x,y) = -G(y,x), \tag{2.10}
+\end{equation}
+and (3) is equivalent to
+\begin{equation}
+F(x,y) = G(Jx,y), \quad \text{or} \quad G(x,y) = -F(Jx,y). \tag{2.11}
+\end{equation}
+Thus $H(x,y)$ defines a pair of real-valued bilinear functions, of which one is symmetric and the other anti-symmetric, which are related to each other by (2.11). Either one of these functions, together with $J$, determines $H(x,y)$.
+
+The hermitian scalar product $H(x,y)$ is called positive definite if the corresponding real-valued symmetric bilinear function $F(x,y)$ is positive definite.
+
+It is known that the space $\wedge^2(W^k)$ of exterior forms of degree two is isomorphic to the space of all antisymmetric bilinear functions over $V$. The isomorphism is established by the fact that it is a vector space isomorphism and that for $\xi,\eta \in W^k$ the bilinear function corresponding to $\xi \wedge \eta$ is
+\begin{equation}
+(\xi \wedge \eta)(x,y) = 1/2 \{ \xi(x)\eta(y) - \xi(y)\eta(x) \}, \quad x,y \in V. \tag{2.12}
+\end{equation}
+
+By means of this isomorphism there is an exterior form $\hat{H}$ of degree two corresponding to the function $-1/2 G(x,y)$. $\hat{H}$ is called the Kähler form of the hermitian structure.
+
+We wish to express $H(x,y)$ in terms of the basis $\lambda^K$ of $V_{\mathbb{C}}$. For this purpose let
+\begin{equation}
+x = \sum_\alpha x^\alpha e_\alpha, \quad y = \sum_\beta y^\beta e_\beta, \quad 1 \leq \alpha, \beta \leq 2m, \quad 1 \leq k,j \leq m. \tag{2.13}
+\end{equation}
+Then we have
+\begin{align*}
+H(x,y) &= H(\Sigma(x^k e_k + x^{m+k} e_{m+k}),y) = H(\Sigma(x^k e_k + x^{m+k} J e_k),y) \\
+&= \Sigma (x^k + ix^{m+k})H(e_k, y) \\
+&= \Sigma (x^k + ix^{m+k})(y^j - iy^{m+j})H(e_k, e_j) \\
+&= \Sigma \lambda^k(x) \lambda^j(y)H(e_k, e_j).
+\end{align*}
+It follows that we can write
+\begin{equation}
+H = \Sigma h_{kj} \lambda^k \overline{\lambda^j} \tag{2.14}
+\end{equation}
+where
+\begin{equation}
+h_{kj} = H(e_k, e_j) = \overline{h_{jk}}. \tag{2.15}
+\end{equation}
+
+To find the expression for the Kähler form $\hat{H}$, we derive from (2.9)
+\begin{align*}
+-1/2(G(x,y)) &= \frac{i}{4} (H(x,y) - \overline{H(x,y)}) \\
+&= \frac{i}{4} \Sigma h_{kj} (\lambda^k(x) \overline{\lambda^j(y)} - \overline{\lambda^j(x)} \lambda^k(y)).
+\end{align*}
+By (2.12) it follows that
+\begin{equation}
+\hat{H} = \frac{i}{2} \Sigma h_{kj} \lambda^k \wedge \overline{\lambda^j}. \tag{2.16}
+\end{equation}
+
+If a real vector space has a complex structure and in addition to it an hermitian structure, the exterior algebra has rich properties. In particular, a complex-valued exterior form, i.e., an element of the exterior algebra $\Lambda (V^* \otimes \mathbb{C})$, is said to be of type $(p,q)$, if it is a sum of terms each of which contains $p$ factors $\lambda^k$ and $q$ factors $\overline{\lambda^h}$. A form of degree $r$ can be written uniquely as a sum
+\begin{equation}
+\alpha = \Sigma \alpha_{pq}, \quad (p,q) \ \text{mutually distinct}, \quad p+q=r \tag{2.17}
+\end{equation}
+where $\alpha_{pq}$ is of type $(p,q)$. The latter will also be denoted by
+\begin{equation}
+\alpha_{pq} = \Pi_{pq} \alpha, \tag{2.18}
+\end{equation}
+whereby the operators $\Pi_{pq}$ are defined.
+
+Another operator, which we will denote by $L$, is defined by
+\begin{equation}
+L\alpha = \hat{H} \wedge \alpha. \tag{2.19}
+\end{equation}
+$L$ is a real operator in the sense that it maps a real-valued form into a real-valued form. This operator $L$ plays an important rôle in Hodge's work on transcendental methods in algebraic geometry.
+
+\endinput

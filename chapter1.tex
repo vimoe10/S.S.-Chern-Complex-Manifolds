@@ -1,0 +1,105 @@
+%-----------------------------------------------------------------------
+% Beginning of chap1.tex
+%-----------------------------------------------------------------------
+%
+%  AMS-LaTeX sample file for a chapter of a monograph, to be used with
+%  an AMS monograph document class.  This is a data file input by
+%  chapter.tex.
+%
+%  Use this file as a model for a chapter; DO NOT START BY removing its
+%  contents and filling in your own text.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \part{Complex Manifolds}
+
+\chapter{Introduction and Examples}
+
+% \section*{Introduction and Examples}
+A complex manifold is a paracompact Hausdorff space which has a covering by neighborhoods each homeomorphic to an open set in the $m$-dimensional complex number space such that where two neighborhoods overlap the local coordinates transform by a complex analytic transformation. That is, if $z^1, \ldots, z^m$ are local coordinates in one such neighborhood and if $w^1, \ldots, w^m$ are local coordinates in another neighborhood, then where they are both defined, we have $w^{\frac{1}{z}} = w^i(z^1, \ldots, z^m)$, where each $w^{\frac{1}{z}}$ is a holomorphic (or analytic) function of the $z$'s and the functional determinant $\partial(w^1, \ldots, w^m)/\partial(z^1, \ldots, z^m) \neq 0$.
+
+We will give some examples of complex manifolds:
+
+\textit{Example 1.} The complex number space $C_m$ whose points are the ordered $m$-tuples of complex numbers $(z^1, \ldots, z^m)$. $C_1$ is called the Gaussian plane.
+
+\textit{Example 2.} The complex projective space $P_m$. To define it, take $C_{m+1} - 0$, where $0$ is the point $(0, \ldots, 0)$, and identify those points $(z^0, z^1, \ldots, z^m)$ which differ from each other by a factor. The resulting quotient space is $P_m$. It can be covered by $m+1$ open sets $U_i$ defined respectively by $z^{\frac{i}{z}} \neq 0$, $0 \leq i \leq m$. In $U_i$ we have the local coordinates $i^{k} = z^{k}/z^{\frac{i}{z}}$, $0 \leq k \leq m$, $k \neq i$. The transition of local coordinates in $U_i \cap U_j$ is given by $i^{h} = i^{h} / i^{j}$, $0 \leq h \leq m$, $h \neq j$, which are holomorphic functions. In particular, $P_1$ is the Riemann sphere.
+
+By assigning to a point of $C_{m+1} - 0$ the point it defines in the quotient space, we get a natural projection $\psi: C_{m+1} - 0 \rightarrow P_m$, for which the inverse image of each point is $C^* = C_1 - 0$. This relationship is the first example of the important notion of a holomorphic line bundle and it is justified to enter into some detail. In fact, in $\psi^{-1}(U_i)$ we can use instead of the coordinates $(z^0, \ldots, z^m)$ the coordinates $i^{h} = z^{h/z^{\dagger}}, 0 \leq h \leq m, h \neq i$, and $z^{\dagger}$. This has the advantage of expressing clearly the fact that $\psi^{-1}(U_i)$ is a product $U_i \times C^*, z^{\dagger}$ being the fiber coordinate (relative to $U_i$). In $\psi^{-1}(U_i \cap U_j)$, the fiber coordinates $z^{\dagger}$ and $z^{\dagger}$, relative to $U_i$ and $U_j$, respectively, are related by
+\[z^{\dagger} = z^{\dagger} j^{\dagger} = z^{\dagger}/j^{\dagger}.\]
+Thus the change of fiber coordinates is expressed by the multiplication of a non-zero holomorphic function. The general notion of a holomorphic line bundle, which generalizes this example, plays a central role in complex manifolds.
+
+To a point $p \in P_m$ the coordinates of a point of $\psi^{-1}(p)$ are called its homogeneous coordinates. They can be normalized so that
+\begin{equation}
+Z Z^{k} Z^{k} = 1. \tag{1.1}
+\end{equation}
+Equation (1.1) defines a sphere $S^{2m+1}$ of real dimension $2m+1$. The restriction of $\psi$ gives the mapping $\psi: S^{2m+1} \rightarrow P_m$, under which the inverse image of each point is a circle. This is called the Hopf fibering of $S^{2m+1}$.
+
+Further examples are obtained from submanifolds of $P_m$ and quotient manifolds of $C_m$.
+
+\textit{Example 3.} Non-singular submanifolds of $P_m$, in particular, the non-singular hyperquadric
+\begin{equation}
+(z^0)^2 + \cdots + (z^m)^2 = 0. \tag{1.2}
+\end{equation}
+By a theorem of Chow, every compact submanifold imbedded in $P_m$ is an algebraic variety, i.e., it is the locus defined by a finite number of homogeneous polynomial equations [5, p. 170].
+
+It will not be significant to consider compact submanifolds of $C_m$, because of the theorem:
+
+(A) A connected compact submanifold of $C_m$ is a point.
+
+The proof makes use of the lemma: Let $f$ be a holomorphic function on a complex manifold $M$. Suppose $p_0 \in M$ is a point such that $|f(p)| \leq |f(p_0)|$ for all $p$ in a neighborhood of $p_0$. Then $f(p) = f(p_0)$ in a neighborhood of $p_0$.
+
+For one variable this follows from the maximum modulus principle. The case of $m$ variables follows from the consideration of the lines through $p_0$ and the application of the one variable case to these lines.
+
+Now let $M$ be a connected compact submanifold of $C_m$. Each coordinate of $C_m$ is a holomorphic function on $M$. By the lemma, it must be a constant on every connected component of $M$. Since $M$ is connected, $M$ is a point.
+
+However, various significant examples arise from the quotient manifolds of $C_m$:
+
+\textit{Example 4.} Let $\Gamma$ be the discontinous group generated by $2m$ translations of $C_m$, which are linearly independent over the reals. Then $C_m/\Gamma$ is called the \textit{complex torus}. If a complex torus can be imbedded as a non-singular submanifold of a projective space of sufficiently high dimension, it is called an \textit{abelian variety}.
+
+Let $\Delta$ be the discontinuous group generated by $z^k \to 2z^k$, $1 \leq k \leq m$. The quotient manifold $(C_m^{-0})/\Delta$ is called the \textit{Hopf manifold}. It is homeomorphic to $S^1 \times S^{2m-1}$.
+
+Consider $C_3$ to be the group of all the matrices
+\[
+\begin{pmatrix}
+1 & z_1 & z_2 \\
+0 & 1 & z_3 \\
+0 & 0 & 1
+\end{pmatrix} \tag{1.3}
+\]
+
+Let $D$ be the discrete subgroup consisting of those matrices for which $z_1$, $z_2$, $z_3$ are Gaussian integers (i.e., $z_k = m_k + i n_k$, $1 \leq k \leq 3$, where $m_k$, $n_k$ are rational integers). Then $C_3 / D$ is called an \textit{Iwasawa manifold}. Its fundamental group is isomorphic to $D$, and hence is not abelian.
+
+\textit{Example 5.} An orientable surface is a complex manifold (of dimension one). We suppose the surface to be $C^\infty$ and define on it a positive definite riemannian metric. By the theorem of Korn-Lichtenstein there exist local isothermal parameters $x$, $y$ so that locally the metric can be written
+\begin{equation}
+ds^2 = \lambda^2 (dx^2 + dy^2), \quad \lambda > 0 \tag{1,4}
+\end{equation}
+or $ds^2 = \lambda^2 dz  d\overline{z}$, where $z = x + iy$, the orientation of the manifold being defined by $dx \wedge dy = \frac{i}{2} dz \wedge d\overline{z}$. If $w$ is another local coordinate we will have
+\[ds^2 = \lambda^2 dz  d\overline{z} = u^2 dw  d\overline{w}\]
+because $ds^2$ is globally defined. It follows that $dw$ is a multiple of $dz$ or $d\overline{z}$. If we assume that the complex coordinates $z$ and $w$ define the same orientation, then $dw$ must be a multiple of $dz$. This means that $w$ is a holomorphic function of $z$, and the surface becomes a complex manifold.
+
+A one-dimensional complex manifold is called a \textit{Riemann surface}.
+
+\textit{Example 6.} (Calabi-Eckmann) Let $S$ and $S'$ be spheres of dimensions $2p+1$ and $2q+1$ respectively, $p, q > 0$. By the Hopf fibering in Ex. 2 we have a fibration
+\[\pi: S \times S' \rightarrow P_p \times P_q\]
+with fiber a two (real) dimensional torus. Since both the base space and the fiber are complex manifolds, we would expect that the total space could be given a complex structure. This we will prove to be the case as follows:
+
+Let $S$ be the set of all points $z = (z_0^0, \ldots, z_P^0)$ such that $\Sigma_{0 \leq k \leq P} z^k z^k = 1$, and $S^1$ be the set of all points $z^1 = (z^1^0, \ldots, z^1^0)$ such that $\Sigma_{0 \leq j \leq q} z^j z^j = 1$. We define
+\[V_{kj} = \{(z,z^1) \in S \times S^1 | z^k z^j \neq 0\}, \quad 0 \leq k \leq P, \quad 0 \leq j \leq q.\]
+Then the sets $V_{kj}$ form an open covering of $S \times S^1$. Let $\tau$ be a complex number such that $\text{Im}(\tau) \neq 0$. In $V_{kj}$ we introduce the following complex coordinates
+\begin{align*}
+k^{w^h} &= z^{h/z^k}, \quad j^{w^b} = z^{b/z^j}, \quad h \neq k, \quad b \neq j, \quad 0 \leq h \leq P, \\
+t_{kj} &= \frac{1}{2\pi i} (\log z^k + \tau \log z^j), \tag{1.5}
+\end{align*}
+where $t_{kj}$ is defined mod 1 and $\tau$. Thus $t_{kj}$ defines a point on the torus $T(1,\tau)$ which is the quotient of $C$ by the translations 1 and $\tau$. In this way we have $p + q + 1$ coordinates in $V_{kj}$ and these define a map $V_{kj} \rightarrow C_{p+q} \times T(1, \tau)$. We show that this map is a homeomorphism. It suffices to show that $k^{w^h}, j^{w^b}$ and $t_{kj}$ determine the $z^1$s and $z^1$s uniquely. Now
+\[\int_{h \neq k} k^{w^h} k^{w^h} = \int_{h \geq k} \frac{z^{h}}{z^k} z^{h} - 1 = \frac{1}{\left| z^k \right|^2} - 1,\]
+so $\left| z^k \right|$ is determined. Similarly, $\left| z^j \right|$ is determined. By the second equation of (1.5) we have
+\[t_{kj} = \frac{1}{2\pi i} (\log \left| z^k \right| + \tau \log \left| z^j \right| + i \arg z^k + \tau i \arg z^j), \quad \text{mod}(1,\tau).\]
+Hence $\arg z^k$, $\arg z^{j}$ are determined mod $2\pi$. The other $z$'s and $z^{j}$'s are then determined by the first equations of (1.5). This proves that our map is a homeomorphism.
+
+In $V_{kj}\cap V_{rs}$ we have
+\[r^{w^h} = \frac{k^{w^h}}{k^{w^r}}, \quad s^{{w'}^l} = j^{{w'}^l}/j^{{w'}^s}\]
+and
+\[t_{rs} = t_{kj} + \frac{1}{2\pi i} (\log k^{w^r} + \tau \log j^{{w'}^s}), \quad \text{mod}(1,\tau)\]
+where we set $k^{w^k} = 1$ and $j^{w^j} = 1$. Hence we have defined a complex structure on $S \times S'$ with the $k^{w^h}, j^{w^z}, \tau_{kj}$ as local coordinates in $V_{kj}$.
+
+\endinput
